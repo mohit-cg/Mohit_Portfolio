@@ -1,0 +1,2669 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Certificate Vault — Mohit Kumar</title>
+  <link href="assets/img/cg.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=JetBrains+Mono:wght@400;500&display=swap">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <style>
+    /* ==========================================================================
+       Certificate Vault Dark-Gold Design Palette (Matched to index.html)
+       ========================================================================== */
+    :root {
+      color-scheme: dark;
+      --bg: #1f1f1f;
+      --surface: #232323;
+      --surface-hover: #292929;
+      --surface-alt: #2c2c2c;
+      --surface-card: rgba(35, 35, 35, 0.72);
+      --fg: #ffffff;
+      --heading-color: #ffffff;
+      --muted: rgba(255, 255, 255, 0.65);
+      --line: rgba(255, 255, 255, 0.1);
+      --line-gold: rgba(155, 128, 90, 0.35);
+
+      /* Accent Brand Gold */
+      --accent: #9b805a;
+      --accent-hover: #b8986c;
+      --accent-fg: #ffffff;
+      --accent-subtle: rgba(155, 128, 90, 0.18);
+      --accent-border: rgba(155, 128, 90, 0.4);
+      --accent-glow: rgba(155, 128, 90, 0.25);
+
+      --good: #4ade80;
+      --warn: #fbbf24;
+      --bad: #f87171;
+      --good-bg: rgba(74, 222, 128, 0.15);
+      --warn-bg: rgba(251, 191, 36, 0.15);
+      --bad-bg: rgba(248, 113, 113, 0.15);
+
+      /* Category colours for the interface */
+      --c-school: #60a5fa;
+      --c-college: #a78bfa;
+      --c-academic: #2dd4bf;
+      --c-education: #fb923c;
+      --c-design: #9b805a;
+      --c-government: #eab308;
+      --c-awards: #f472b6;
+      --c-professional: #38bdf8;
+
+      /* Category colours on paper */
+      --p-school: #1F55AD;
+      --p-college: #632CA8;
+      --p-academic: #0A6552;
+      --p-education: #A33C06;
+      --p-design: #8A6D3B;
+      --p-government: #6E530A;
+      --p-awards: #971F18;
+      --p-professional: #1E6091;
+
+      --sheet-bg: #FCFAF6;
+      --sheet-ink: #1C1917;
+
+      --display: "Ubuntu", "Cormorant Garamond", Georgia, serif;
+      --body: "Roboto", system-ui, -apple-system, sans-serif;
+      --mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    [hidden] {
+      display: none !important;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--fg);
+      font-family: var(--body);
+      font-size: 15px;
+      line-height: 1.6;
+      margin: 0;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    button,
+    input,
+    select {
+      font: inherit;
+      color: inherit;
+    }
+
+    button {
+      cursor: pointer;
+    }
+
+    :focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
+    }
+
+    .wrap {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 0 24px 70px 24px;
+    }
+
+    svg {
+      display: block;
+    }
+
+    /* Page title & Back Button */
+    .page-title {
+      background: transparent;
+      border-bottom: none;
+      padding: 24px 0 0 0;
+      margin-bottom: 20px;
+    }
+
+    .page-title h1 {
+      font-size: 26px;
+      letter-spacing: -0.01em;
+      color: #ffffff;
+    }
+
+    .page-title .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      min-height: 38px;
+      padding: 0 18px;
+      border-radius: 999px;
+      border: 1px solid var(--accent-border);
+      background: var(--surface-card);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      color: #ffffff;
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 0.25s, border-color 0.25s, transform 0.25s, box-shadow 0.25s;
+    }
+
+    .page-title .back-btn i {
+      font-size: 15px;
+      transition: transform 0.25s ease;
+    }
+
+    .page-title .back-btn:hover {
+      background: var(--accent);
+      border-color: var(--accent-hover);
+      color: #ffffff;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px -4px var(--accent-glow);
+    }
+
+    .page-title .back-btn:hover i {
+      transform: translateX(-3px);
+    }
+
+    @media (max-width: 576px) {
+      .page-title h1 {
+        font-size: 20px;
+      }
+      .page-title .back-btn {
+        min-height: 34px;
+        padding: 0 14px;
+        font-size: 13px;
+        gap: 6px;
+      }
+    }
+
+    /* Sidebar Header Styling */
+    .header .header-container {
+      background: var(--surface);
+      border: 1px solid var(--line);
+    }
+
+    /* Vault Hero Section */
+    .vault-hero {
+      padding: 16px 0 32px 0;
+    }
+
+    .vault-eyebrow-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      font-family: var(--mono);
+      font-size: 12px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      background: var(--accent-subtle);
+      border: 1px solid var(--accent-border);
+      padding: 5px 14px;
+      border-radius: 99px;
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+
+    .vault-hero h1 {
+      font-size: clamp(30px, 4.8vw, 50px);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: #ffffff;
+      line-height: 1.18;
+      max-width: 22ch;
+      margin: 0 0 14px 0;
+    }
+
+    .gold-gradient {
+      color: var(--accent);
+      background: linear-gradient(135deg, #dfc299 0%, #9b805a 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .lede {
+      margin: 0 0 24px 0;
+      max-width: 66ch;
+      font-size: 15.5px;
+      color: rgba(255, 255, 255, 0.8);
+      line-height: 1.65;
+    }
+
+    /* Metric Stat Cards */
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 14px;
+      margin: 24px 0 0;
+      padding: 0;
+    }
+
+    .stat-card {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 16px 18px;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .stat-card:hover {
+      transform: translateY(-2px);
+      border-color: var(--accent-border);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4), 0 0 12px var(--accent-subtle);
+    }
+
+    .stat-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 10px;
+      background: var(--accent-subtle);
+      border: 1px solid var(--accent-border);
+      color: var(--accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      flex-shrink: 0;
+    }
+
+    .stat-card.good .stat-icon {
+      background: var(--good-bg);
+      border-color: rgba(74, 222, 128, 0.3);
+      color: var(--good);
+    }
+
+    .stat-card.warn .stat-icon {
+      background: var(--warn-bg);
+      border-color: rgba(251, 191, 36, 0.3);
+      color: var(--warn);
+    }
+
+    .stat-card.bad .stat-icon {
+      background: var(--bad-bg);
+      border-color: rgba(248, 113, 113, 0.3);
+      color: var(--bad);
+    }
+
+    .stat-info {
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+    }
+
+    .stat-num {
+      margin: 0;
+      font: 700 24px/1.1 var(--display);
+      color: #ffffff;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .stat-label {
+      font-size: 12px;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      margin-top: 2px;
+    }
+
+    /* Sticky Control Toolbar */
+    .bar {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(26, 26, 26, 0.94);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      padding: 16px 20px;
+      border-radius: 18px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      margin: 32px 0 36px 0;
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.45);
+    }
+
+    .chips-container {
+      overflow-x: auto;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+      padding-bottom: 2px;
+    }
+
+    .chips-container::-webkit-scrollbar {
+      display: none;
+    }
+
+    .chips {
+      display: flex;
+      gap: 8px;
+      white-space: nowrap;
+    }
+
+    .chip {
+      flex: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      height: 36px;
+      padding: 0 15px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: var(--surface);
+      color: var(--fg);
+      font-size: 13.5px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .chip:hover {
+      border-color: var(--accent);
+      background: var(--surface-hover);
+      color: #ffffff;
+    }
+
+    .chip .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--dot, var(--fg));
+      box-shadow: 0 0 6px var(--dot, transparent);
+    }
+
+    .chip .n {
+      font-family: var(--mono);
+      font-size: 11px;
+      background: rgba(255, 255, 255, 0.08);
+      padding: 1px 7px;
+      border-radius: 99px;
+      color: var(--muted);
+      font-variant-numeric: tabular-nums;
+      transition: all 0.2s ease;
+    }
+
+    .chip[aria-pressed="true"] {
+      background: var(--accent);
+      color: #ffffff;
+      border-color: var(--accent);
+      box-shadow: 0 4px 16px var(--accent-subtle);
+    }
+
+    .chip[aria-pressed="true"] .n {
+      background: rgba(0, 0, 0, 0.3);
+      color: #ffffff;
+    }
+
+    .tools {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      margin-top: 14px;
+      padding-top: 12px;
+      border-top: 1px solid var(--line);
+    }
+
+    .search {
+      position: relative;
+      flex: 1 1 240px;
+      min-width: 0;
+      max-width: 400px;
+    }
+
+    .search .search-icon {
+      position: absolute;
+      left: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--muted);
+      font-size: 14px;
+      pointer-events: none;
+    }
+
+    .search input {
+      width: 100%;
+      height: 40px;
+      padding: 0 34px 0 38px;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      background: var(--surface);
+      color: #ffffff;
+      font-size: 13.5px;
+      transition: all 0.2s ease;
+    }
+
+    .search input:focus {
+      outline: none;
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px var(--accent-subtle);
+    }
+
+    .search input::placeholder {
+      color: var(--muted);
+    }
+
+    .btn-clear-search {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: 0;
+      color: var(--muted);
+      cursor: pointer;
+      font-size: 14px;
+      padding: 4px;
+      transition: color 0.2s;
+    }
+
+    .btn-clear-search:hover {
+      color: #ffffff;
+    }
+
+    .sort-wrapper {
+      position: relative;
+    }
+
+    .sort-icon {
+      position: absolute;
+      left: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--muted);
+      font-size: 14px;
+      pointer-events: none;
+    }
+
+    .sort {
+      height: 40px;
+      padding: 0 30px 0 34px;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      background: var(--surface);
+      color: var(--fg);
+      font-size: 13.5px;
+      cursor: pointer;
+      transition: border-color 0.2s ease;
+      appearance: none;
+      -webkit-appearance: none;
+    }
+
+    .sort-wrapper::after {
+      content: "\F282";
+      font-family: "bootstrap-icons";
+      position: absolute;
+      right: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--muted);
+      pointer-events: none;
+      font-size: 11px;
+    }
+
+    .sort:focus {
+      outline: none;
+      border-color: var(--accent);
+    }
+
+    .toggle {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      height: 40px;
+      padding: 0 14px;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      background: var(--surface);
+      color: var(--fg);
+      font-size: 13.5px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .toggle:hover {
+      border-color: var(--accent);
+      background: var(--surface-hover);
+    }
+
+    .toggle .box {
+      width: 18px;
+      height: 18px;
+      border-radius: 5px;
+      border: 1.5px solid var(--muted);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      transition: all 0.2s ease;
+    }
+
+    .toggle[aria-pressed="true"] {
+      border-color: var(--good);
+      background: var(--surface-hover);
+    }
+
+    .toggle[aria-pressed="true"] .box {
+      background: var(--good);
+      border-color: var(--good);
+      color: #111111;
+    }
+
+    .count-pill {
+      margin-left: auto;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 12px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--line);
+      border-radius: 99px;
+      font-size: 12.5px;
+      color: var(--accent);
+      font-family: var(--mono);
+      font-variant-numeric: tabular-nums;
+    }
+
+    /* Certificate Shelves */
+    .shelf {
+      padding-top: 36px;
+      scroll-margin-top: 130px;
+    }
+
+    .shelf-head {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      gap: 8px 16px;
+      margin-bottom: 20px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .shelf-head h2 {
+      margin: 0;
+      font: 700 26px/1.2 var(--display);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: #ffffff;
+    }
+
+    .shelf-head h2 .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--dot);
+      box-shadow: 0 0 10px var(--dot);
+    }
+
+    .shelf-head p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+      max-width: 52ch;
+    }
+
+    .shelf-head .k {
+      margin-left: auto;
+      font-family: var(--mono);
+      font-size: 12px;
+      color: var(--muted);
+      background: rgba(255, 255, 255, 0.04);
+      padding: 3px 10px;
+      border-radius: 99px;
+      border: 1px solid var(--line);
+    }
+
+    /* Modern Certificate Grid & Card */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(min(100%, 310px), 1fr));
+      gap: 24px;
+    }
+
+    .card {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      min-width: 0;
+      padding: 16px;
+      text-align: left;
+      background: var(--surface-card);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 16px;
+      color: var(--fg);
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.3s cubic-bezier(0.165, 0.84, 0.44, 1),
+        border-color 0.3s ease,
+        box-shadow 0.3s ease,
+        background 0.3s ease;
+    }
+
+    .card:hover,
+    .card:focus-visible {
+      transform: translateY(-6px);
+      background: rgba(42, 42, 42, 0.92);
+      border-color: rgba(155, 128, 90, 0.45);
+      box-shadow: 0 18px 42px rgba(0, 0, 0, 0.65), 0 0 24px var(--accent-subtle);
+      position: relative;
+      z-index: 4;
+    }
+
+    .card-top-meta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+    }
+
+    .card-cat-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-family: var(--mono);
+      font-size: 11.5px;
+      color: var(--muted);
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .card-cat-badge .dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--dot);
+      box-shadow: 0 0 6px var(--dot);
+    }
+
+    .card-verify-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 11px;
+      color: var(--good);
+      background: var(--good-bg);
+      border: 1px solid rgba(74, 222, 128, 0.25);
+      padding: 1px 7px;
+      border-radius: 99px;
+      font-weight: 600;
+    }
+
+    /* Thumbnail with Holographic Light Sweep */
+    .thumb {
+      position: relative;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.45), 0 1px 3px rgba(0, 0, 0, 0.25);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      transition: transform 0.3s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.3s ease;
+    }
+
+    .thumb::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(125deg, transparent 20%, rgba(255, 255, 255, 0.25) 45%, rgba(155, 128, 90, 0.25) 55%, transparent 80%);
+      transform: translateX(-100%);
+      transition: transform 0.75s ease;
+      pointer-events: none;
+      z-index: 4;
+    }
+
+    .card:hover .thumb::after {
+      transform: translateX(100%);
+    }
+
+    .thumb-hover-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.42);
+      backdrop-filter: blur(2px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.25s ease;
+      z-index: 5;
+    }
+
+    .card:hover .thumb-hover-overlay {
+      opacity: 1;
+    }
+
+    .thumb-view-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      border-radius: 99px;
+      background: var(--accent);
+      color: #ffffff;
+      font-size: 12px;
+      font-weight: 600;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.6), 0 0 12px var(--accent-subtle);
+      transform: translateY(6px);
+      transition: transform 0.25s ease;
+    }
+
+    .card:hover .thumb-view-pill {
+      transform: translateY(0);
+    }
+
+    .thumb-img {
+      width: 100%;
+      aspect-ratio: 1.414 / 1;
+      object-fit: cover;
+      object-position: top center;
+      display: block;
+      background: #181818;
+      transition: transform 0.4s ease;
+    }
+
+    .card:hover .thumb-img {
+      transform: scale(1.05);
+    }
+
+    .meta {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      min-width: 0;
+    }
+
+    .meta h3 {
+      margin: 0;
+      font-size: 15.5px;
+      font-weight: 600;
+      line-height: 1.35;
+      text-wrap: balance;
+      color: #ffffff;
+      transition: color 0.2s ease;
+    }
+
+    .card:hover .meta h3 {
+      color: var(--accent);
+    }
+
+    .meta .iss {
+      margin: 0;
+      font-size: 13px;
+      color: var(--muted);
+      overflow-wrap: anywhere;
+    }
+
+    .pills {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 6px;
+      margin-top: 6px;
+    }
+
+    .date {
+      font-family: var(--mono);
+      font-size: 11.5px;
+      color: var(--muted);
+      margin-right: 2px;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      height: 22px;
+      padding: 0 8px;
+      border-radius: 999px;
+      font-size: 11.5px;
+      font-weight: 500;
+      background: var(--surface-alt);
+      color: var(--muted);
+      border: 1px solid var(--line);
+    }
+
+    .pill.good {
+      background: var(--good-bg);
+      color: var(--good);
+      border-color: rgba(74, 222, 128, 0.25);
+    }
+
+    .pill.warn {
+      background: var(--warn-bg);
+      color: var(--warn);
+      border-color: rgba(251, 191, 36, 0.25);
+    }
+
+    .pill.bad {
+      background: var(--bad-bg);
+      color: var(--bad);
+      border-color: rgba(248, 113, 113, 0.25);
+    }
+
+    /* Empty state */
+    .empty {
+      padding: 60px 20px;
+      text-align: center;
+      background: var(--surface-card);
+      border: 1px dashed var(--line);
+      border-radius: 16px;
+      margin: 32px 0;
+    }
+
+    .empty h2 {
+      margin: 0 0 8px;
+      font: 700 24px/1.2 var(--display);
+      color: #ffffff;
+    }
+
+    .empty p {
+      margin: 0 0 18px;
+      color: var(--muted);
+      max-width: 48ch;
+      margin-inline: auto;
+    }
+
+    .btn {
+      height: 40px;
+      padding: 0 20px;
+      border-radius: 10px;
+      border: 1px solid var(--accent);
+      background: var(--accent);
+      color: #ffffff;
+      font-weight: 600;
+      font-size: 13.5px;
+      transition: all 0.2s ease;
+    }
+
+    .btn:hover {
+      background: var(--accent-hover);
+      border-color: var(--accent-hover);
+      box-shadow: 0 6px 18px var(--accent-subtle);
+    }
+
+    .foot {
+      margin-top: 56px;
+      padding-top: 18px;
+      border-top: 1px solid var(--line);
+      font-size: 13px;
+      color: var(--muted);
+      max-width: 62ch;
+    }
+
+    /* The Simulated Certificate Sheet */
+    .sheet {
+      container-type: inline-size;
+      position: relative;
+      aspect-ratio: 1.414 / 1;
+      max-width: 100%;
+      border-radius: 6px;
+      overflow: hidden;
+      background-color: var(--sheet-bg);
+      color: var(--sheet-ink);
+      background-image: radial-gradient(circle at center, color-mix(in srgb, var(--c) 4%, transparent) 0%, transparent 70%),
+        repeating-linear-gradient(135deg, color-mix(in srgb, var(--c) 7%, transparent) 0 1px, transparent 1px 8px);
+    }
+
+    .sheet-in {
+      position: absolute;
+      inset: 0;
+      padding: 6.6cqw 8.4cqw 6cqw;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      text-align: center;
+    }
+
+    .sheet-in::before {
+      content: "";
+      position: absolute;
+      inset: 2.6cqw;
+      border: .5cqw solid var(--c);
+    }
+
+    .sheet-in::after {
+      content: "";
+      position: absolute;
+      inset: 3.7cqw;
+      border: .18cqw solid var(--c);
+    }
+
+    .sheet-in>* {
+      position: relative;
+      z-index: 1;
+    }
+
+    .s-top,
+    .s-mid {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      min-width: 0;
+    }
+
+    .s-issuer {
+      margin: 0;
+      font-size: 2cqw;
+      font-weight: 700;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: var(--c);
+      max-width: 100%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .s-kind {
+      margin: .8cqw 0 0;
+      font: 600 5.8cqw/1.05 var(--display);
+      max-width: 100%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .s-cert {
+      margin: 0;
+      font: italic 500 2.5cqw/1.2 var(--display);
+      opacity: .8;
+    }
+
+    .s-name {
+      margin: .4cqw 0 0;
+      padding-inline: 2cqw;
+      font: italic 600 7.6cqw/1.1 var(--display);
+      max-width: 100%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      border-bottom: .15cqw solid color-mix(in srgb, var(--sheet-ink) 35%, transparent);
+    }
+
+    .s-line {
+      margin: 1cqw 0 0;
+      font-size: 2.1cqw;
+      line-height: 1.35;
+      max-width: 92%;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .s-title {
+      margin: .8cqw 0 0;
+      font: 700 4.4cqw/1.1 var(--display);
+      max-width: 94%;
+      color: var(--c);
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .s-foot {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: end;
+      width: 100%;
+      gap: 2cqw;
+    }
+
+    .s-cell {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: .6cqw;
+      min-width: 0;
+    }
+
+    .s-cell>span {
+      display: block;
+      width: 100%;
+      padding-bottom: .5cqw;
+      font-size: 2.2cqw;
+      font-weight: 600;
+      border-bottom: .15cqw solid color-mix(in srgb, var(--sheet-ink) 40%, transparent);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .s-cell>svg {
+      width: 14cqw;
+      height: 4.2cqw;
+      margin-bottom: -.4cqw;
+    }
+
+    .s-cell>i {
+      font-style: normal;
+      font-size: 1.4cqw;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      opacity: .7;
+    }
+
+    .s-seal {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: .6cqw;
+    }
+
+    .seal {
+      width: 11cqw;
+      height: 11cqw;
+    }
+
+    .s-id {
+      font-family: var(--mono);
+      font-size: 1.5cqw;
+      opacity: .7;
+      white-space: nowrap;
+    }
+
+    /* Detail View Modal Dialog & Corner Navigation */
+    .overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 99999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: max(16px, env(safe-area-inset-top, 0px)) max(16px, env(safe-area-inset-right, 0px)) max(16px, env(safe-area-inset-bottom, 0px)) max(16px, env(safe-area-inset-left, 0px));
+      background: rgba(0, 0, 0, 0.84);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+    }
+
+    .overlay[hidden] {
+      display: none !important;
+    }
+
+    /* Relative Container for Modal and Floating Corner Side Navigation */
+    .panel-container {
+      position: relative;
+      width: 100%;
+      max-width: 1080px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Side Navigation Buttons (Middle Left and Right Corners) */
+    .panel-nav-side-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 35;
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      background: rgba(24, 24, 24, 0.94);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      cursor: pointer;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.65);
+      transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+      user-select: none;
+    }
+
+    .panel-nav-side-btn.panel-prev {
+      left: -26px;
+    }
+
+    .panel-nav-side-btn.panel-next {
+      right: -26px;
+    }
+
+    .panel-nav-side-btn:hover:not(:disabled) {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #ffffff;
+      transform: translateY(-50%) scale(1.12);
+      box-shadow: 0 12px 32px var(--accent-subtle);
+    }
+
+    .panel-nav-side-btn:active:not(:disabled) {
+      transform: translateY(-50%) scale(0.96);
+    }
+
+    .panel-nav-side-btn:disabled {
+      opacity: 0.35;
+      cursor: not-allowed;
+      pointer-events: none;
+      filter: grayscale(1);
+    }
+
+    @media (max-width: 1140px) {
+      .panel-nav-side-btn.panel-prev {
+        left: 10px;
+      }
+
+      .panel-nav-side-btn.panel-next {
+        right: 10px;
+      }
+
+      .panel-nav-side-btn {
+        width: 44px;
+        height: 44px;
+        font-size: 19px;
+        background: rgba(18, 18, 18, 0.96);
+        border-color: rgba(255, 255, 255, 0.24);
+      }
+    }
+
+    .panel {
+      position: relative;
+      width: 100%;
+      max-width: 1080px;
+      max-height: calc(100vh - 36px);
+      overflow-y: auto;
+      display: grid;
+      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+      gap: 28px;
+      padding: 30px;
+      border-radius: 18px;
+      background: var(--surface);
+      border: 1px solid var(--line-gold);
+      box-shadow: 0 30px 80px rgba(0, 0, 0, .8), 0 0 30px var(--accent-subtle);
+      color: var(--fg);
+    }
+
+    @keyframes panelSlideNext {
+      from {
+        opacity: 0.45;
+        transform: translateX(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes panelSlidePrev {
+      from {
+        opacity: 0.45;
+        transform: translateX(-20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    .panel-anim-next {
+      animation: panelSlideNext 0.24s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+    }
+
+    .panel-anim-prev {
+      animation: panelSlidePrev 0.24s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+    }
+
+    .close {
+      position: absolute;
+      top: 14px;
+      right: 14px;
+      width: 38px;
+      height: 38px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      border: 1px solid var(--line);
+      background: var(--surface-alt);
+      color: var(--fg);
+      z-index: 2;
+      transition: all .2s;
+    }
+
+    .close:hover {
+      background: var(--accent);
+      color: #ffffff;
+      border-color: var(--accent);
+      transform: scale(1.08);
+    }
+
+    .m-sheet {
+      align-self: center;
+      border-radius: 8px;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 20px 48px -16px rgba(0, 0, 0, .75);
+    }
+
+    .m-preview-wrap {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      background: rgba(18, 18, 18, 0.75);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 12px;
+      padding: 14px;
+      min-height: 280px;
+      align-self: center;
+      box-shadow: 0 12px 36px rgba(0, 0, 0, 0.6);
+    }
+
+    .m-preview-wrap .m-img {
+      max-width: 100%;
+      max-height: 520px;
+      object-fit: contain;
+      border-radius: 8px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+      background: #111;
+    }
+
+    .m-preview-wrap .m-expand-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 18px;
+      border-radius: 99px;
+      background: rgba(35, 35, 35, 0.95);
+      border: 1px solid rgba(155, 128, 90, 0.4);
+      color: #dfca9b;
+      font-size: 13px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.25s ease;
+    }
+
+    .m-preview-wrap .m-expand-btn:hover {
+      background: var(--accent);
+      color: #ffffff;
+      border-color: var(--accent-light);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(155, 128, 90, 0.35);
+    }
+
+    .m-side {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      min-width: 0;
+      padding-top: 6px;
+    }
+
+    .m-cat {
+      margin: 0;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--mono);
+      font-size: 12px;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      padding-right: 40px;
+    }
+
+    .m-cat .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--dot);
+      box-shadow: 0 0 6px var(--dot);
+    }
+
+    .m-side h2 {
+      margin: 0;
+      font: 700 28px/1.15 var(--display);
+      text-wrap: balance;
+      color: #ffffff;
+    }
+
+    .m-issuer {
+      margin: -6px 0 0;
+      color: var(--accent);
+      font-weight: 600;
+      font-size: 14.5px;
+    }
+
+    .m-desc {
+      margin: 0;
+      max-width: 52ch;
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 14px;
+      line-height: 1.55;
+    }
+
+    .facts {
+      margin: 0;
+      display: grid;
+      grid-template-columns: auto minmax(0, 1fr);
+      gap: 0 18px;
+      border-top: 1px solid var(--line);
+    }
+
+    .facts dt,
+    .facts dd {
+      margin: 0;
+      padding: 10px 0;
+      border-bottom: 1px solid var(--line);
+      font-size: 13.5px;
+    }
+
+    .facts dt {
+      color: var(--muted);
+      font-weight: 500;
+    }
+
+    .facts dd {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px;
+      min-width: 0;
+      font-variant-numeric: tabular-nums;
+      color: var(--fg);
+    }
+
+    .idcode {
+      font-family: var(--mono);
+      font-size: 13px;
+      overflow-wrap: anywhere;
+      color: var(--accent);
+    }
+
+    .copy {
+      height: 28px;
+      padding: 0 12px;
+      border-radius: 6px;
+      border: 1px solid var(--line);
+      background: var(--surface-alt);
+      color: var(--fg);
+      font-size: 12px;
+      font-weight: 600;
+      transition: all .2s;
+    }
+
+    .copy:hover {
+      border-color: var(--accent);
+      color: #ffffff;
+      background: var(--accent);
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .skill {
+      padding: 4px 10px;
+      border-radius: 6px;
+      background: var(--surface-alt);
+      border: 1px solid var(--line);
+      font-size: 12.5px;
+      color: rgba(255, 255, 255, 0.85);
+      font-family: var(--mono);
+      transition: all 0.2s ease;
+    }
+
+    .skill:hover {
+      border-color: var(--accent-border);
+      color: var(--accent);
+      background: var(--accent-subtle);
+    }
+
+    .m-nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      margin-top: auto;
+      padding-top: 14px;
+      border-top: 1px solid var(--line);
+    }
+
+    .m-nav .pos {
+      font-family: var(--mono);
+      font-size: 13px;
+      color: var(--accent);
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .m-nav .hint-keys {
+      font-size: 12px;
+      color: var(--muted);
+      opacity: 0.7;
+    }
+
+    @media (max-width: 860px) {
+      .panel {
+        grid-template-columns: minmax(0, 1fr);
+        padding: 20px;
+        gap: 20px;
+      }
+
+      .m-side h2 {
+        font-size: 24px;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .vault-hero {
+        padding-block: 16px 20px;
+      }
+
+      .wrap {
+        padding: 0 16px 40px 16px;
+      }
+
+      .tools {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .search {
+        max-width: 100%;
+      }
+
+      .count-pill {
+        margin-left: 0;
+        justify-content: center;
+      }
+
+      .shelf-head h2 {
+        font-size: 22px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+
+      .thumb,
+      .card {
+        transition: none;
+      }
+
+      .card:hover,
+      .card:focus-visible {
+        transform: none;
+      }
+
+      .card:hover .thumb::after {
+        display: none;
+      }
+    }
+  </style>
+</head>
+
+<body class="certificate-page">
+
+  <!-- Header / Navbar -->
+  <header id="header" class="header d-flex flex-column justify-content-center">
+    <i class="header-toggle d-xl-none bi bi-list"></i>
+
+    <div class="header-container d-flex flex-column align-items-start">
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html#hero"><i class="bi bi-house navicon"></i>Home</a></li>
+          <li><a href="index.html#about"><i class="bi bi-person navicon"></i> About</a></li>
+          <li><a href="index.html#resume"><i class="bi bi-file-earmark-text navicon"></i> Resume</a></li>
+          <li><a href="certificate.html" class="active"><i class="bi bi-award navicon"></i> Certification</a></li>
+          <li><a href="works.html"><i class="bi bi-palette navicon"></i> Visual Works</a></li>
+          <li><a href="index.html#portfolio"><i class="bi bi-images navicon"></i> Portfolio</a></li>
+          <li><a href="index.html#social"><i class="bi bi-share navicon"></i> Social Links</a></li>
+          <li><a href="index.html#services"><i class="bi bi-hdd-stack navicon"></i> Services</a></li>
+          <li><a href="index.html#contact"><i class="bi bi-envelope navicon"></i> Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="social-links text-center">
+        <a href="https://www.linkedin.com/in/mohit-cg/" target="_blank" class="linkedin"><i
+            class="bi bi-linkedin"></i></a>
+        <a href="https://github.com/mohit-cg" target="_blank" class="github"><i class="bi bi-github"></i></a>
+        <a href="https://www.figma.com/@mohit_cg" target="_blank" class="figma"> <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma" width="20"
+            height="20"> </a>
+        <a href="https://www.instagram.com/team_codogram" target="_blank" class="instagram"><i
+            class="bi bi-instagram"></i></a>
+        <a href="https://www.youtube.com/@team_codogram" target="_blank" class="youtube"><i
+            class="bi bi-youtube"></i></a>
+      </div>
+
+    </div>
+
+  </header>
+
+  <main class="main" id="main">
+
+    <!-- Page Title & Back Button -->
+    <div class="page-title">
+      <div class="container d-flex justify-content-between align-items-center">
+        <h1 class="mb-0">Certificate Vault</h1>
+        <a href="index.html#certification" class="back-btn" title="Back to Certifications">
+          <i class="bi bi-arrow-left"></i>
+          <span>Back</span>
+        </a>
+      </div>
+    </div><!-- End Page Title -->
+
+    <div class="wrap">
+      <section class="vault-hero">
+        <div class="vault-eyebrow-pill">
+          <i class="bi bi-patch-check-fill"></i> Verified Academic &amp; Professional Archive
+        </div>
+        <h1>
+          Credential Vault &amp; <span class="gold-gradient">Registry</span>
+        </h1>
+        <p class="lede">
+          School marksheets, university degree transcripts, design credentials, government certifications, and honors
+          earned by <strong>Mohit Kumar</strong>, preserved in an interactive verification vault.
+        </p>
+
+        <!-- Metric Stat Cards -->
+        <dl class="stats" id="stats"></dl>
+      </section>
+
+      <div class="bar" id="bar">
+        <div class="chips-container">
+          <div class="chips" id="chips" role="group" aria-label="Certificate categories"></div>
+        </div>
+        <div class="tools">
+          <div class="search">
+            <i class="bi bi-search search-icon"></i>
+            <label class="sr-only" for="q">Search certificates</label>
+            <input id="q" type="search" placeholder="Search title, issuer, skill, or ID..." autocomplete="off">
+            <button type="button" id="clearSearch" class="btn-clear-search" aria-label="Clear search"
+              style="display:none;">
+              <i class="bi bi-x-circle-fill"></i>
+            </button>
+          </div>
+          <div class="sort-wrapper">
+            <i class="bi bi-sort-down sort-icon"></i>
+            <label class="sr-only" for="sort">Sort certificates</label>
+            <select id="sort" class="sort">
+              <option value="new">Newest first</option>
+              <option value="old">Oldest first</option>
+              <option value="az">Title A to Z</option>
+            </select>
+          </div>
+          <button id="ver" class="toggle" type="button" aria-pressed="false">
+            <span class="box"><i class="bi bi-check-lg"></i></span>
+            <span>Verified only</span>
+          </button>
+          <div class="count-pill">
+            <i class="bi bi-award-fill"></i>
+            <span class="count" id="count" aria-live="polite"></span>
+          </div>
+        </div>
+      </div>
+
+      <div id="shelves"></div>
+
+      <p class="foot">Curated certificate vault showcasing credentials, academic records, and certifications earned by
+        Mohit Kumar.</p>
+    </div>
+
+  </main>
+
+  <footer id="footer" class="footer position-relative">
+    <div class="container">
+      <div class="copyright text-center">
+        <p>© <span>Copyright</span> <strong class="px-1 sitename">Mohit Kumar</strong> <span>All Rights Reserved</span>
+        </p>
+      </div>
+      <div class="credits">
+        Designed &amp; Developed by <a href="https://www.instagram.com/team_codogram" target="_blank"
+          rel="noopener">Codogram</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <div class="overlay" id="overlay" hidden>
+    <div class="panel-container" id="panelContainer">
+      <!-- Middle Left Corner Navigation Button -->
+      <button type="button" class="panel-nav-side-btn panel-prev" id="prev" aria-label="Previous certificate"
+        title="Previous Certificate (←)">
+        <i class="bi bi-chevron-left"></i>
+      </button>
+
+      <!-- Middle Right Corner Navigation Button -->
+      <button type="button" class="panel-nav-side-btn panel-next" id="next" aria-label="Next certificate"
+        title="Next Certificate (→)">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+
+      <div class="panel" id="panel" role="dialog" aria-modal="true" aria-labelledby="m-title"></div>
+    </div>
+  </div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Navbar & Navigation Script -->
+  <script>
+    (function () {
+      "use strict";
+
+      // Mobile Header Toggle
+      var headerToggleBtn = document.querySelector('.header-toggle');
+      if (headerToggleBtn) {
+        function headerToggle() {
+          var header = document.querySelector('#header');
+          if (header) header.classList.toggle('header-show');
+          headerToggleBtn.classList.toggle('bi-list');
+          headerToggleBtn.classList.toggle('bi-x');
+        }
+        headerToggleBtn.addEventListener('click', headerToggle);
+
+        // Hide mobile nav on clicking nav links
+        document.querySelectorAll('#navmenu a').forEach(function (navmenu) {
+          navmenu.addEventListener('click', function () {
+            if (document.querySelector('.header-show')) {
+              headerToggle();
+            }
+          });
+        });
+      }
+
+      // Toggle mobile nav dropdowns
+      document.querySelectorAll('.navmenu .toggle-dropdown').forEach(function (navmenu) {
+        navmenu.addEventListener('click', function (e) {
+          e.preventDefault();
+          this.parentNode.classList.toggle('active');
+          if (this.parentNode.nextElementSibling) {
+            this.parentNode.nextElementSibling.classList.toggle('dropdown-active');
+          }
+          e.stopImmediatePropagation();
+        });
+      });
+
+      // Scroll top button
+      var scrollTop = document.querySelector('.scroll-top');
+      if (scrollTop) {
+        function toggleScrollTop() {
+          if (window.scrollY > 100) {
+            scrollTop.classList.add('active');
+          } else {
+            scrollTop.classList.remove('active');
+          }
+        }
+        scrollTop.addEventListener('click', function (e) {
+          e.preventDefault();
+          window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+          });
+        });
+        window.addEventListener('load', toggleScrollTop);
+        document.addEventListener('scroll', toggleScrollTop);
+      }
+    })();
+  </script>
+
+  <!-- Certificate Vault Script -->
+  <script>
+    (function () {
+      var CATS = [
+        { id: "school", label: "School", blurb: "Board results and school awards" },
+        { id: "college", label: "College", blurb: "Degree, semester and project records" },
+        { id: "academic", label: "Academic", blurb: "Scholarships, olympiads and research" },
+        { id: "education", label: "Education", blurb: "Courses and professional training" },
+        { id: "design", label: "Design", blurb: "Design programmes and workshops" },
+        { id: "government", label: "Government", blurb: "Official documents and licences" },
+        { id: "awards", label: "Awards & Activities", blurb: "Competitions, sports and service" },
+        { id: "professional", label: "Professional", blurb: "Internships and work experience" }
+      ];
+      var CAT = {}; CATS.forEach(function (c) { CAT[c.id] = c; });
+
+      var DATA = [
+        // --- School ---
+        {
+          id: "CBSE-X-2015-7232901",
+          cat: "school",
+          kind: "Grade Sheet cum Certificate",
+          title: "Secondary School Examination (Class X)",
+          issuer: "Central Board of Secondary Education (CBSE), Delhi",
+          line: "has passed the Secondary School Examination with CGPA 8.2 at Tender Heart Senior Secondary School, Ranchi",
+          date: "2015-05-28",
+          grade: "CGPA 8.2",
+          verified: true,
+          skills: ["English", "Mathematics", "Science", "Social Science", "Foundation of IT"],
+          desc: "Grade Sheet cum Certificate of Performance for Class X (Session 2013-15). Roll No: 7232901.",
+          image: "assets/img/certifications/x marksheet_page-0001.jpg"
+        },
+        {
+          id: "CBSE-XII-2017-7676994",
+          cat: "school",
+          kind: "Marks Statement",
+          title: "Senior School Certificate Examination (Class XII)",
+          issuer: "Central Board of Secondary Education (CBSE), Delhi",
+          line: "has passed the Senior School Certificate Examination in the Science Stream",
+          date: "2017-05-28",
+          grade: "Pass (Science)",
+          verified: true,
+          skills: ["Computer Science", "Mathematics", "Physics", "Chemistry", "English Core"],
+          desc: "Marks Statement for All India Senior School Certificate Examination 2017. Roll No: 7676994.",
+          image: "assets/img/certifications/xii_marksheet_page-0001.jpg"
+        },
+        {
+          id: "CBSE-PASS-2017-0775243",
+          cat: "school",
+          kind: "Pass Certificate",
+          title: "Class XII Senior School Passing Certificate",
+          issuer: "Central Board of Secondary Education (CBSE), Delhi",
+          line: "certified to have passed the Senior School Certificate Examination in March 2017",
+          date: "2017-05-28",
+          grade: "Qualified",
+          verified: true,
+          skills: ["Science Stream", "Secondary Education", "CBSE"],
+          desc: "Official Senior School Certificate of completion awarded by CBSE Delhi. Serial No: 0775243.",
+          image: "assets/img/certifications/xii_passing_certificate_page-0001.jpg"
+        },
+        {
+          id: "THS-YE-2017-03",
+          cat: "school",
+          kind: "Certificate of Merit",
+          title: "Young Exhibitors' Exhibition - 3rd Position",
+          issuer: "Tender Heart Senior Secondary School, Ranchi",
+          line: "awarded 3rd position in Computer 'Election + Movies + Game' project",
+          date: "2017-02-15",
+          grade: "3rd Position",
+          verified: true,
+          skills: ["Computer Programming", "Interactive Game Dev", "Project Presentation"],
+          desc: "Awarded at Tender Heart Senior Secondary School Young Exhibitors Exhibition 2016-17.",
+          image: "assets/img/certifications/young.jpg"
+        },
+
+        // --- College ---
+        {
+          id: "BIT-MCA-2024-40059",
+          cat: "college",
+          kind: "Degree Certificate",
+          title: "Master of Computer Applications (MCA) Degree",
+          issuer: "Birla Institute of Technology (BIT), Mesra",
+          line: "has been admitted to the Degree of Master of Computer Applications in First Class",
+          date: "2024-10-29",
+          grade: "First Class",
+          verified: true,
+          skills: ["Advanced Computer Applications", "Cloud Computing", "Full Stack Development", "System Design"],
+          desc: "Official MCA Degree conferred by the Board of Governors & Academic Council of BIT Mesra. Reg: 1784-MCA/40059/22.",
+          image: "assets/img/certifications/mca_degree_page-0001.jpg"
+        },
+        {
+          id: "BIT-PC-2024-001924",
+          cat: "college",
+          kind: "Provisional Degree Certificate",
+          title: "MCA Provisional Degree Certificate",
+          issuer: "Birla Institute of Technology (BIT), Mesra",
+          line: "completed all MCA requirements with a CGPA of 8.15 on 10.00 Point Scale",
+          date: "2024-07-11",
+          grade: "CGPA 8.15 (81.50%)",
+          verified: true,
+          skills: ["Software Engineering", "Algorithms", "Data Structures", "Database Architecture"],
+          desc: "Provisional Degree Certificate No: PC001924 issued by Registrar, BIT Mesra.",
+          image: "assets/img/certifications/mca_provisional_degree_page-0001.jpg"
+        },
+        {
+          id: "MCR-BCA-2020-1758072",
+          cat: "college",
+          kind: "Statement of Marks",
+          title: "Bachelor of Computer Application (Honours)",
+          issuer: "Marwari College, Ranchi (Ranchi University)",
+          line: "graduated in BCA (Honours) in First Class with 74.38% Honours score",
+          date: "2020-10-28",
+          grade: "First Class (74.38%)",
+          verified: true,
+          skills: ["Core Java", "C++", "DBMS & SQL", "Web Development", "Computer Networks"],
+          desc: "Comprehensive 6-Semester Consolidated Statement of Marks. Roll No: 17MCRBS58072, Reg: MCR1758072.",
+          image: "assets/img/certifications/bca_provisional_marksheet_page-0001.jpg"
+        },
+        {
+          id: "BIT-VPA-2024-TH01",
+          cat: "college",
+          kind: "Certificate of Appreciation",
+          title: "Technical Head - Visual & Performing Arts Society",
+          issuer: "Birla Institute of Technology (BIT), Mesra, Lalpur",
+          line: "demonstrated outstanding leadership and dedication as Technical Head during the 2023-24 session",
+          date: "2024-04-30",
+          grade: "Technical Head Leadership",
+          verified: true,
+          skills: ["Technical Leadership", "Team Management", "Audio-Visual Systems", "Event Production"],
+          desc: "Awarded by Director & Faculty In-Charge for exceptional campus technical leadership at BIT Mesra.",
+          image: "assets/img/certifications/vpa.jpg"
+        },
+
+        // --- Academic ---
+        {
+          id: "GF-21CS-2023-MC09",
+          cat: "academic",
+          kind: "Certificate of Participation",
+          title: "21st Century Skills Panel Discussion",
+          issuer: "Gandhi Fellowship & Piramal School of Leadership",
+          line: "active participation in the 21st Century Skills panel discussion in collaboration with Marwari College",
+          date: "2023-08-18",
+          grade: "Active Participant",
+          verified: true,
+          skills: ["21st Century Skills", "Critical Thinking", "Leadership", "Public Communication"],
+          desc: "Organised by Gandhi Fellowship and Piramal School of Leadership to foster modern professional skills.",
+          image: "assets/img/certifications/gandhi.jpg"
+        },
+        {
+          id: "UNSTOP-UTP-TECH-2023",
+          cat: "academic",
+          kind: "Certificate of Participation",
+          title: "Unstop Talent Park - Tech (MCQ + Coding)",
+          issuer: "Unstop & BIT Mesra",
+          line: "participated in the MCQ + Coding Assessment of Unstop Talent Park - Tech",
+          date: "2023-12-05",
+          grade: "Assessment Completed",
+          verified: true,
+          skills: ["Coding Assessment", "Algorithms", "Competitive Programming", "Analytical Skills"],
+          desc: "Competitive programming and technical MCQ evaluation proctored by Unstop.",
+          image: "assets/img/certifications/MCQ.jpg"
+        },
+
+        // --- Professional ---
+        {
+          id: "BSFTEN36",
+          cat: "professional",
+          kind: "Certificate of Internship",
+          title: "Graphics Designer Internship",
+          issuer: "Bluestock Fintech (#startupindia)",
+          line: "successfully completed graphics designer internship for fintech products",
+          date: "2024-02-29",
+          grade: "2 Months Completed",
+          verified: true,
+          skills: ["Graphic Design", "Fintech Branding", "Marketing Creatives", "UI Assets"],
+          desc: "Official internship certificate UDYAM-MH-01-0138001 awarded by Founder & CEO Ganesh Karale.",
+          image: "assets/img/certifications/BSFTEN36.jpg"
+        },
+        {
+          id: "ABWTGARVQQ",
+          cat: "professional",
+          kind: "Certificate of Selection & Internship",
+          title: "Mobile App Development Intern",
+          issuer: "The Sparks Foundation",
+          line: "selected as an intern at The Sparks Foundation for Mobile App Development",
+          date: "2023-09-25",
+          grade: "Selected Intern",
+          verified: true,
+          skills: ["Mobile App Development", "Android UI", "Java/Kotlin", "App Architecture"],
+          desc: "Verified internship selection code ABWTGARVQQ via truecertificates.com.",
+          image: "assets/img/certifications/intern.png"
+        },
+        {
+          id: "MxcNH67KRdrKi6d7f",
+          cat: "professional",
+          kind: "Certificate of Completion",
+          title: "Cybersecurity Analyst Job Simulation",
+          issuer: "Tata Group & Forage",
+          line: "completed practical tasks in IAM fundamentals, IAM strategy assessment, and custom IAM solutions",
+          date: "2025-07-07",
+          grade: "Simulation Completed",
+          verified: true,
+          skills: ["Identity & Access Management (IAM)", "Security Strategy", "Platform Integration", "Enterprise Security"],
+          desc: "Job simulation verified by Forage CEO Tom Brunskill. Verification code: MxcNH67KRdrKi6d7f.",
+          image: "assets/img/certifications/cybersecurity.jpg"
+        },
+
+        // --- Design ---
+        {
+          id: "9JZQVF72UKT5",
+          cat: "design",
+          kind: "Google Career Certificate",
+          title: "Foundations of User Experience (UX) Design",
+          issuer: "Google on Coursera",
+          line: "completed online course authorized by Google and offered through Coursera",
+          date: "2024-06-12",
+          grade: "Distinction",
+          verified: true,
+          skills: ["UX Research", "Wireframing", "Figma", "User Empathy", "Design Thinking"],
+          desc: "Authorized by Amanda Brophy, Global Director of Google Career Certificates. Verify at coursera.org/verify/9JZQVF72UKT5.",
+          image: "assets/img/certifications/Coursera.jpg"
+        },
+        {
+          id: "n6dwx2mmut7",
+          cat: "design",
+          kind: "Certificate of Completion",
+          title: "UX/UI Designing Professional Course",
+          issuer: "LERNX",
+          line: "successfully completed comprehensive course of UX/UI Designing",
+          date: "2024-11-24",
+          grade: "Course Completed",
+          verified: true,
+          skills: ["UI/UX Design", "Wireframing", "Interactive Prototyping", "Design Systems"],
+          desc: "Certified by Pushkar Poonia, Founder of Lernx. Certificate UID: n6dwx2mmut7.",
+          image: "assets/img/certifications/uiux.png"
+        },
+        {
+          id: "LUEFGJAN1251409",
+          cat: "design",
+          kind: "Certificate of Completion",
+          title: "Figma Bootcamp",
+          issuer: "LetsUpgrade & NSDC / GDG MAD",
+          line: "successfully completed hands-on Figma Bootcamp in collaboration with GDG MAD & ITM",
+          date: "2025-01-10",
+          grade: "Bootcamp Graduate",
+          verified: true,
+          skills: ["Figma", "Components & Variants", "Auto-Layout", "Design Handoff"],
+          desc: "National Skill Development Corporation (NSDC) accredited certification. Verify at letsupgrade.in/verify.",
+          image: "assets/img/certifications/Figma.jpg"
+        },
+        {
+          id: "MCR20DD990006",
+          cat: "design",
+          kind: "Diploma & Statement of Marks",
+          title: "Diploma in Digital Photography & Film Making (DPFM)",
+          issuer: "Marwari College, Ranchi (Ranchi University)",
+          line: "graduated in Diploma in Digital Photography & Film Making in First Division with 73.13%",
+          date: "2021-12-24",
+          grade: "First Division (73.13%)",
+          verified: true,
+          skills: ["Digital Photography", "Film Production", "Cinematography", "Lighting & Optics", "Post-Production"],
+          desc: "Official statement of marks and diploma awarded by Examination Department. Roll No: MCR20DD990006.",
+          image: "assets/img/certifications/dpfm_provisional_marksheet_page-0001.jpg"
+        },
+        {
+          id: "CANVA-10D-2024",
+          cat: "design",
+          kind: "Design Milestone Award",
+          title: "10 Designs in Canva Milestone",
+          issuer: "Canva Team",
+          line: "recognized for creating 10 original visual designs in Canva",
+          date: "2024-05-15",
+          grade: "Milestone Badge",
+          verified: true,
+          skills: ["Visual Branding", "Social Media Graphics", "Layout Composition", "Canva Pro"],
+          desc: "Achievement badge for digital design workflows awarded by The Canva Team.",
+          image: "assets/img/certifications/Canva.jpg"
+        },
+
+        // --- Education ---
+        {
+          id: "OUTSKILL-AI-ENG-2024",
+          cat: "education",
+          kind: "Certificate of Completion",
+          title: "AI for Engineers",
+          issuer: "Outskill (GrowthSchool)",
+          line: "proudly presented for successfully completing AI for Engineers masterclass",
+          date: "2024-08-10",
+          grade: "Completed",
+          verified: true,
+          skills: ["Generative AI", "AI Engineering", "Prompt Engineering", "LLM Integration"],
+          desc: "Certified by Vaibhav Sisinty (Founder, GrowthSchool), Ramanathan (Data Scientist), and Vishnuvardhan BKM.",
+          image: "assets/img/certifications/Ai.jpg"
+        },
+        {
+          id: "LUEBTSJUN125413",
+          cat: "education",
+          kind: "Certificate of Completion",
+          title: "Build a Personal Portfolio with Bootstrap 5",
+          issuer: "LetsUpgrade & NSDC / GDG MAD",
+          line: "successfully completed intensive training on Bootstrap 5 portfolio development",
+          date: "2025-06-25",
+          grade: "Bootcamp Graduate",
+          verified: true,
+          skills: ["Bootstrap 5", "Responsive Web Design", "HTML5 & CSS3", "Portfolio Architecture"],
+          desc: "Issued in collaboration with GDG MAD and ITM Edutech Training. Certificate No: LUEBTSJUN125413.",
+          image: "assets/img/certifications/Bootstrap.jpg"
+        },
+        {
+          id: "LUEAIMJUN125726",
+          cat: "education",
+          kind: "Certificate of Completion",
+          title: "Build Your First AI Model in Just 3 Days",
+          issuer: "LetsUpgrade & NSDC / GDG MAD",
+          line: "successfully completed 3-day practical training on building predictive AI models",
+          date: "2025-07-05",
+          grade: "Bootcamp Graduate",
+          verified: true,
+          skills: ["Machine Learning", "Model Training", "Python", "Data Science"],
+          desc: "Certificate No: LUEAIMJUN125726 verified via letsupgrade.in/verify.",
+          image: "assets/img/certifications/Build.jpg"
+        },
+        {
+          id: "LUEGGJUN1251042",
+          cat: "education",
+          kind: "Certificate of Completion",
+          title: "Git & GitHub Bootcamp",
+          issuer: "LetsUpgrade & NSDC / GDG MAD",
+          line: "successfully completed Git & GitHub version control bootcamp",
+          date: "2025-07-04",
+          grade: "Bootcamp Graduate",
+          verified: true,
+          skills: ["Git Version Control", "GitHub Workflows", "Branching & Merging", "Open Source Collaboration"],
+          desc: "Certificate No: LUEGGJUN1251042 verified via letsupgrade.in/verify.",
+          image: "assets/img/certifications/Git.jpg"
+        },
+        {
+          id: "MSFT-AISC-2024",
+          cat: "education",
+          kind: "Certificate of Participation",
+          title: "Microsoft Learn AI Skills Challenge",
+          issuer: "Microsoft Learn & IGNOU Delhi / Unstop",
+          line: "participated in the Microsoft Learn AI Skills Challenge organized by IGNOU Delhi",
+          date: "2024-03-20",
+          grade: "Challenge Completed",
+          verified: true,
+          skills: ["Azure AI Services", "Machine Learning Basics", "Computer Vision", "Natural Language Processing"],
+          desc: "Hands-on challenge focusing on enterprise AI workloads on Microsoft Learn.",
+          image: "assets/img/certifications/microsoft.jpg"
+        },
+        {
+          id: "UNSTOP-RESUME-2023",
+          cat: "education",
+          kind: "Certificate of Participation",
+          title: "How to Craft the Perfect Resume!",
+          issuer: "Unstop & BIT Mesra",
+          line: "participated in the specialized workshop on technical resume building",
+          date: "2023-11-12",
+          grade: "Completed",
+          verified: true,
+          skills: ["Technical Resume Writing", "Portfolio Curation", "Career Preparation"],
+          desc: "Organised by Unstop for Birla Institute of Technology (BIT), Mesra students.",
+          image: "assets/img/certifications/How.jpg"
+        },
+
+        // --- Awards & Activities ---
+        {
+          id: "IITH-ELAN-2023-APP02",
+          cat: "awards",
+          kind: "Certificate of Merit",
+          title: "App Development (Runner-up) - Elan & nVision 2023",
+          issuer: "IIT Hyderabad (Elan & nVision 2023)",
+          line: "awarded Runner-up in App Development at the annual cultural-cum-technical fest of IIT Hyderabad",
+          date: "2023-02-19",
+          grade: "Runner-up (2nd Place)",
+          verified: true,
+          skills: ["App Development", "Mobile Architecture", "Rapid Prototyping", "Technical Pitching"],
+          desc: "Awarded at IIT Hyderabad's premier fest Elan & nVision 2023 in association with Greenko & Uni.",
+          image: "assets/img/certifications/techy.jpg"
+        },
+        {
+          id: "2025H2S06AID-F01484",
+          cat: "awards",
+          kind: "Certificate of Appreciation",
+          title: "Google Cloud Agentic AI Day - Finalist",
+          issuer: "Google Cloud & Hack2skill",
+          line: "recognized as a finalist in the 30-hour in-person Agentic AI Day challenge",
+          date: "2025-06-20",
+          grade: "Finalist (30-Hr In-Person)",
+          verified: true,
+          skills: ["Agentic AI", "Google Cloud", "Autonomous Agents", "Multi-Agent Systems", "Hackathon"],
+          desc: "Demonstrated incredible skill and passion by completing the 30-hour in-person Agentic AI hackathon. ID: 2025H2S06AID-F01484.",
+          image: "assets/img/certifications/Hack2skill.png"
+        },
+        {
+          id: "ACCN-AIC-2023-BIT",
+          cat: "awards",
+          kind: "Certificate of Participation",
+          title: "Accenture Innovation Challenge 2023",
+          issuer: "Accenture & Unstop",
+          line: "participated in the national Accenture Innovation Challenge 2023 representing BIT Mesra",
+          date: "2023-10-15",
+          grade: "Participant",
+          verified: true,
+          skills: ["Innovation & Strategy", "Design Thinking", "Problem Solving", "Enterprise Solutions"],
+          desc: "Organized by Accenture to solve business and technology challenges.",
+          image: "assets/img/certifications/Acc.jpg"
+        },
+        {
+          id: "FLIPKART-GRID5-2023",
+          cat: "awards",
+          kind: "Certificate of Participation",
+          title: "Flipkart GRiD 5.0 - Software Development Track",
+          issuer: "Flipkart & Unstop",
+          line: "participated in Level 1.1: E-Commerce & Tech Quiz of Flipkart GRiD 5.0",
+          date: "2023-09-04",
+          grade: "Level 1.1 Completed",
+          verified: true,
+          skills: ["Algorithms", "Data Structures", "E-Commerce Architecture", "Software Engineering"],
+          desc: "Prestigious engineering competition organised by Flipkart for top engineering students.",
+          image: "assets/img/certifications/flipkart.jpg"
+        },
+        {
+          id: "TATA-CRUCIBLE-2024",
+          cat: "awards",
+          kind: "Certificate of Participation",
+          title: "TATA Crucible Campus Quiz 2024",
+          issuer: "Tata Group & Unstop",
+          line: "participated in the TATA Crucible Campus Quiz 2024 representing BIT Mesra",
+          date: "2024-04-12",
+          grade: "Campus Participant",
+          verified: true,
+          skills: ["Business Acumen", "Technology Trends", "General Knowledge", "Strategic Quizzing"],
+          desc: "India's premier campus business and technology quiz organised by the Tata Group.",
+          image: "assets/img/certifications/TATA.jpg"
+        },
+        {
+          id: "TATA-IMAG-2023-R1",
+          cat: "awards",
+          kind: "Certificate of Participation",
+          title: "Tata Imagination Challenge 2023",
+          issuer: "Tata Group & Unstop",
+          line: "participated in Round 1 | Tata Brand Assessment of Tata Imagination Challenge 2023",
+          date: "2023-10-08",
+          grade: "Round 1 Completed",
+          verified: true,
+          skills: ["Creative Ideation", "Brand Strategy", "Case Solving", "Critical Thinking"],
+          desc: "National ideation challenge by the Tata Group.",
+          image: "assets/img/certifications/Imagination.jpg"
+        },
+        {
+          id: "TVS-EPIC5-2023",
+          cat: "awards",
+          kind: "Certificate of Participation",
+          title: "TVS Credit E.P.I.C 5.0 — IT Challenge",
+          issuer: "TVS Credit & Unstop",
+          line: "participated in Round 1 - Online Quiz of the TVS Credit E.P.I.C 5.0 IT Challenge",
+          date: "2023-09-18",
+          grade: "Round 1 Completed",
+          verified: true,
+          skills: ["Information Technology", "Cloud & Security", "Analytical Reasoning"],
+          desc: "National technology competition organised by TVS Credit.",
+          image: "assets/img/certifications/TVS.jpg"
+        },
+        {
+          id: "UNSTOP-LATENT-2024",
+          cat: "awards",
+          kind: "Certificate of Participation",
+          title: "Unstop's Got Latent — Team Codogram",
+          issuer: "Unstop",
+          line: "participated in Unstop's Got Latent representing Team Codogram from BIT Mesra",
+          date: "2024-06-25",
+          grade: "Team Codogram Entry",
+          verified: true,
+          skills: ["Creative Presentation", "Coding Performance", "Team Collaboration"],
+          desc: "Creative technical showcase by Unstop.",
+          image: "assets/img/certifications/Latent.jpg"
+        },
+        {
+          id: "UNSTOP-UTP-2023-MCA",
+          cat: "awards",
+          kind: "Certificate of Participation",
+          title: "Unstop Talent Park — Team mca40059.22",
+          issuer: "Unstop & BIT Mesra",
+          line: "participated in Unstop Talent Park representing Team mca40059.22 from BIT Mesra",
+          date: "2023-11-20",
+          grade: "Team Participant",
+          verified: true,
+          skills: ["Software Aptitude", "Technical Assessment", "Collaborative Problem Solving"],
+          desc: "National talent evaluation initiative organised by Unstop.",
+          image: "assets/img/certifications/unstop.jpg"
+        },
+
+        // --- Government ---
+        {
+          id: "FJCCI-VOTE-2024-MK",
+          cat: "government",
+          kind: "Certificate of Appreciation",
+          title: "Loksabha Elections 2024 — Proud Voter",
+          issuer: "Federation of Jharkhand Chamber of Commerce & Industries (FJCCI)",
+          line: "recognized for casting valuable vote in the Loksabha Elections 2024",
+          date: "2024-05-25",
+          grade: "Proud Voter",
+          verified: true,
+          skills: ["Civic Duty", "Democratic Participation", "Voter Engagement"],
+          desc: "Official Certificate of Appreciation awarded by President, FJCCI Ranchi.",
+          image: "assets/img/certifications/vote.jpeg"
+        },
+        {
+          id: "GOI-MOC-HGD-2023",
+          cat: "government",
+          kind: "Certificate of Participation",
+          title: "Har Ghar Dhyan Session (Azadi Ka Amrit Mahotsav)",
+          issuer: "Ministry of Culture, Government of India & The Art of Living",
+          line: "active participation in Har Ghar Dhyan Session under Azadi Ka Amrit Mahotsav",
+          date: "2023-04-14",
+          grade: "Active Participant",
+          verified: true,
+          skills: ["Mindfulness & Well-being", "Community Participation", "National Initiative"],
+          desc: "National civic and wellness initiative under Ministry of Culture, Govt. of India.",
+          image: "assets/img/certifications/Har.jpg"
+        }
+      ];
+
+      var state = { cat: "all", q: "", sort: "new", ver: false };
+      var name = "Mohit Kumar";
+      var visible = [];
+      var current = -1;
+      var lastFocus = null;
+      var today = new Date();
+
+      function $(id) { return document.getElementById(id); }
+      function esc(s) {
+        return String(s).replace(/[&<>"']/g, function (m) {
+          return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[m];
+        });
+      }
+      function d(s) { return new Date(s + "T00:00:00"); }
+      function fmtShort(s) { return d(s).toLocaleDateString("en-IN", { month: "short", year: "numeric" }); }
+      function fmtLong(s) { return d(s).toLocaleDateString("en-IN", { day: "numeric", month: "short", year: "numeric" }); }
+
+      function status(c) {
+        if (!c.expires) return { k: "none", label: "No expiry" };
+        var days = Math.round((d(c.expires) - today) / 864e5);
+        if (days < 0) return { k: "expired", label: "Expired " + fmtShort(c.expires) };
+        if (days <= 90) return { k: "soon", label: "Expires in " + days + (days === 1 ? " day" : " days") };
+        return { k: "valid", label: "Valid until " + fmtShort(c.expires) };
+      }
+
+      var CHECK = '<svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12l5 5 11-11"/></svg>';
+
+      function seal(verified) {
+        var pts = [], n = 24, i, r, a;
+        for (i = 0; i < n * 2; i++) {
+          r = i % 2 ? 44 : 49; a = Math.PI * i / n;
+          pts.push((50 + r * Math.sin(a)).toFixed(1) + "," + (50 - r * Math.cos(a)).toFixed(1));
+        }
+        var mark = verified
+          ? '<path d="M35 51l10 10 20-21" fill="none" stroke="var(--sheet-bg)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>'
+          : '<circle cx="50" cy="50" r="9" fill="var(--sheet-bg)"/>';
+        return '<svg class="seal" viewBox="0 0 100 100" aria-hidden="true"><polygon points="' + pts.join(" ") + '" fill="var(--c)"/><circle cx="50" cy="50" r="36" fill="none" stroke="var(--sheet-bg)" stroke-width="1.8"/>' + mark + "</svg>";
+      }
+
+      var SIGN = '<svg viewBox="0 0 80 24" aria-hidden="true"><path d="M2 17c6-13 10-13 9-2s4 6 9-2c3-5 5-4 4 1s5 4 10-3c2-3 4-2 3 2 3-3 8-4 12-3 4 1 8-1 14-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>';
+
+      function sheet(c, extra) {
+        return '<div class="sheet ' + (extra || "") + '" style="--c:var(--p-' + c.cat + ')" aria-hidden="true"><div class="sheet-in">' +
+          '<div class="s-top"><p class="s-issuer">' + esc(c.issuer) + '</p><p class="s-kind">' + esc(c.kind) + "</p></div>" +
+          '<div class="s-mid"><p class="s-cert">This is to certify that</p><p class="s-name">' + esc(name || "Your Name") + '</p><p class="s-line">' + esc(c.line) + '</p><p class="s-title">' + esc(c.title) + "</p></div>" +
+          '<div class="s-foot"><div class="s-cell"><span>' + fmtLong(c.date) + "</span><i>Date of issue</i></div>" +
+          '<div class="s-seal">' + seal(c.verified) + '<span class="s-id">' + esc(c.id) + "</span></div>" +
+          '<div class="s-cell">' + SIGN + "<i>Authorised signatory</i></div></div>" +
+          "</div></div>";
+      }
+
+      function match(c) {
+        if (state.ver && !c.verified) return false;
+        if (state.q) {
+          var hay = (c.title + " " + c.issuer + " " + c.id + " " + c.kind + " " + c.skills.join(" ")).toLowerCase();
+          if (hay.indexOf(state.q.toLowerCase()) === -1) return false;
+        }
+        return true;
+      }
+      function cmp(a, b) {
+        if (state.sort === "az") return a.title.localeCompare(b.title);
+        var x = d(a.date) - d(b.date);
+        return state.sort === "old" ? x : -x;
+      }
+
+      function renderStats() {
+        var total = DATA.length;
+        var ver = DATA.filter(function (c) { return c.verified; }).length;
+        var soon = 0, exp = 0;
+        DATA.forEach(function (c) { var s = status(c); if (s.k === "soon") soon++; if (s.k === "expired") exp++; });
+        var html = "";
+        function item(label, val, icon, cls) {
+          html += '<div class="stat-card ' + (cls || "") + '">' +
+            '<div class="stat-icon"><i class="bi ' + (icon || "bi-award") + '"></i></div>' +
+            '<div class="stat-info">' +
+            '<dd class="stat-num">' + val + '</dd>' +
+            '<dt class="stat-label">' + label + '</dt>' +
+            '</div>' +
+            '</div>';
+        }
+        item("Total Certificates", total, "bi-layers-fill");
+        item("Issuer Verified", ver, "bi-patch-check-fill");
+        item("Disciplines", CATS.length, "bi-grid-1x2-fill");
+        if (soon) item("Expiring Soon", soon, "bi-hourglass-split", "warn");
+        if (exp) item("Renew Needed", exp, "bi-exclamation-triangle-fill", "bad");
+        else if (!soon) item("Permanent / Active", total, "bi-shield-check", "good");
+        $("stats").innerHTML = html;
+      }
+
+      function renderChips() {
+        var all = DATA.filter(function (c) { return match(c); });
+        var html = '<button type="button" class="chip" data-cat="all" aria-pressed="' + (state.cat === "all") + '">All <span class="n">' + all.length + "</span></button>";
+        CATS.forEach(function (cat) {
+          var n = all.filter(function (c) { return c.cat === cat.id; }).length;
+          html += '<button type="button" class="chip" data-cat="' + cat.id + '" style="--dot:var(--c-' + cat.id + ')" aria-pressed="' + (state.cat === cat.id) + '"><span class="dot"></span>' + esc(cat.label) + ' <span class="n">' + n + "</span></button>";
+        });
+        $("chips").innerHTML = html;
+      }
+
+      function pills(c) {
+        var s = status(c), h = "";
+        h += c.verified ? '<span class="pill good">' + CHECK + "Verified</span>" : '<span class="pill">Self-reported</span>';
+        if (s.k === "expired") h += '<span class="pill bad">Expired</span>';
+        if (s.k === "soon") h += '<span class="pill warn">' + esc(s.label) + "</span>";
+        return h;
+      }
+
+      function renderShelves() {
+        visible = [];
+        var html = "";
+        CATS.forEach(function (cat) {
+          var list = DATA.filter(function (c) { return c.cat === cat.id && match(c); }).sort(cmp);
+          if (!list.length) return;
+          html += '<section class="shelf" id="shelf-' + cat.id + '" aria-labelledby="h-' + cat.id + '"><div class="shelf-head" style="--dot:var(--c-' + cat.id + ')"><h2 id="h-' + cat.id + '"><span class="dot"></span>' + esc(cat.label) + "</h2><p>" + esc(cat.blurb) + '</p><span class="k">' + list.length + (list.length === 1 ? " certificate" : " certificates") + '</span></div><div class="grid">';
+          list.forEach(function (c) {
+            var idx = visible.length; visible.push(c);
+            var thumbContent = c.image
+              ? '<img src="' + esc(c.image) + '" alt="' + esc(c.title) + '" class="thumb-img" loading="lazy">'
+              : sheet(c);
+            html += '<button type="button" class="card" data-i="' + idx + '">' +
+              '<div class="card-top-meta">' +
+              '<span class="card-cat-badge" style="--dot:var(--c-' + c.cat + ')"><span class="dot"></span>' + esc(CAT[c.cat].label) + '</span>' +
+              (c.verified ? '<span class="card-verify-badge" title="Issuer Verified"><i class="bi bi-patch-check-fill"></i> Verified</span>' : '') +
+              '</div>' +
+              '<div class="thumb">' +
+              thumbContent +
+              '<div class="thumb-hover-overlay"><span class="thumb-view-pill"><i class="bi bi-arrows-fullscreen"></i> View Credential</span></div>' +
+              '</div>' +
+              '<div class="meta">' +
+              '<h3>' + esc(c.title) + '</h3>' +
+              '<p class="iss"><i class="bi bi-building me-1"></i> ' + esc(c.issuer) + '</p>' +
+              '<div class="pills">' +
+              '<span class="date"><i class="bi bi-calendar3 me-1"></i> ' + fmtShort(c.date) + '</span>' +
+              pills(c) +
+              '</div>' +
+              '</div>' +
+              '</button>';
+          });
+          html += "</div></section>";
+        });
+        if (!visible.length) {
+          html = '<div class="empty"><h2>No certificates match</h2><p>Try a different word, pick another category, or turn off the verified filter.</p><button type="button" class="btn" id="clear">Clear filters</button></div>';
+        }
+        $("shelves").innerHTML = html;
+        $("count").textContent = "Showing " + visible.length + " of " + DATA.length;
+      }
+
+      function renderAll() { renderChips(); renderShelves(); }
+
+      /* detail view */
+      function factRow(k, v) { return "<dt>" + k + "</dt><dd>" + v + "</dd>"; }
+
+      function renderModal() {
+        var c = visible[current];
+        var s = status(c);
+        var stCls = s.k === "expired" ? "bad" : s.k === "soon" ? "warn" : s.k === "valid" ? "good" : "";
+        var facts = factRow("Issued", fmtLong(c.date)) +
+          factRow("Validity", '<span class="pill ' + stCls + '">' + esc(s.label) + "</span>") +
+          factRow("Result", esc(c.grade)) +
+          factRow("Credential ID", '<span class="idcode" id="idcode">' + esc(c.id) + '</span><button type="button" class="copy" id="copy">Copy</button>') +
+          factRow("Check", c.verified ? '<span class="pill good">' + CHECK + "Verified by issuer</span>" : '<span class="pill">Self-reported</span>');
+        var skills = c.skills.map(function (k) { return '<span class="skill">' + esc(k) + "</span>"; }).join("");
+        var previewHtml = c.image
+          ? '<div class="m-preview-wrap"><img src="' + esc(c.image) + '" alt="' + esc(c.title) + '" class="m-img" id="modal-img"><a href="' + esc(c.image) + '" target="_blank" rel="noopener noreferrer" class="m-expand-btn" title="Open full resolution in new tab"><i class="bi bi-arrows-fullscreen"></i> View Full Image</a></div>'
+          : sheet(c, "m-sheet");
+        $("panel").innerHTML =
+          '<button type="button" class="close" id="close" aria-label="Close"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button>' +
+          previewHtml +
+          '<div class="m-side" style="--dot:var(--c-' + c.cat + ')"><p class="m-cat"><span class="dot"></span>' + esc(CAT[c.cat].label) + '</p><h2 id="m-title">' + esc(c.title) + '</h2><p class="m-issuer">' + esc(c.issuer) + "</p>" +
+          (c.desc ? '<p class="m-desc">' + esc(c.desc) + "</p>" : "") +
+          '<dl class="facts">' + facts + "</dl>" +
+          '<div class="skills" aria-label="Skills">' + skills + "</div>" +
+          '<div class="m-nav"><span class="pos"><i class="bi bi-award me-1"></i> ' + (current + 1) + " of " + visible.length + "</span>" +
+          '<span class="hint-keys d-none d-sm-inline">(Press ← / → keys to navigate)</span></div></div>';
+
+        // Update side navigation buttons state
+        var pBtn = $("prev");
+        var nBtn = $("next");
+        if (pBtn) pBtn.disabled = (current <= 0);
+        if (nBtn) nBtn.disabled = (current >= visible.length - 1);
+      }
+
+      function openModal(i, trigger) {
+        current = i;
+        if (trigger) lastFocus = trigger;
+        var pEl = $("panel");
+        if (pEl) pEl.classList.remove("panel-anim-next", "panel-anim-prev");
+        renderModal();
+        $("overlay").hidden = false;
+        $("overlay").classList.add("active");
+        document.body.style.overflow = "hidden";
+        document.body.classList.add("modal-open");
+        var st = $("scroll-top");
+        if (st) { st.classList.remove("active"); st.style.display = "none"; }
+        $("close").focus();
+      }
+      function closeModal() {
+        $("overlay").hidden = true;
+        $("overlay").classList.remove("active");
+        document.body.style.overflow = "";
+        document.body.classList.remove("modal-open");
+        var st = $("scroll-top");
+        if (st) { st.style.display = ""; }
+        current = -1;
+        if (lastFocus && document.body.contains(lastFocus)) lastFocus.focus();
+      }
+      function step(n) {
+        var j = current + n;
+        if (j < 0 || j >= visible.length) return;
+        current = j;
+        var pEl = $("panel");
+        if (pEl) {
+          pEl.classList.remove("panel-anim-next", "panel-anim-prev");
+          void pEl.offsetWidth; // Force CSS reflow
+          pEl.classList.add(n > 0 ? "panel-anim-next" : "panel-anim-prev");
+        }
+        renderModal();
+        var b = $(n > 0 ? "next" : "prev");
+        (b && !b.disabled ? b : $("close")).focus();
+      }
+
+      function copyId(btn) {
+        var text = visible[current].id;
+        function done(msg) { btn.textContent = msg; setTimeout(function () { if (btn.isConnected) btn.textContent = "Copy"; }, 1800); }
+        function fallback() {
+          var el = $("idcode");
+          if (el) { var r = document.createRange(); r.selectNodeContents(el); var sel = window.getSelection(); sel.removeAllRanges(); sel.addRange(r); }
+          done("Selected");
+        }
+        try {
+          navigator.clipboard.writeText(text).then(function () { done("Copied"); }, fallback);
+        } catch (e) { fallback(); }
+      }
+
+      /* events */
+      var clearSearchBtn = $("clearSearch");
+      if (clearSearchBtn) {
+        clearSearchBtn.addEventListener("click", function () {
+          state.q = "";
+          $("q").value = "";
+          clearSearchBtn.style.display = "none";
+          renderAll();
+          $("q").focus();
+        });
+      }
+      $("q").addEventListener("input", function (e) {
+        state.q = e.target.value.trim();
+        if (clearSearchBtn) clearSearchBtn.style.display = state.q ? "block" : "none";
+        renderAll();
+      });
+      var isScrollingFromClick = false;
+      var scrollspyTimer = null;
+
+      function scrollToCategory(catId) {
+        var targetId = catId === "all" ? "shelves" : "shelf-" + catId;
+        var target = $(targetId);
+
+        // If target shelf is not currently visible (e.g. filtered out by search query), clear search so it appears
+        if (!target && catId !== "all") {
+          state.q = "";
+          $("q").value = "";
+          renderAll();
+          target = $(targetId);
+        }
+
+        if (!target) return;
+
+        isScrollingFromClick = true;
+
+        var bar = $("bar");
+        var barHeight = bar ? bar.getBoundingClientRect().height : 100;
+        var targetRect = target.getBoundingClientRect();
+        var targetY = window.pageYOffset + targetRect.top - barHeight - 16;
+
+        window.scrollTo({
+          top: Math.max(0, targetY),
+          behavior: "smooth"
+        });
+
+        setTimeout(function () {
+          isScrollingFromClick = false;
+        }, 850);
+      }
+
+      function updateActiveChipOnScroll() {
+        if (isScrollingFromClick) return;
+        var bar = $("bar");
+        var barHeight = bar ? bar.getBoundingClientRect().height : 100;
+        var scrollThreshold = barHeight + 40;
+
+        var shelves = document.querySelectorAll('#shelves .shelf');
+        var currentCat = "all";
+
+        var shelvesEl = $("shelves");
+        if (shelvesEl) {
+          var shelvesTop = shelvesEl.getBoundingClientRect().top;
+          if (shelvesTop > scrollThreshold) {
+            currentCat = "all";
+          } else {
+            shelves.forEach(function (shelf) {
+              var rect = shelf.getBoundingClientRect();
+              if (rect.top <= scrollThreshold && rect.bottom > scrollThreshold) {
+                currentCat = shelf.id.replace("shelf-", "");
+              }
+            });
+          }
+        }
+
+        if (state.cat !== currentCat) {
+          state.cat = currentCat;
+          document.querySelectorAll('#chips [data-cat]').forEach(function (chip) {
+            chip.setAttribute("aria-pressed", chip.getAttribute("data-cat") === currentCat ? "true" : "false");
+          });
+          var on = document.querySelector('#chips [data-cat="' + currentCat + '"]');
+          if (on && on.scrollIntoView) {
+            on.scrollIntoView({ block: "nearest", inline: "nearest" });
+          }
+        }
+      }
+
+      window.addEventListener("scroll", function () {
+        if (scrollspyTimer) cancelAnimationFrame(scrollspyTimer);
+        scrollspyTimer = requestAnimationFrame(updateActiveChipOnScroll);
+      }, { passive: true });
+
+      $("chips").addEventListener("click", function (e) {
+        var b = e.target.closest("[data-cat]");
+        if (!b) return;
+        var catId = b.getAttribute("data-cat");
+        state.cat = catId;
+
+        // Update active chip state immediately
+        document.querySelectorAll('#chips [data-cat]').forEach(function (chip) {
+          chip.setAttribute("aria-pressed", chip.getAttribute("data-cat") === catId ? "true" : "false");
+        });
+
+        // Ensure active chip is visible in horizontal chip scroll
+        b.scrollIntoView({ block: "nearest", inline: "nearest" });
+
+        // Smoothly scroll to the target section
+        scrollToCategory(catId);
+      });
+      // Search listener handled above
+      $("sort").addEventListener("change", function (e) { state.sort = e.target.value; renderShelves(); });
+      $("ver").addEventListener("click", function () {
+        state.ver = !state.ver;
+        this.setAttribute("aria-pressed", String(state.ver));
+        renderAll();
+      });
+      $("shelves").addEventListener("click", function (e) {
+        var card = e.target.closest(".card");
+        if (card) { openModal(parseInt(card.getAttribute("data-i"), 10), card); return; }
+        if (e.target.id === "clear") {
+          state.cat = "all"; state.q = ""; state.ver = false;
+          $("q").value = ""; $("ver").setAttribute("aria-pressed", "false");
+          renderAll();
+          scrollToCategory("all");
+        }
+      });
+      $("overlay").addEventListener("click", function (e) {
+        if (e.target === this || e.target.id === "panelContainer") { closeModal(); return; }
+        var t = e.target.closest("button");
+        if (!t) return;
+        if (t.id === "close") closeModal();
+        else if (t.id === "prev") step(-1);
+        else if (t.id === "next") step(1);
+        else if (t.id === "copy") copyId(t);
+      });
+      document.addEventListener("keydown", function (e) {
+        if ($("overlay").hidden) return;
+        if (e.key === "Escape") { closeModal(); return; }
+        if (e.key === "ArrowLeft") { step(-1); return; }
+        if (e.key === "ArrowRight") { step(1); return; }
+        if (e.key === "Tab") {
+          var container = $("panelContainer") || $("panel");
+          var f = container.querySelectorAll("button:not([disabled])");
+          if (!f.length) return;
+          var first = f[0], last = f[f.length - 1];
+          if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+          else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+        }
+      });
+
+      renderStats();
+      renderAll();
+
+      // Support direct hash navigation on page load
+      if (window.location.hash) {
+        var hashCat = window.location.hash.replace("#shelf-", "").replace("#h-", "").replace("#", "");
+        var matchingCat = CATS.some(function (c) { return c.id === hashCat; });
+        if (matchingCat) {
+          setTimeout(function () {
+            state.cat = hashCat;
+            document.querySelectorAll('#chips [data-cat]').forEach(function (chip) {
+              chip.setAttribute("aria-pressed", chip.getAttribute("data-cat") === hashCat ? "true" : "false");
+            });
+            scrollToCategory(hashCat);
+          }, 200);
+        }
+      }
+    })();
+  </script>
+
+</body>
+
+</html>

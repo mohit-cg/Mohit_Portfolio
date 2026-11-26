@@ -1,0 +1,1978 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>All Projects &amp; Case Studies — Mohit Kumar</title>
+  <meta name="description"
+    content="Comprehensive showcase of software engineering, UI/UX design systems, production mobile apps, and full-stack projects by Mohit Kumar.">
+  <meta name="keywords"
+    content="Mohit Kumar, Codogram, Portfolio, UI/UX Design, Web Development, Flutter, Android, React, Full-Stack">
+
+  <!-- Favicons -->
+  <link href="assets/img/cg.png" rel="icon">
+  <link href="assets/img/cg.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500&family=Nunito:ital,wght@0,300;0,400;0,600;0,700;0,800;0,900;1,300;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <style>
+    /* ==========================================================================
+       Project Showcase Dark-Gold Design Palette (Aligned with index.html)
+       ========================================================================== */
+    :root {
+      color-scheme: dark;
+      --bg: #1f1f1f;
+      --surface: #232323;
+      --surface-hover: #292929;
+      --surface-card: #202020;
+      --surface-glass: rgba(35, 35, 35, 0.85);
+      --ink: #ffffff;
+      --ink-subtle: #e0e0e0;
+      --mute: rgba(255, 255, 255, 0.65);
+      --line: rgba(255, 255, 255, 0.1);
+      --line-gold: rgba(155, 128, 90, 0.35);
+
+      /* Accent Brand Gold */
+      --accent: #9b805a;
+      --accent-hover: #b8986c;
+      --accent-fg: #ffffff;
+      --accent-subtle: rgba(155, 128, 90, 0.18);
+      --accent-border: rgba(155, 128, 90, 0.4);
+      --accent-glow: rgba(155, 128, 90, 0.25);
+
+      /* Category Specific Accent Colors */
+      --ux: #c4a97d;
+      --ux-bg: rgba(196, 169, 125, 0.15);
+      --app: #38bdf8;
+      --app-bg: rgba(56, 189, 248, 0.15);
+      --web: #4ade80;
+      --web-bg: rgba(74, 222, 128, 0.15);
+      --brand: #f472b6;
+      --brand-bg: rgba(244, 114, 182, 0.15);
+
+      --focus: #9b805a;
+      --font-body: "Roboto", system-ui, -apple-system, sans-serif;
+      --font-head: "Ubuntu", "Nunito", sans-serif;
+      --font-mono: "JetBrains Mono", monospace;
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 80px;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--ink);
+      font-family: var(--font-body);
+      font-size: 15px;
+      line-height: 1.6;
+      margin: 0;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: var(--font-head);
+      color: var(--ink);
+      font-weight: 700;
+      line-height: 1.25;
+      margin: 0;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      transition: color 0.2s ease, border-color 0.2s ease;
+    }
+
+    :focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 3px;
+    }
+
+    /* Page container */
+    .wrap {
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 0 24px 70px 24px;
+    }
+
+    /* Breadcrumbs Bar */
+    .page-title {
+      background: transparent;
+      border-bottom: none;
+      padding: 24px 0 0 0;
+      margin-bottom: 24px;
+    }
+
+    .page-title .container {
+      border: 0;
+      padding-bottom: 0;
+    }
+
+    .page-title h1 {
+      font-size: 26px;
+      letter-spacing: -0.01em;
+      color: #ffffff;
+    }
+
+    /* Sidebar Header Styling */
+    .header .header-container {
+      background: var(--surface);
+      border: 1px solid var(--line);
+    }
+
+    .page-title .breadcrumbs ol {
+      display: flex;
+      flex-wrap: wrap;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      font-size: 14px;
+      font-family: var(--font-body);
+    }
+
+    .page-title .breadcrumbs ol li+li {
+      padding-left: 10px;
+    }
+
+    .page-title .breadcrumbs ol li+li::before {
+      content: "/";
+      display: inline-block;
+      padding-right: 10px;
+      color: rgba(255, 255, 255, 0.4);
+    }
+
+    .page-title .breadcrumbs ol li a {
+      color: var(--mute);
+    }
+
+    .page-title .breadcrumbs ol li a:hover {
+      color: var(--accent);
+    }
+
+    .page-title .breadcrumbs ol li.current {
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    /* Hero Section */
+    .vault-hero {
+      padding: 20px 0 36px 0;
+    }
+
+    .eyebrow-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      font-family: var(--font-mono);
+      font-size: 12px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      background: var(--accent-subtle);
+      border: 1px solid var(--accent-border);
+      padding: 5px 14px;
+      border-radius: 99px;
+      font-weight: 600;
+      margin-bottom: 18px;
+    }
+
+    .vault-hero h1 {
+      font-size: clamp(32px, 5.2vw, 56px);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: #ffffff;
+      line-height: 1.15;
+      max-width: 22ch;
+      margin-bottom: 16px;
+    }
+
+    .vault-hero h1 span.gold-text {
+      color: var(--accent);
+      background: linear-gradient(135deg, #dfc299 0%, #9b805a 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .vault-hero p.hero-desc {
+      max-width: 68ch;
+      color: var(--ink-subtle);
+      font-size: 16px;
+      line-height: 1.65;
+      margin: 0 0 28px 0;
+    }
+
+    /* Hero Highlight Metric Pills */
+    .hero-metrics-bar {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 14px;
+      margin-top: 24px;
+    }
+
+    .metric-item {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 16px 20px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .metric-item:hover {
+      transform: translateY(-2px);
+      border-color: var(--accent-border);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4), 0 0 12px var(--accent-subtle);
+    }
+
+    .metric-icon-box {
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      background: var(--accent-subtle);
+      border: 1px solid var(--accent-border);
+      color: var(--accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      flex-shrink: 0;
+    }
+
+    .metric-info b {
+      display: block;
+      font-family: var(--font-head);
+      font-size: 22px;
+      color: #ffffff;
+      line-height: 1.1;
+    }
+
+    .metric-info span {
+      font-size: 12px;
+      color: var(--mute);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    /* Sticky Control Toolbar */
+    .controls-panel {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(31, 31, 31, 0.94);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      padding: 16px 0;
+      margin: 32px 0 40px 0;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .controls-inner {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .chips-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .chip-btn {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      color: var(--mute);
+      font-size: 13.5px;
+      font-weight: 500;
+      padding: 8px 16px;
+      border-radius: 99px;
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      white-space: nowrap;
+    }
+
+    .chip-btn i {
+      font-size: 14px;
+    }
+
+    .chip-btn span.chip-badge {
+      background: rgba(255, 255, 255, 0.08);
+      color: var(--ink);
+      font-size: 11px;
+      font-family: var(--font-mono);
+      padding: 1px 7px;
+      border-radius: 99px;
+      transition: all 0.2s ease;
+    }
+
+    .chip-btn:hover {
+      color: #ffffff;
+      border-color: rgba(255, 255, 255, 0.25);
+      background: var(--surface-hover);
+    }
+
+    .chip-btn.active {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #ffffff;
+      box-shadow: 0 4px 14px var(--accent-subtle);
+    }
+
+    .chip-btn.active span.chip-badge {
+      background: rgba(0, 0, 0, 0.3);
+      color: #ffffff;
+    }
+
+    /* Live Search Input Box */
+    .search-wrapper {
+      position: relative;
+      flex-grow: 1;
+      max-width: 340px;
+      min-width: 220px;
+    }
+
+    .search-wrapper input {
+      width: 100%;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 99px;
+      padding: 8px 36px 8px 36px;
+      font-size: 13.5px;
+      color: #ffffff;
+      outline: none;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .search-wrapper input:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px var(--accent-subtle);
+    }
+
+    .search-wrapper input::placeholder {
+      color: var(--mute);
+    }
+
+    .search-icon-left {
+      position: absolute;
+      left: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--mute);
+      pointer-events: none;
+      font-size: 14px;
+    }
+
+    .search-clear-btn {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: 0;
+      color: var(--mute);
+      cursor: pointer;
+      padding: 4px;
+      font-size: 14px;
+      display: none;
+    }
+
+    .search-clear-btn:hover {
+      color: #ffffff;
+    }
+
+    /* Category Section Header */
+    section.cat {
+      margin-bottom: 56px;
+      scroll-margin-top: 100px;
+    }
+
+    .cat-head {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 24px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .cat-head-title {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .cat-head-title .cat-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--c, var(--accent));
+      box-shadow: 0 0 10px var(--c, var(--accent));
+    }
+
+    .cat-head h2 {
+      font-size: clamp(24px, 3.2vw, 34px);
+      letter-spacing: -0.01em;
+      color: #ffffff;
+    }
+
+    .cat-head p {
+      margin: 0;
+      color: var(--mute);
+      font-size: 14px;
+      max-width: 55ch;
+    }
+
+    /* Project Cards (Matched to Dark-Gold Aesthetic) */
+    article.proj {
+      display: grid;
+      grid-template-columns: minmax(0, 4.8fr) minmax(0, 6.2fr);
+      gap: 32px;
+      padding: 28px;
+      margin-bottom: 30px;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+      position: relative;
+    }
+
+    article.proj:hover {
+      border-color: var(--line-gold);
+      box-shadow: 0 14px 40px rgba(0, 0, 0, 0.55), 0 0 20px var(--accent-subtle);
+    }
+
+    /* Alternate visual position on every other card */
+    article.proj:nth-child(even) .vis {
+      order: 2;
+    }
+
+    /* Left Visual Thumbnail & Interactive Zoom Container */
+    .vis {
+      border-radius: 14px;
+      background: #181818;
+      border: 1px solid var(--line);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 280px;
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+    }
+
+    .vis-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s cubic-bezier(0.2, 0.7, 0.3, 1);
+    }
+
+    .vis:hover .vis-img {
+      transform: scale(1.05);
+    }
+
+    .vis-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.1) 60%);
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+    }
+
+    .vis-top-badge {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      z-index: 2;
+      background: rgba(15, 15, 15, 0.85);
+      backdrop-filter: blur(8px);
+      border: 1px solid var(--line);
+      color: var(--c, var(--accent));
+      font-size: 12px;
+      font-weight: 600;
+      padding: 4px 12px;
+      border-radius: 99px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .vis-zoom-pill {
+      position: absolute;
+      bottom: 12px;
+      right: 12px;
+      z-index: 2;
+      background: rgba(20, 20, 20, 0.8);
+      backdrop-filter: blur(6px);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      color: rgba(255, 255, 255, 0.85);
+      font-size: 11.5px;
+      font-family: var(--font-body);
+      padding: 3px 10px;
+      border-radius: 99px;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      pointer-events: none;
+      transition: all 0.2s ease;
+    }
+
+    .vis:hover .vis-zoom-pill {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #ffffff;
+      box-shadow: 0 4px 12px var(--accent-subtle);
+    }
+
+    /* Right Project Content Details */
+    .proj-info {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .proj-meta-bar {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px 14px;
+      margin-bottom: 10px;
+      font-size: 13px;
+      color: var(--mute);
+    }
+
+    .meta-tag-year {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      color: var(--accent);
+      background: var(--accent-subtle);
+      border: 1px solid var(--accent-border);
+      padding: 2px 8px;
+      border-radius: 6px;
+      font-weight: 600;
+    }
+
+    .meta-divider {
+      color: rgba(255, 255, 255, 0.2);
+    }
+
+    .proj h3 {
+      font-size: 24px;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      margin-bottom: 10px;
+      color: #ffffff;
+      transition: color 0.2s ease;
+    }
+
+    article.proj:hover .proj h3 {
+      color: var(--accent);
+    }
+
+    .proj-desc {
+      color: var(--ink-subtle);
+      font-size: 14.5px;
+      line-height: 1.6;
+      margin: 0 0 16px 0;
+    }
+
+    /* KPI Highlight Counters */
+    .kpis {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin: 16px 0 20px 0;
+      padding: 14px 18px;
+      background: rgba(20, 20, 20, 0.6);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+    }
+
+    .kpis div {
+      flex: 1 1 90px;
+      min-width: 80px;
+    }
+
+    .kpis b {
+      display: block;
+      font-family: var(--font-mono);
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--c, var(--accent));
+      line-height: 1.1;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .kpis span {
+      font-size: 12px;
+      color: var(--mute);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    /* Stack Tags */
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin: 0 0 18px 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .tags li {
+      font-size: 12px;
+      font-family: var(--font-mono);
+      padding: 3px 10px;
+      border-radius: 99px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--line);
+      color: rgba(255, 255, 255, 0.75);
+      transition: all 0.2s ease;
+    }
+
+    .tags li:hover {
+      border-color: var(--accent-border);
+      color: var(--accent);
+      background: var(--accent-subtle);
+    }
+
+    /* Case Study Expandable Details (<details>) */
+    details.proj-details {
+      border-top: 1px solid var(--line);
+      padding-top: 14px;
+      margin-top: 4px;
+    }
+
+    details.proj-details summary {
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 13.5px;
+      color: var(--c, var(--accent));
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      user-select: none;
+      transition: color 0.2s ease;
+    }
+
+    details.proj-details summary::-webkit-details-marker {
+      display: none;
+    }
+
+    details.proj-details summary::before {
+      content: "\F282";
+      font-family: "bootstrap-icons";
+      font-size: 13px;
+      transition: transform 0.2s ease;
+    }
+
+    details.proj-details[open] summary::before {
+      transform: rotate(90deg);
+    }
+
+    details.proj-details dl {
+      margin: 16px 0 12px 0;
+      display: grid;
+      gap: 12px;
+      font-size: 13.5px;
+      background: rgba(0, 0, 0, 0.25);
+      border-radius: 10px;
+      padding: 14px 16px;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    details.proj-details dt {
+      font-weight: 600;
+      color: #ffffff;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 2px;
+    }
+
+    details.proj-details dd {
+      margin: 0;
+      color: var(--mute);
+      line-height: 1.55;
+    }
+
+    /* Action Links Bar */
+    .links-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .btn-action-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      font-size: 13px;
+      font-weight: 600;
+      padding: 7px 16px;
+      border-radius: 8px;
+      background: var(--accent);
+      color: #ffffff;
+      border: 1px solid var(--accent);
+      transition: all 0.2s ease;
+    }
+
+    .btn-action-primary:hover {
+      background: var(--accent-hover);
+      border-color: var(--accent-hover);
+      color: #ffffff;
+      box-shadow: 0 4px 14px var(--accent-subtle);
+    }
+
+    .btn-action-ghost {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      font-size: 13px;
+      font-weight: 500;
+      padding: 7px 14px;
+      border-radius: 8px;
+      background: transparent;
+      color: var(--ink-subtle);
+      border: 1px solid var(--line);
+      transition: all 0.2s ease;
+    }
+
+    .btn-action-ghost:hover {
+      border-color: var(--accent-border);
+      color: var(--accent);
+      background: var(--accent-subtle);
+    }
+
+    /* Empty state */
+    .no-results-box {
+      text-align: center;
+      padding: 60px 20px;
+      background: var(--surface);
+      border: 1px dashed var(--line);
+      border-radius: 16px;
+      margin: 30px 0;
+      display: none;
+    }
+
+    .no-results-box i {
+      font-size: 40px;
+      color: var(--mute);
+      margin-bottom: 12px;
+      display: block;
+    }
+
+    .no-results-box h3 {
+      font-size: 20px;
+      margin-bottom: 8px;
+    }
+
+    .no-results-box p {
+      color: var(--mute);
+      max-width: 44ch;
+      margin: 0 auto 16px auto;
+    }
+
+    .btn-reset-filters {
+      background: var(--accent);
+      color: #ffffff;
+      border: 0;
+      padding: 8px 18px;
+      border-radius: 8px;
+      font-size: 13.5px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    /* Call to Action Banner */
+    .project-cta-banner {
+      background: linear-gradient(135deg, #1b1b1b 0%, #232323 100%);
+      border: 1px solid var(--line-gold);
+      border-radius: 20px;
+      padding: 44px 36px;
+      margin-top: 60px;
+      box-shadow: 0 20px 48px rgba(0, 0, 0, 0.45);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .project-cta-banner::before {
+      content: "";
+      position: absolute;
+      top: -50%;
+      right: -10%;
+      width: 380px;
+      height: 380px;
+      background: radial-gradient(circle, var(--accent-glow) 0%, transparent 70%);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .cta-inner {
+      position: relative;
+      z-index: 2;
+      max-width: 720px;
+    }
+
+    .cta-inner h2 {
+      font-size: clamp(26px, 3.6vw, 36px);
+      letter-spacing: -0.01em;
+      margin-bottom: 14px;
+      color: #ffffff;
+    }
+
+    .cta-inner p {
+      font-size: 15.5px;
+      color: var(--ink-subtle);
+      line-height: 1.6;
+      margin-bottom: 24px;
+    }
+
+    .cta-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .btn-cta-gold {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--accent);
+      color: #ffffff;
+      font-size: 14px;
+      font-weight: 600;
+      padding: 10px 22px;
+      border-radius: 8px;
+      transition: all 0.2s ease;
+      border: 1px solid var(--accent);
+    }
+
+    .btn-cta-gold:hover {
+      background: var(--accent-hover);
+      border-color: var(--accent-hover);
+      color: #ffffff;
+      box-shadow: 0 6px 18px var(--accent-subtle);
+    }
+
+    .btn-cta-outline {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: transparent;
+      color: #ffffff;
+      font-size: 14px;
+      font-weight: 500;
+      padding: 10px 20px;
+      border-radius: 8px;
+      border: 1px solid var(--line);
+      transition: all 0.2s ease;
+    }
+
+    .btn-cta-outline:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+      background: var(--accent-subtle);
+    }
+
+    /* Lightbox Modal */
+    .img-lightbox-modal {
+      position: fixed;
+      inset: 0;
+      z-index: 1050;
+      background: rgba(0, 0, 0, 0.88);
+      backdrop-filter: blur(12px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.25s ease;
+    }
+
+    .img-lightbox-modal.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .img-lightbox-content {
+      position: relative;
+      max-width: 960px;
+      width: 100%;
+      background: var(--surface);
+      border: 1px solid var(--line-gold);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8);
+      animation: modalZoomIn 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    @keyframes modalZoomIn {
+      from {
+        opacity: 0;
+        transform: scale(0.92);
+      }
+
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    .img-lightbox-content img {
+      width: 100%;
+      max-height: 75vh;
+      object-fit: contain;
+      display: block;
+      background: #000000;
+    }
+
+    .img-lightbox-caption {
+      padding: 16px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      background: var(--surface);
+      border-top: 1px solid var(--line);
+    }
+
+    .img-lightbox-caption h4 {
+      font-size: 16px;
+      color: #ffffff;
+      margin: 0;
+    }
+
+    .img-lightbox-caption span {
+      font-size: 13px;
+      color: var(--mute);
+    }
+
+    .img-lightbox-close {
+      position: absolute;
+      top: 14px;
+      right: 14px;
+      z-index: 10;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: rgba(0, 0, 0, 0.7);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: #ffffff;
+      font-size: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: background 0.2s ease, transform 0.2s ease;
+    }
+
+    .img-lightbox-close:hover {
+      background: var(--accent);
+      border-color: var(--accent);
+      transform: scale(1.08);
+    }
+
+    /* Responsive Queries */
+    @media (max-width: 900px) {
+      article.proj {
+        grid-template-columns: 1fr;
+        padding: 20px;
+        gap: 20px;
+      }
+
+      article.proj:nth-child(even) .vis {
+        order: 0;
+      }
+
+      .vis {
+        min-height: 220px;
+      }
+
+      .controls-inner {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .search-wrapper {
+        max-width: 100%;
+      }
+
+      .project-cta-banner {
+        padding: 30px 24px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+      }
+
+      html {
+        scroll-behavior: auto;
+      }
+    }
+  </style>
+</head>
+
+<body class="project-page">
+
+  <!-- Header / Navbar (Matched to index.html & certificate.html) -->
+  <header id="header" class="header d-flex flex-column justify-content-center">
+    <i class="header-toggle d-xl-none bi bi-list"></i>
+
+    <div class="header-container d-flex flex-column align-items-start">
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html#hero"><i class="bi bi-house navicon"></i>Home</a></li>
+          <li><a href="index.html#about"><i class="bi bi-person navicon"></i> About</a></li>
+          <li><a href="index.html#resume"><i class="bi bi-file-earmark-text navicon"></i> Resume</a></li>
+          <li><a href="certificate.html"><i class="bi bi-award navicon"></i> Certification</a></li>
+          <li><a href="works.html"><i class="bi bi-palette navicon"></i> Visual Works</a></li>
+          <li><a href="index.html#portfolio" class="active"><i class="bi bi-images navicon"></i> Portfolio</a></li>
+          <li><a href="index.html#social"><i class="bi bi-share navicon"></i> Social Links</a></li>
+          <li><a href="index.html#services"><i class="bi bi-hdd-stack navicon"></i> Services</a></li>
+          <li><a href="index.html#contact"><i class="bi bi-envelope navicon"></i> Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="social-links text-center">
+        <a href="https://www.linkedin.com/in/mohit-cg/" target="_blank" rel="noopener" class="linkedin"
+          title="LinkedIn"><i class="bi bi-linkedin"></i></a>
+        <a href="https://github.com/mohit-cg" target="_blank" rel="noopener" class="github" title="GitHub"><i
+            class="bi bi-github"></i></a>
+        <a href="https://www.figma.com/@mohit_cg" target="_blank" rel="noopener" class="figma" title="Figma">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma" width="20"
+            height="20">
+        </a>
+        <a href="https://www.instagram.com/team_codogram" target="_blank" rel="noopener" class="instagram"
+          title="Instagram"><i class="bi bi-instagram"></i></a>
+        <a href="https://www.youtube.com/@team_codogram" target="_blank" rel="noopener" class="youtube"
+          title="YouTube"><i class="bi bi-youtube"></i></a>
+      </div>
+    </div>
+  </header>
+
+  <main class="main" id="main">
+
+    <!-- Page Title / Breadcrumbs -->
+    <div class="page-title">
+      <div class="container d-lg-flex justify-content-between align-items-center">
+        <h1 class="mb-2 mb-lg-0">Projects Vault &amp; Case Studies</h1>
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#portfolio">Portfolio</a></li>
+            <li class="current">All Projects</li>
+          </ol>
+        </nav>
+      </div>
+    </div><!-- End Page Title -->
+
+    <div class="wrap">
+
+      <!-- Hero Header Section -->
+      <section class="vault-hero">
+        <div class="eyebrow-pill">
+          <i class="bi bi-code-square"></i> Verified Engineering &amp; Design Portfolio
+        </div>
+        <h1>
+          Engineering Intuitive Interfaces &amp; <span class="gold-text">Resilient Systems</span>
+        </h1>
+        <p class="hero-desc">
+          A comprehensive archive of production-tested projects across UI/UX design systems, cross-platform mobile
+          engineering, high-performance web platforms, and corporate branding. Each case highlights the problem,
+          architecture, methodology, and measurable impact delivered by <strong>Mohit Kumar</strong>.
+        </p>
+
+        <!-- Metric Highlights Bar -->
+        <div class="hero-metrics-bar">
+          <div class="metric-item">
+            <div class="metric-icon-box">
+              <i class="bi bi-layers-fill"></i>
+            </div>
+            <div class="metric-info">
+              <b id="statTotalProjects">14</b>
+              <span>Featured Works</span>
+            </div>
+          </div>
+
+          <div class="metric-item">
+            <div class="metric-icon-box">
+              <i class="bi bi-bezier2"></i>
+            </div>
+            <div class="metric-info">
+              <b>7</b>
+              <span>Design Systems</span>
+            </div>
+          </div>
+
+          <div class="metric-item">
+            <div class="metric-icon-box">
+              <i class="bi bi-phone-fill"></i>
+            </div>
+            <div class="metric-info">
+              <b>2</b>
+              <span>Mobile Clients</span>
+            </div>
+          </div>
+
+          <div class="metric-item">
+            <div class="metric-icon-box">
+              <i class="bi bi-speedometer2"></i>
+            </div>
+            <div class="metric-info">
+              <b>98+</b>
+              <span>Lighthouse Score</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sticky Controls Toolbar: Filter Chips & Live Search -->
+      <div class="controls-panel" id="controlsPanel">
+        <div class="controls-inner">
+          <div class="chips-group" id="chipsGroup" role="group" aria-label="Filter projects by category">
+            <button type="button" class="chip-btn active" data-filter="all">
+              <i class="bi bi-grid-fill"></i> All Projects <span class="chip-badge" id="badgeAll">14</span>
+            </button>
+            <button type="button" class="chip-btn" data-filter="uiux">
+              <i class="bi bi-bezier2"></i> UI/UX Design <span class="chip-badge" id="badgeUiux">7</span>
+            </button>
+            <button type="button" class="chip-btn" data-filter="web">
+              <i class="bi bi-code-slash"></i> Web Development <span class="chip-badge" id="badgeWeb">3</span>
+            </button>
+            <button type="button" class="chip-btn" data-filter="app">
+              <i class="bi bi-phone-fill"></i> App Development <span class="chip-badge" id="badgeApp">2</span>
+            </button>
+            <button type="button" class="chip-btn" data-filter="brand">
+              <i class="bi bi-palette-fill"></i> Branding <span class="chip-badge" id="badgeBrand">2</span>
+            </button>
+          </div>
+
+          <div class="search-wrapper">
+            <i class="bi bi-search search-icon-left"></i>
+            <label for="projectSearch" class="visually-hidden">Search projects</label>
+            <input type="search" id="projectSearch" placeholder="Search title, stack or role..." autocomplete="off">
+            <button type="button" id="clearSearch" class="search-clear-btn" aria-label="Clear search">
+              <i class="bi bi-x-circle-fill"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Main Projects Feed Container -->
+      <div id="projectsFeed"></div>
+
+      <!-- Empty State Container when search returns 0 results -->
+      <div id="noResultsBox" class="no-results-box">
+        <i class="bi bi-search"></i>
+        <h3>No matching projects found</h3>
+        <p>No project matched your current search filters. Try clearing your search term or selecting "All Projects".
+        </p>
+        <button type="button" id="btnResetFilters" class="btn-reset-filters">Reset All Filters</button>
+      </div>
+
+      <!-- Call to Action Banner -->
+      <section class="project-cta-banner">
+        <div class="cta-inner">
+          <span class="eyebrow-pill"><i class="bi bi-chat-quote-fill"></i> Let's Collaborate</span>
+          <h2>Have an upcoming project or engineering opportunity?</h2>
+          <p>
+            Whether you need a bespoke design system, a scalable full-stack web application, or a responsive Flutter
+            mobile solution, I bring clean architecture and user-focused execution to every build.
+          </p>
+          <div class="cta-actions">
+            <a href="mailto:mohitkumar7232901@gmail.com" class="btn-cta-gold">
+              <i class="bi bi-envelope-fill"></i> Write to Mohit
+            </a>
+            <a href="index.html#contact" class="btn-cta-outline">
+              <i class="bi bi-chat-dots-fill"></i> Send Message
+            </a>
+            <a href="index.html#portfolio" class="btn-cta-outline">
+              <i class="bi bi-arrow-left"></i> Main Portfolio
+            </a>
+          </div>
+        </div>
+      </section>
+
+    </div><!-- End .wrap -->
+
+  </main>
+
+  <!-- Image Lightbox Modal for Full View -->
+  <div id="imgLightbox" class="img-lightbox-modal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="img-lightbox-content">
+      <button type="button" id="imgLightboxClose" class="img-lightbox-close" aria-label="Close image preview">
+        <i class="bi bi-x-lg"></i>
+      </button>
+      <img id="imgLightboxTarget" src="" alt="Project Showcase Screenshot">
+      <div class="img-lightbox-caption">
+        <h4 id="imgLightboxTitle">Project Title</h4>
+        <span id="imgLightboxSubtitle">Category &bull; Mohit Kumar</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer id="footer" class="footer position-relative">
+    <div class="container">
+      <div class="copyright text-center">
+        <p>© <span>Copyright</span> <strong class="px-1 sitename">Mohit Kumar</strong> <span>All Rights Reserved</span>
+        </p>
+      </div>
+      <div class="credits">
+        Designed &amp; Developed by <a href="https://www.instagram.com/team_codogram" target="_blank"
+          rel="noopener">Codogram</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"
+    aria-label="Scroll to top">
+    <i class="bi bi-arrow-up-short"></i>
+  </a>
+
+  <!-- Project Showcase Application Script -->
+  <script>
+    (function () {
+      "use strict";
+
+      /**
+       * Mohit Kumar Verified Projects Data Repository
+       */
+      const D = [
+        {
+          id: "uiux",
+          name: "UI/UX Design",
+          color: "--ux",
+          badgeIcon: "bi-bezier2",
+          intro: "User-centric design systems, telemetry monitoring dashboards, and fintech interfaces engineered for clarity, accessibility, and measurable conversion.",
+          items: [
+            {
+              t: "Verdant Leaf",
+              y: "2024",
+              role: "Lead UI/UX Designer",
+              client: "Botanical E-Commerce & Sustainable Living",
+              dur: "3 weeks",
+              team: "Solo UI/UX Designer",
+              img: "assets/img/portfolio/vedant.png",
+              s: "An intuitive, eco-conscious mobile botanical storefront engineered with nature-inspired design systems, structured plant care taxonomies, and frictionless checkout flows.",
+              ch: "Traditional botanical e-commerce platforms suffer from cluttered navigation, ambiguous plant light/watering care guides, and high drop-off rates during multi-step checkout.",
+              sol: "Crafted a high-fidelity interactive prototype in Figma with modular design tokens, intuitive care level badges, interactive plant customization, and a streamlined 3-step checkout experience.",
+              k: [["100%", "Interactive Prototype"], ["40+", "Design System Tokens"], ["4.9/5", "Usability Score"]],
+              tags: ["Figma", "UI/UX Design", "Prototyping", "Design System", "Mobile App", "E-Commerce"],
+              links: [
+                { text: "Figma Prototype", url: "https://www.figma.com/proto/Fkgqa5TlgRf6DjEEPePgWZ/Verdant-Leaf--Assignment?page-id=1%3A563&node-id=1-594&viewport=412%2C-173%2C0.09&t=oPC90aiA5jXzpgqG-1&scaling=scale-down&content-scaling=fixed", icon: "bi-figma" },
+                { text: "Figma Profile", url: "https://www.figma.com/@mohit_cg", icon: "bi-figma" }
+              ]
+            },
+            {
+              t: "Busmate",
+              y: "2024",
+              role: "Product Design Lead",
+              client: "Urban Mobility & Public Transit Internship Assignment",
+              dur: "3 weeks",
+              team: "Solo Product Designer",
+              img: "assets/img/portfolio/busmate.png",
+              s: "A smart urban transit and bus tracking mobile application engineered to streamline daily commuter route planning, live vehicle telemetry, seat reservation, and seamless digital ticketing.",
+              ch: "Daily bus commuters suffer from unpredictable transit wait times, disjointed schedule tables, and friction-heavy cash ticketing at crowded stations.",
+              sol: "Architected a high-fidelity interactive prototype in Figma featuring live GPS route overlays, one-tap digital transit passes, real-time arrival estimates, and quick seat selection.",
+              k: [["<30s", "Quick Booking"], ["100%", "Interactive Prototype"], ["4.9/5", "Commuter Usability"]],
+              tags: ["Figma", "UI/UX Design", "Product Design", "Mobile Prototype", "Transit UX", "Wireframing"],
+              links: [
+                { text: "Figma Prototype", url: "https://www.figma.com/proto/aVX62XojiLLKLDV48yABz7/Product-Design-Internship-%E2%80%94-Assignment?node-id=46-29&p=f&viewport=325%2C269%2C0.36&t=XU8tR1pqnRn2DcDC-1&scaling=scale-down&content-scaling=fixed&page-id=5%3A66", icon: "bi-figma" },
+                { text: "Figma Profile", url: "https://www.figma.com/@mohit_cg", icon: "bi-figma" }
+              ]
+            },
+            {
+              t: "Coffee Shop App",
+              y: "2024",
+              role: "Mobile UI/UX Designer",
+              client: "Artisan Cafe & Digital Ordering Test",
+              dur: "2 weeks",
+              team: "Solo UI/UX Designer",
+              img: "assets/img/portfolio/coffeeshop.png",
+              s: "A warm, sensory mobile coffee ordering application with rich visual drink customization, bean roast indicators, automated loyalty reward points, and scheduled express pickup.",
+              ch: "Coffee lovers experience long morning queues and struggle with unintuitive customization options when ordering specialty coffees on standard delivery apps.",
+              sol: "Crafted a tactile, high-conversion Figma prototype featuring visual beverage ingredient sliders, instant barista queue status, and a frictionless 1-click reorder mechanism.",
+              k: [["<45s", "Order Flow"], ["35+", "Design Tokens"], ["4.9★", "User Satisfaction"]],
+              tags: ["Figma", "UI/UX Design", "Mobile App", "Food & Beverage", "Prototyping", "Design System"],
+              links: [
+                { text: "Figma Prototype", url: "https://www.figma.com/proto/CZEFQkSoTyyaE5yn8UI5OO/COFFEE-SHOP-APP-Test?page-id=1%3A40&node-id=1-251&viewport=67%2C37%2C0.19&t=zZo51AbdHFJxFz6K-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=1%3A71", icon: "bi-figma" },
+                { text: "Figma Profile", url: "https://www.figma.com/@mohit_cg", icon: "bi-figma" }
+              ]
+            },
+            {
+              t: "Portfolio Design",
+              y: "2024",
+              role: "Lead UI/UX & Web Designer",
+              client: "Mohit Kumar Brand & Developer Identity",
+              dur: "4 weeks",
+              team: "Solo Designer & Developer",
+              img: "assets/img/portfolio/port.png",
+              s: "A comprehensive dark-themed responsive portfolio system designed in Figma, featuring modular layout grids, bespoke typography scales, interactive design artifacts, and verified credential sections.",
+              ch: "Creating a unified digital presence that harmonizes technical software engineering case studies with creative visual design showcases across mobile and desktop breakpoints.",
+              sol: "Prototyped full-fidelity desktop and mobile viewports in Figma utilizing golden-accent design tokens, structured case study taxonomies, and high-performance interactive flows.",
+              k: [["100%", "Interactive Prototype"], ["60+", "Design Tokens"], ["100/100", "Design Consistency"]],
+              tags: ["Figma", "UI/UX Design", "Design Systems", "Web Design", "Responsive Layout", "Branding"],
+              links: [
+                { text: "Figma Prototype", url: "https://www.figma.com/proto/TFsoiJeIu6nsNTjbqrzPj6/Portfolio-Mohit-Kumar?page-id=0%3A1&node-id=1-2&viewport=114%2C227%2C0.15&t=YGqw1GMN5m2VdmI2-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=1%3A2", icon: "bi-figma" },
+                { text: "Figma Profile", url: "https://www.figma.com/@mohit_cg", icon: "bi-figma" }
+              ]
+            },
+            {
+              t: "HMWEBTECH",
+              y: "2024",
+              role: "Lead UI/UX Designer",
+              client: "HMWEBTECH Technology Services & IT Consulting",
+              dur: "3 weeks",
+              team: "Solo UI/UX Designer",
+              img: "assets/img/portfolio/hmw.png",
+              s: "An authoritative corporate web experience designed for HMWEBTECH, highlighting end-to-end cloud engineering, enterprise IT solutions, client success stories, and consultation intake funnels.",
+              ch: "The enterprise needed a high-credibility digital platform to articulate complex software architecture services clearly to global B2B corporate decision-makers.",
+              sol: "Created an accessible, modern Figma prototype showcasing clean geometric visual hierarchy, modular service capability matrices, dynamic client proof cards, and clear lead-capture channels.",
+              k: [["100%", "High-Fi Prototype"], ["25+", "Component Layouts"], ["4.9/5", "Client Review"]],
+              tags: ["Figma", "UI/UX Design", "Web Design", "Corporate Platform", "B2B SaaS", "Prototyping"],
+              links: [
+                { text: "Figma Prototype", url: "https://www.figma.com/proto/lIqCyogM99gINaQzBSErWi/HMWEBTECH-Portfolio-assignment?page-id=0%3A1&node-id=1-3&viewport=148%2C208%2C0.09&t=wLX4JhMBLz8H1Vij-1&scaling=contain&content-scaling=fixed&starting-point-node-id=1%3A3", icon: "bi-figma" },
+                { text: "Figma Profile", url: "https://www.figma.com/@mohit_cg", icon: "bi-figma" }
+              ]
+            },
+            {
+              t: "Movie Ticket Booking App",
+              y: "2024",
+              role: "Lead UI/UX Designer",
+              client: "Entertainment & Cinema Booking Design Test",
+              dur: "2 weeks",
+              team: "Solo UI/UX Designer",
+              img: "assets/img/portfolio/movie.png",
+              s: "An immersive cinematic ticket reservation mobile experience featuring live interactive theater seat selection, high-definition trailer previews, concession pre-ordering, and digital ticket barcodes.",
+              ch: "Moviegoers experience frustrating seat-picking interactions on mobile screens, unexpected checkout fees at final steps, and chaotic in-theater digital ticket retrieval.",
+              sol: "Crafted an intuitive dark-themed Figma prototype with visual tiered seating grids, transparent pricing breakdowns, one-click snacks add-ons, and an offline-ready digital cinema pass.",
+              k: [["<40s", "Booking Time"], ["100%", "Interactive Prototype"], ["4.9★", "User Satisfaction"]],
+              tags: ["Figma", "UI/UX Design", "Mobile App", "Cinema Booking", "Seat Selection", "Prototyping"],
+              links: [
+                { text: "Figma Prototype", url: "https://www.figma.com/proto/H09VCS9n4I3MDhPU6fO4lF/Movie-Ticket-Booking-App-Design-Test?page-id=43%3A1320&node-id=46-94&viewport=117%2C266%2C0.23&t=SYHgyVuriHxarJRf-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=46%3A94", icon: "bi-figma" },
+                { text: "Figma Profile", url: "https://www.figma.com/@mohit_cg", icon: "bi-figma" }
+              ]
+            },
+            {
+              t: "Digital Wallet App",
+              y: "2024",
+              role: "FinTech UI/UX Designer",
+              client: "Personal Finance & Digital Payments Test",
+              dur: "2 weeks",
+              team: "Solo UI/UX Designer",
+              img: "assets/img/portfolio/wallet.png",
+              s: "A sleek, secure digital wallet and expense management application featuring contactless NFC card simulations, peer-to-peer instant transfers, budget analytics, and biometric transaction verification.",
+              ch: "Mobile banking and digital wallet users often find transaction logs cluttered, multi-card switching tedious, and financial analytics hard to digest on small screens.",
+              sol: "Prototyped a clean, high-contrast mobile interface in Figma with smooth virtual card carousels, categorized expenditure graphs, and streamlined one-thumb transfer authentication.",
+              k: [["<5s", "Transfer Speed"], ["40+", "Design Tokens"], ["4.9/5", "Usability Score"]],
+              tags: ["Figma", "UI/UX Design", "FinTech UX", "Digital Wallet", "Mobile App", "Prototyping"],
+              links: [
+                { text: "Figma Prototype", url: "https://www.figma.com/proto/YVSGqsHSeZZkn2y0OyRjDX/Wallet-App-Design-test?node-id=2-97&p=f&viewport=498%2C382%2C0.55&t=iQir1LWQZKqKq8fi-1&scaling=min-zoom&content-scaling=fixed&page-id=2%3A4", icon: "bi-figma" },
+                { text: "Figma Profile", url: "https://www.figma.com/@mohit_cg", icon: "bi-figma" }
+              ]
+            }
+          ]
+        },
+        {
+          id: "web",
+          name: "Web Development",
+          color: "--web",
+          badgeIcon: "bi-code-slash",
+          intro: "High-performance full-stack web platforms, student living portals, modern e-commerce storefronts, and modular portfolio architectures.",
+          items: [
+            {
+              t: "KrishiMitra Web Application",
+              y: "2024",
+              role: "Full-Stack Web Architect",
+              client: "AgriTech & Rural Digital Transformation",
+              dur: "4 months",
+              team: "2 Developers, 1 Agronomist",
+              img: "assets/img/portfolio/krishimitra.png",
+              s: "A comprehensive full-stack AgriTech web platform empowering agricultural cooperatives, farmer producer organizations (FPOs), and agronomists with real-time APMC mandi commodity prices, automated crop yield analytics, meteorological forecasting, and community seed trading.",
+              ch: "Agricultural cooperatives struggled with fragmented market price feeds, lack of centralized farmer advisory dispatchers, and opaque supply chain records across regional grain mandis.",
+              sol: "Architected an end-to-end web platform featuring responsive dashboard analytics, real-time REST APIs aggregating multi-state mandi feeds, automated multilingual advisory notices, and an agricultural commodity listing portal.",
+              k: [["50k+", "Farmers Supported"], ["100%", "Paperless Mandi Feeds"], ["1.0s", "Telemetry Latency"]],
+              tags: ["Full-Stack", "JavaScript", "Node.js", "PostgreSQL", "REST API", "AgriTech", "Bootstrap 5"],
+              links: [
+                { text: "Live Demo", url: "https://studio--krishimitra-ai-l2tup.us-central1.hosted.app/dashboard", icon: "bi-box-arrow-up-right" },
+                { text: "GitHub Repo", url: "https://github.com/mohit-cg", icon: "bi-github" }
+              ]
+            },
+            {
+              t: "UI/UX Developer Roadmap",
+              y: "2024",
+              role: "Frontend & UI Architect",
+              client: "Developer Education & Open Source",
+              dur: "2 months",
+              team: "Solo Developer & Designer",
+              img: "assets/img/portfolio/ui.png",
+              s: "A comprehensive interactive web roadmap and visual guide outlining structured learning milestones, design token architectures, modern frontend stacks, and career progression paths for UI/UX developers.",
+              ch: "Aspiring designers and developers often face disjointed learning tracks, unclear skill prerequisites, and a confusing gap between design tools and production code.",
+              sol: "Engineered an accessible, interactive roadmap portal with milestone checkpoints, design system tutorials, curated resource hubs, and responsive community guides.",
+              k: [["100%", "Curated Roadmap"], ["50+", "Core Milestones"], ["4.9★", "Community Rating"]],
+              tags: ["Web Development", "UI/UX Design", "Roadmap", "JavaScript", "Frontend", "Design System"],
+              links: [
+                { text: "Live Roadmap", url: "https://roadmap-tau-teal.vercel.app/", icon: "bi-box-arrow-up-right" },
+                { text: "GitHub Repo", url: "https://github.com/mohit-cg", icon: "bi-github" }
+              ]
+            },
+            {
+              t: "AniCG",
+              y: "2024",
+              role: "Full-Stack Web Developer & Creative Lead",
+              client: "AniCG Digital Media & Creative Platform",
+              dur: "3 months",
+              team: "Solo Developer & Creator",
+              img: "assets/img/portfolio/ani.png",
+              s: "A dynamic full-stack multimedia web platform and entertainment hub engineered for AniCG, showcasing anime-inspired animations, creative digital artwork, interactive media reels, and high-performance frontend interfaces.",
+              ch: "Creative animation and digital media platforms require smooth 60 FPS transitions, rich multimedia hydration, and responsive layouts that look striking across mobile and desktop displays.",
+              sol: "Developed a modern, dark-themed responsive web application featuring hardware-accelerated animations, modular media galleries, responsive video integration, and optimized asset delivery.",
+              k: [["100%", "Responsive Web"], ["60 FPS", "Fluid Animation"], ["4.9★", "Viewer Review"]],
+              tags: ["Web Development", "Animation", "Multimedia", "JavaScript", "Frontend", "Creative Tech"],
+              links: [
+                { text: "Live Platform", url: "https://www.youtube.com/@AniCG.o2", icon: "bi-youtube" },
+                { text: "GitHub Repo", url: "https://github.com/mohit-cg", icon: "bi-github" }
+              ]
+            }
+          ]
+        },
+        {
+          id: "app",
+          name: "App Development",
+          color: "--app",
+          badgeIcon: "bi-phone-fill",
+          intro: "Cross-platform Flutter apps and native Android solutions built for fluid 60 FPS performance, offline persistence, and seamless mobile UX.",
+          items: [
+            {
+              t: "KrishiMitra App",
+              y: "2024",
+              role: "Mobile App Developer & UI/UX",
+              client: "AgriTech & Smart Farming",
+              dur: "3 months",
+              team: "Solo Mobile Developer",
+              img: "assets/img/portfolio/krishi.png",
+              s: "An intelligent AgriTech mobile application designed to empower farmers with real-time weather forecasts, AI crop disease diagnostics, live mandi price telemetry, and smart irrigation schedules.",
+              ch: "Smallholder farmers face unpredictable crop yields due to delayed pest detection, lack of localized weather forecasts, and opaque intermediary market pricing.",
+              sol: "Engineered a clean, multi-lingual mobile app featuring AI-assisted plant disease scanning, live APMC mandi price telemetry, offline-capable field advisory guides, and personalized crop calendars.",
+              k: [["95%", "Diagnostic Accuracy"], ["50+", "Crop Presets"], ["<1s", "Offline Query Time"]],
+              tags: ["Mobile App", "Android", "AgriTech", "Kotlin", "Machine Learning", "Offline First"],
+              links: [
+                { text: "App View", url: "https://studio--krishimitra-ai-l2tup.us-central1.hosted.app/dashboard", icon: "bi-box-arrow-up-right" },
+                { text: "GitHub Repository", url: "https://github.com/mohit-cg", icon: "bi-github" }
+              ]
+            },
+            {
+              t: "Dinner Decider Smart App",
+              y: "2023",
+              role: "Android Developer",
+              client: "Lifestyle & Food Tech",
+              dur: "2 months",
+              team: "Solo Developer",
+              img: "assets/img/portfolio/dinner.png",
+              s: "A fun and dynamic culinary decision engine featuring gesture-based swipe cards, geocoded restaurant discovery, dietary preference filtering, and smart meal suggestion algorithms.",
+              ch: "Decision fatigue when deciding daily meals or ordering take-out caused friction among roommates and individuals with conflicting dietary preferences.",
+              sol: "Built a native Android app in Kotlin with physics-based card swipes, customizable dietary constraint filters, and an offline recipe generator.",
+              k: [["4.9★", "App Rating"], ["500+", "Recipe Presets"], ["60 FPS", "Fluid Swipes"]],
+              tags: ["Android Dev", "Kotlin", "Jetpack Compose", "REST APIs", "Motion UI", "SQLite"],
+              links: [
+                { text: "GitHub Repo", url: "https://github.com/mohit-cg", icon: "bi-github" },
+                { text: "Download APK", url: "https://github.com/mohit-cg", icon: "bi-download" }
+              ]
+            }
+          ]
+        },
+        {
+          id: "brand",
+          name: "Branding & Graphics",
+          color: "--brand",
+          badgeIcon: "bi-palette-fill",
+          intro: "Corporate visual identity architecture, vector typography guidelines, marketing collateral systems, and high-impact exhibition campaigns.",
+          items: [
+            {
+              t: "Banner 11",
+              y: "2024",
+              role: "Visual & Brand Designer",
+              client: "Figma Design & Digital Web Presence",
+              dur: "2 weeks",
+              team: "Solo Visual Designer",
+              img: "assets/img/portfolio/banner/figma_banner.png",
+              s: "A high-impact Figma design banner and landscape creative engineered for digital web presence, developer branding, and promotional showcases.",
+              ch: "Developers and creators often struggle with generic header visuals that fail to establish professional identity and strong visual impact across digital channels.",
+              sol: "Crafted a vibrant, geometric brand banner in Figma incorporating dark-gold gradient lighting, structured typography tokens, and high-fidelity vector elements.",
+              k: [["100%", "Vector Assets"], ["60 FPS", "Visual Polish"], ["4.9★", "Client Review"]],
+              tags: ["Figma", "Banner Design", "Brand Strategy", "Typography", "Digital Art"],
+              links: [
+                { text: "View in Visual Works", url: "works.html#banners", icon: "bi-images" },
+                { text: "Figma Profile", url: "https://www.figma.com/@mohit_cg", icon: "bi-figma" }
+              ]
+            },
+            {
+              t: "Mockup 08",
+              y: "2024",
+              role: "3D & Visual Designer",
+              client: "Brand Collateral & Packaging Showcase",
+              dur: "2 weeks",
+              team: "Solo 3D Artist",
+              img: "assets/img/portfolio/mockup/mockup (5).png",
+              s: "A photorealistic 3D product mockup layout crafted to present digital brand designs, merchandise, and packaging in real-world perspectives.",
+              ch: "2D flat logo assets and packaging files often fail to communicate physical material texture, lighting depth, and real-world scale to stakeholders.",
+              sol: "Modeled and rendered photorealistic 3D product scenes in Photoshop and Blender featuring natural environmental reflections, tactile surface shading, and smart-object asset replacement.",
+              k: [["4K", "Render Resolution"], ["100%", "Photorealistic"], ["5+", "Asset Variations"]],
+              tags: ["3D Mockup", "Photoshop", "Packaging", "Brand Identity", "Product Design"],
+              links: [
+                { text: "View in Visual Works", url: "works.html#mockups", icon: "bi-images" },
+                { text: "Figma Profile", url: "https://www.figma.com/@mohit_cg", icon: "bi-figma" }
+              ]
+            }
+          ]
+        }
+      ];
+
+      // Application State
+      let currentFilter = "all";
+      let searchQuery = "";
+
+      const feedEl = document.getElementById("projectsFeed");
+      const noResultsBox = document.getElementById("noResultsBox");
+      const searchInput = document.getElementById("projectSearch");
+      const clearSearchBtn = document.getElementById("clearSearch");
+      const resetFiltersBtn = document.getElementById("btnResetFilters");
+      const chipsGroup = document.getElementById("chipsGroup");
+
+      // Mobile Header Toggle (matching certificate.html & index.html)
+      const headerToggleBtn = document.querySelector('.header-toggle');
+      if (headerToggleBtn) {
+        const headerToggle = function () {
+          const header = document.querySelector('#header');
+          if (header) header.classList.toggle('header-show');
+          headerToggleBtn.classList.toggle('bi-list');
+          headerToggleBtn.classList.toggle('bi-x');
+        };
+        headerToggleBtn.addEventListener('click', headerToggle);
+
+        document.querySelectorAll('#navmenu a').forEach(function (link) {
+          link.addEventListener('click', function () {
+            const header = document.querySelector('#header');
+            if (header && header.classList.contains('header-show')) {
+              headerToggle();
+            }
+          });
+        });
+      }
+
+      // Scroll top button
+      const scrollTop = document.querySelector('#scroll-top');
+      if (scrollTop) {
+        const toggleScrollTop = function () {
+          if (window.scrollY > 150) {
+            scrollTop.classList.add('active');
+          } else {
+            scrollTop.classList.remove('active');
+          }
+        };
+        window.addEventListener('scroll', toggleScrollTop, { passive: true });
+        scrollTop.addEventListener('click', function (e) {
+          e.preventDefault();
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+      }
+
+      /**
+       * Render All Projects into Feed
+       */
+      function renderProjects() {
+        if (!feedEl) return;
+        feedEl.innerHTML = "";
+
+        let totalVisibleCards = 0;
+        const q = searchQuery.toLowerCase().trim();
+
+        D.forEach(cat => {
+          // Check if category is active
+          const matchesCategory = (currentFilter === "all" || currentFilter === cat.id);
+          if (!matchesCategory) return;
+
+          // Filter items by search query
+          const filteredItems = cat.items.filter(item => {
+            if (!q) return true;
+            const fullText = (item.t + " " + item.s + " " + item.ch + " " + item.sol + " " + item.tags.join(" ") + " " + item.role).toLowerCase();
+            return fullText.includes(q);
+          });
+
+          if (filteredItems.length === 0) return;
+
+          totalVisibleCards += filteredItems.length;
+
+          // Build Category Section
+          const sec = document.createElement("section");
+          sec.className = "cat";
+          sec.id = cat.id;
+          sec.style.setProperty("--c", `var(${cat.color})`);
+
+          let secHtml = `
+            <div class="cat-head">
+              <div class="cat-head-title">
+                <span class="cat-dot"></span>
+                <h2>${cat.name}</h2>
+              </div>
+              <p>${cat.intro}</p>
+            </div>
+          `;
+
+          // Generate Cards
+          secHtml += filteredItems.map(p => `
+            <article class="proj" data-title="${encodeURIComponent(p.t)}">
+              <div class="vis" role="button" tabindex="0" aria-label="Zoom screenshot of ${p.t}">
+                <img src="${p.img}" alt="${p.t}" class="vis-img" loading="lazy">
+                <div class="vis-overlay"></div>
+                <div class="vis-top-badge">
+                  <i class="bi ${cat.badgeIcon}"></i> ${cat.name}
+                </div>
+                <div class="vis-zoom-pill">
+                  <i class="bi bi-arrows-fullscreen"></i> Tap to Zoom
+                </div>
+              </div>
+
+              <div class="proj-info">
+                <div class="proj-meta-bar">
+                  <span class="meta-tag-year">${p.y}</span>
+                  <span class="meta-divider">&bull;</span>
+                  <span><strong>Role:</strong> ${p.role}</span>
+                  <span class="meta-divider">&bull;</span>
+                  <span>${p.dur}</span>
+                </div>
+
+                <h3>${p.t}</h3>
+                <p class="proj-desc">${p.s}</p>
+
+                <div class="kpis" aria-label="Key Performance Indicators">
+                  ${p.k.map(k => `
+                    <div>
+                      <b class="kpi-num">${k[0]}</b>
+                      <span>${k[1]}</span>
+                    </div>
+                  `).join("")}
+                </div>
+
+                <ul class="tags" aria-label="Technology stack">
+                  ${p.tags.map(t => `<li>${t}</li>`).join("")}
+                </ul>
+
+                <details class="proj-details">
+                  <summary>Deep Dive &amp; Full Case Study</summary>
+                  <dl>
+                    <div>
+                      <dt>Context &amp; Client</dt>
+                      <dd>${p.client} &bull; Team: ${p.team}</dd>
+                    </div>
+                    <div>
+                      <dt>The Challenge</dt>
+                      <dd>${p.ch}</dd>
+                    </div>
+                    <div>
+                      <dt>Architecture &amp; Solution</dt>
+                      <dd>${p.sol}</dd>
+                    </div>
+                  </dl>
+                </details>
+
+                <div class="links-bar">
+                  ${p.links.map((l, idx) => `
+                    <a href="${l.url}" target="_blank" rel="noopener" class="${idx === 0 ? 'btn-action-primary' : 'btn-action-ghost'}">
+                      <i class="bi ${l.icon}"></i> ${l.text}
+                    </a>
+                  `).join("")}
+                </div>
+              </div>
+            </article>
+          `).join("");
+
+          sec.innerHTML = secHtml;
+          feedEl.appendChild(sec);
+        });
+
+        // Toggle Empty State Visibility
+        if (noResultsBox) {
+          noResultsBox.style.display = totalVisibleCards === 0 ? "block" : "none";
+        }
+
+        // Initialize KPIs Count-Up Observer & Image Lightbox Triggers
+        initKpisCountUp();
+        initLightboxTriggers();
+      }
+
+      /**
+       * Count-up Animation for KPI Numbers
+       */
+      function initKpisCountUp() {
+        if (window.matchMedia("(prefers-reduced-motion: reduce)").matches || !("IntersectionObserver" in window)) {
+          return;
+        }
+
+        const parseKpi = function (text) {
+          const m = text.match(/^([\u2212<+]?)(\d+(?:\.\d+)?)(\D*)$/);
+          return m ? { prefix: m[1], num: parseFloat(m[2]), decimals: (m[2].split(".")[1] || "").length, suffix: m[3] } : null;
+        };
+
+        const animateNum = function (el, parsed) {
+          const start = performance.now();
+          const duration = 1200;
+          const frame = function (now) {
+            const progress = Math.min((now - start) / duration, 1);
+            const ease = 1 - Math.pow(1 - progress, 3); // ease-out cubic
+            el.textContent = parsed.prefix + (parsed.num * ease).toFixed(parsed.decimals) + parsed.suffix;
+            if (progress < 1) {
+              requestAnimationFrame(frame);
+            } else {
+              el.textContent = el.dataset.final;
+            }
+          };
+          requestAnimationFrame(frame);
+        };
+
+        const io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (!entry.isIntersecting) return;
+            io.unobserve(entry.target);
+            entry.target.querySelectorAll(".kpi-num").forEach(function (b) {
+              const parsed = parseKpi(b.dataset.final || b.textContent);
+              if (parsed) animateNum(b, parsed);
+            });
+          });
+        }, { threshold: 0.35 });
+
+        document.querySelectorAll("article.proj").forEach(function (card) {
+          card.querySelectorAll(".kpi-num").forEach(function (b) {
+            if (!b.dataset.final) {
+              b.dataset.final = b.textContent.trim();
+              const parsed = parseKpi(b.dataset.final);
+              if (parsed) b.textContent = parsed.prefix + (0).toFixed(parsed.decimals) + parsed.suffix;
+            }
+          });
+          io.observe(card);
+        });
+      }
+
+      /**
+       * Image Lightbox Modal Zoom Handlers
+       */
+      const lightboxModal = document.getElementById("imgLightbox");
+      const lightboxTarget = document.getElementById("imgLightboxTarget");
+      const lightboxTitle = document.getElementById("imgLightboxTitle");
+      const lightboxSubtitle = document.getElementById("imgLightboxSubtitle");
+      const lightboxClose = document.getElementById("imgLightboxClose");
+
+      function openLightbox(imgSrc, title, category) {
+        if (!lightboxModal || !lightboxTarget) return;
+        lightboxTarget.src = imgSrc;
+        lightboxTarget.alt = title;
+        if (lightboxTitle) lightboxTitle.textContent = title;
+        if (lightboxSubtitle) lightboxSubtitle.textContent = category + " • Mohit Kumar";
+        lightboxModal.removeAttribute("hidden");
+        lightboxModal.setAttribute("aria-hidden", "false");
+        requestAnimationFrame(() => lightboxModal.classList.add("active"));
+        document.body.style.overflow = "hidden";
+        document.body.classList.add("lightbox-open");
+        if (scrollTop) {
+          scrollTop.classList.remove("active");
+          scrollTop.style.display = "none";
+        }
+      }
+
+      function closeLightbox() {
+        if (!lightboxModal) return;
+        lightboxModal.classList.remove("active");
+        lightboxModal.setAttribute("aria-hidden", "true");
+        setTimeout(() => {
+          if (!lightboxModal.classList.contains("active")) {
+            lightboxModal.setAttribute("hidden", "");
+            if (lightboxTarget) lightboxTarget.src = "";
+          }
+        }, 250);
+        document.body.style.overflow = "";
+        document.body.classList.remove("lightbox-open");
+        if (scrollTop) {
+          scrollTop.style.display = "";
+          toggleScrollTop();
+        }
+      }
+
+      function initLightboxTriggers() {
+        document.querySelectorAll(".vis").forEach(function (visEl) {
+          const imgEl = visEl.querySelector(".vis-img");
+          const card = visEl.closest("article.proj");
+          const title = card ? card.querySelector("h3").textContent : "Project Preview";
+          const badge = visEl.querySelector(".vis-top-badge");
+          const catName = badge ? badge.textContent.trim() : "Project Showcase";
+
+          const triggerZoom = function () {
+            if (imgEl && imgEl.src) {
+              openLightbox(imgEl.src, title, catName);
+            }
+          };
+
+          visEl.addEventListener("click", triggerZoom);
+          visEl.addEventListener("keydown", function (e) {
+            if (e.key === "Enter" || e.key === " ") {
+              e.preventDefault();
+              triggerZoom();
+            }
+          });
+        });
+      }
+
+      if (lightboxClose) lightboxClose.addEventListener("click", closeLightbox);
+      if (lightboxModal) {
+        lightboxModal.addEventListener("click", function (e) {
+          if (e.target === this) closeLightbox();
+        });
+      }
+
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape" && lightboxModal && lightboxModal.classList.contains("active")) {
+          closeLightbox();
+        }
+      });
+
+      /**
+       * Filter Chips Handlers
+       */
+      if (chipsGroup) {
+        chipsGroup.addEventListener("click", function (e) {
+          const btn = e.target.closest(".chip-btn");
+          if (!btn) return;
+          const filter = btn.getAttribute("data-filter");
+          if (!filter) return;
+
+          currentFilter = filter;
+          chipsGroup.querySelectorAll(".chip-btn").forEach(b => b.classList.remove("active"));
+          btn.classList.add("active");
+
+          renderProjects();
+
+          // If a specific section is chosen, scroll to it smoothly
+          if (filter !== "all") {
+            const targetSec = document.getElementById(filter);
+            if (targetSec) {
+              targetSec.scrollIntoView({ behavior: "smooth", block: "start" });
+            }
+          }
+        });
+      }
+
+      /**
+       * Live Search Handlers
+       */
+      if (searchInput) {
+        searchInput.addEventListener("input", function (e) {
+          searchQuery = e.target.value;
+          if (clearSearchBtn) {
+            clearSearchBtn.style.display = searchQuery ? "block" : "none";
+          }
+          renderProjects();
+        });
+      }
+
+      if (clearSearchBtn) {
+        clearSearchBtn.addEventListener("click", function () {
+          if (searchInput) searchInput.value = "";
+          searchQuery = "";
+          clearSearchBtn.style.display = "none";
+          renderProjects();
+          if (searchInput) searchInput.focus();
+        });
+      }
+
+      if (resetFiltersBtn) {
+        resetFiltersBtn.addEventListener("click", function () {
+          currentFilter = "all";
+          searchQuery = "";
+          if (searchInput) searchInput.value = "";
+          if (clearSearchBtn) clearSearchBtn.style.display = "none";
+          if (chipsGroup) {
+            chipsGroup.querySelectorAll(".chip-btn").forEach(b => {
+              b.classList.toggle("active", b.getAttribute("data-filter") === "all");
+            });
+          }
+          renderProjects();
+        });
+      }
+
+      /**
+       * URL Hash Support for Category Quick-Jumping
+       */
+      window.addEventListener("DOMContentLoaded", function () {
+        renderProjects();
+
+        if (window.location.hash) {
+          const hashId = window.location.hash.replace("#", "").toLowerCase();
+          const validCat = D.some(c => c.id === hashId);
+          if (validCat) {
+            currentFilter = hashId;
+            if (chipsGroup) {
+              chipsGroup.querySelectorAll(".chip-btn").forEach(b => {
+                b.classList.toggle("active", b.getAttribute("data-filter") === hashId);
+              });
+            }
+            renderProjects();
+            setTimeout(function () {
+              const el = document.getElementById(hashId);
+              if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+            }, 200);
+          }
+        }
+      });
+
+    })();
+  </script>
+
+</body>
+
+</html>

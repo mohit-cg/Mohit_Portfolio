@@ -1,0 +1,4388 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Visual Design Portfolio &amp; Creative Works — Mohit Kumar</title>
+  <meta name="description"
+    content="Curated archive of 380+ visual artworks, posters, high-CTR YouTube thumbnails, brand identity marks, AI concept art, and fintech infographics by Mohit Kumar.">
+  <meta name="keywords"
+    content="Mohit Kumar, Codogram, Visual Design, Graphic Designer, Posters, Thumbnails, Logos, Branding, AI Art, FinTech Infographics">
+
+  <!-- Favicons -->
+  <link href="assets/img/cg.png" rel="icon">
+  <link href="assets/img/cg.png" rel="apple-touch-icon">
+
+  <!-- Fonts (Matched to project.html & index.html) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500&family=Nunito:ital,wght@0,300;0,400;0,600;0,700;0,800;0,900;1,300;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <style>
+    /* ==========================================================================
+       Visual Design Showcase Dark-Gold Design Palette (Aligned with project.html)
+       ========================================================================== */
+    :root {
+      color-scheme: dark;
+      --bg: #1f1f1f;
+      --surface: #232323;
+      --surface-hover: #292929;
+      --surface-card: #202020;
+      --surface-glass: rgba(35, 35, 35, 0.85);
+      --ink: #ffffff;
+      --ink-subtle: #e0e0e0;
+      --mute: rgba(255, 255, 255, 0.65);
+      --line: rgba(255, 255, 255, 0.1);
+      --line-gold: rgba(155, 128, 90, 0.35);
+
+      /* Accent Brand Gold */
+      --accent: #9b805a;
+      --accent-hover: #b8986c;
+      --accent-fg: #ffffff;
+      --accent-subtle: rgba(155, 128, 90, 0.18);
+      --accent-border: rgba(155, 128, 90, 0.4);
+      --accent-glow: rgba(155, 128, 90, 0.25);
+
+      /* Discipline Specific Accent Colors */
+      --ux: #c4a97d;
+      --ux-bg: rgba(196, 169, 125, 0.15);
+      --app: #38bdf8;
+      --app-bg: rgba(56, 189, 248, 0.15);
+      --web: #4ade80;
+      --web-bg: rgba(74, 222, 128, 0.15);
+      --brand: #f472b6;
+      --brand-bg: rgba(244, 114, 182, 0.15);
+
+      --font-body: "Roboto", system-ui, -apple-system, sans-serif;
+      --font-head: "Ubuntu", "Nunito", sans-serif;
+      --font-mono: "JetBrains Mono", monospace;
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 80px;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--ink);
+      font-family: var(--font-body);
+      font-size: 15px;
+      line-height: 1.6;
+      margin: 0;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: var(--font-head);
+      color: var(--ink);
+      font-weight: 700;
+      line-height: 1.25;
+      margin: 0;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      transition: color 0.2s ease, border-color 0.2s ease;
+    }
+
+    :focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 3px;
+    }
+
+    /* Page container */
+    .wrap {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px 70px 24px;
+    }
+
+    /* Page Title & Back Button */
+    .page-title {
+      background: transparent;
+      border-bottom: none;
+      padding: 24px 0 0 0;
+      margin-bottom: 24px;
+    }
+
+    .page-title .container {
+      border: 0;
+      padding-bottom: 0;
+    }
+
+    .page-title h1 {
+      font-size: 26px;
+      letter-spacing: -0.01em;
+      color: #ffffff;
+    }
+
+    .page-title .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      min-height: 38px;
+      padding: 0 18px;
+      border-radius: 999px;
+      border: 1px solid var(--accent-border);
+      background: var(--surface-glass);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      color: #ffffff;
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      flex-shrink: 0;
+      white-space: nowrap;
+      transition: background 0.25s, border-color 0.25s, transform 0.25s, box-shadow 0.25s;
+    }
+
+    .page-title .back-btn i {
+      font-size: 15px;
+      transition: transform 0.25s ease;
+    }
+
+    .page-title .back-btn:hover {
+      background: var(--accent);
+      border-color: var(--accent-hover);
+      color: #ffffff;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px -4px var(--accent-glow);
+    }
+
+    .page-title .back-btn:hover i {
+      transform: translateX(-3px);
+    }
+
+    @media (max-width: 768px) {
+      .page-title h1 {
+        font-size: 20px;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .page-title h1 {
+        font-size: 17px;
+      }
+      .page-title .back-btn {
+        min-height: 34px;
+        padding: 0 14px;
+        font-size: 13px;
+        gap: 6px;
+      }
+    }
+
+    /* Sidebar Header Styling (Matched to project.html) */
+    .header .header-container {
+      background: var(--surface);
+      border: 1px solid var(--line);
+    }
+
+    /* Hero Section */
+    .vault-hero {
+      padding: 20px 0 36px 0;
+    }
+
+    .eyebrow-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      font-family: var(--font-mono);
+      font-size: 12px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      background: var(--accent-subtle);
+      border: 1px solid var(--accent-border);
+      padding: 5px 14px;
+      border-radius: 99px;
+      font-weight: 600;
+      margin-bottom: 18px;
+    }
+
+    .vault-hero h1 {
+      font-size: clamp(32px, 5.2vw, 54px);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: #ffffff;
+      line-height: 1.15;
+      max-width: 24ch;
+      margin-bottom: 16px;
+    }
+
+    .vault-hero h1 span.gold-text {
+      color: var(--accent);
+      background: linear-gradient(135deg, #dfc299 0%, #9b805a 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .vault-hero p.hero-desc {
+      max-width: 72ch;
+      color: var(--ink-subtle);
+      font-size: 16px;
+      line-height: 1.65;
+      margin: 0 0 28px 0;
+    }
+
+    /* Hero Metric Highlight Cards */
+    .hero-metrics-bar {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 14px;
+      margin-top: 24px;
+    }
+
+    .metric-item {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 16px 20px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .metric-item:hover {
+      transform: translateY(-2px);
+      border-color: var(--accent-border);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4), 0 0 12px var(--accent-subtle);
+    }
+
+    .metric-icon-box {
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      background: var(--accent-subtle);
+      border: 1px solid var(--accent-border);
+      color: var(--accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      flex-shrink: 0;
+    }
+
+    .metric-info b {
+      display: block;
+      font-family: var(--font-head);
+      font-size: 22px;
+      color: #ffffff;
+      line-height: 1.1;
+    }
+
+    .metric-info span {
+      font-size: 12px;
+      color: var(--mute);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    /* Sticky Control Toolbar */
+    .controls-panel {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(31, 31, 31, 0.94);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      padding: 16px 0;
+      margin: 32px 0 40px 0;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .controls-inner {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .chips-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .chip-btn {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      color: var(--mute);
+      font-size: 13.5px;
+      font-weight: 500;
+      padding: 8px 16px;
+      border-radius: 99px;
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      white-space: nowrap;
+    }
+
+    .chip-btn i {
+      font-size: 14px;
+    }
+
+    .chip-btn span.chip-badge {
+      background: rgba(255, 255, 255, 0.08);
+      color: var(--ink);
+      font-size: 11px;
+      font-family: var(--font-mono);
+      padding: 1px 7px;
+      border-radius: 99px;
+      transition: all 0.2s ease;
+    }
+
+    .chip-btn:hover {
+      color: #ffffff;
+      border-color: rgba(255, 255, 255, 0.25);
+      background: var(--surface-hover);
+    }
+
+    .chip-btn.active {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #ffffff;
+      box-shadow: 0 4px 14px var(--accent-subtle);
+    }
+
+    .chip-btn.active span.chip-badge {
+      background: rgba(0, 0, 0, 0.3);
+      color: #ffffff;
+    }
+
+    /* Live Search Input Box */
+    .search-wrapper {
+      position: relative;
+      flex-grow: 1;
+      max-width: 320px;
+      min-width: 200px;
+    }
+
+    .search-wrapper input {
+      width: 100%;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 99px;
+      padding: 8px 36px 8px 36px;
+      font-size: 13.5px;
+      color: #ffffff;
+      outline: none;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .search-wrapper input:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px var(--accent-subtle);
+    }
+
+    .search-wrapper input::placeholder {
+      color: var(--mute);
+    }
+
+    .search-icon-left {
+      position: absolute;
+      left: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--mute);
+      pointer-events: none;
+      font-size: 14px;
+    }
+
+    .search-clear-btn {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: 0;
+      color: var(--mute);
+      cursor: pointer;
+      padding: 4px;
+      font-size: 14px;
+      display: none;
+    }
+
+    .search-clear-btn:hover {
+      color: #ffffff;
+    }
+
+    /* Category Section Header */
+    section.cat {
+      margin-bottom: 56px;
+      scroll-margin-top: 100px;
+    }
+
+    .cat-head {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 24px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .cat-head-title {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .cat-head-title .cat-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--c, var(--accent));
+      box-shadow: 0 0 10px var(--c, var(--accent));
+    }
+
+    .cat-head h2 {
+      font-size: clamp(22px, 3vw, 30px);
+      letter-spacing: -0.01em;
+      color: #ffffff;
+    }
+
+    .cat-head p {
+      margin: 0;
+      color: var(--mute);
+      font-size: 14px;
+      max-width: 58ch;
+    }
+
+    .cat-count-pill {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      padding: 3px 10px;
+      border-radius: 99px;
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    /* Visual Grid Layout */
+    .works-grid {
+      display: grid;
+      gap: 20px;
+    }
+
+    /* Work Card Component (Aligned with project.html aesthetic) */
+    .work-card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 14px;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+      position: relative;
+    }
+
+    .work-card:hover {
+      border-color: var(--line-gold);
+      box-shadow: 0 14px 36px rgba(0, 0, 0, 0.55), 0 0 16px var(--accent-subtle);
+      transform: translateY(-4px);
+    }
+
+    /* Visual Container */
+    .vis {
+      border-radius: 12px;
+      background: #181818;
+      border: 1px solid var(--line);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    .vis-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s cubic-bezier(0.2, 0.7, 0.3, 1);
+    }
+
+    .vis:hover .vis-img {
+      transform: scale(1.05);
+    }
+
+    .vis-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.05) 60%);
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+    }
+
+    .vis-top-badge {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      z-index: 2;
+      background: rgba(15, 15, 15, 0.85);
+      backdrop-filter: blur(8px);
+      border: 1px solid var(--line);
+      color: var(--c, var(--accent));
+      font-size: 11px;
+      font-weight: 600;
+      padding: 3px 10px;
+      border-radius: 99px;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .vis-slide-count {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      z-index: 2;
+      background: rgba(155, 128, 90, 0.85);
+      backdrop-filter: blur(6px);
+      border: 1px solid var(--accent-border);
+      color: #ffffff;
+      font-size: 11px;
+      font-weight: 600;
+      padding: 3px 9px;
+      border-radius: 99px;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .vis-zoom-pill {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      z-index: 2;
+      background: rgba(20, 20, 20, 0.85);
+      backdrop-filter: blur(6px);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      color: rgba(255, 255, 255, 0.85);
+      font-size: 11px;
+      font-family: var(--font-body);
+      padding: 3px 10px;
+      border-radius: 99px;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      pointer-events: none;
+      transition: all 0.2s ease;
+    }
+
+    .vis:hover .vis-zoom-pill {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #ffffff;
+      box-shadow: 0 4px 12px var(--accent-subtle);
+    }
+
+    /* Card Details */
+    .work-card-body {
+      padding: 12px 2px 2px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .work-card-title {
+      font-size: 15px;
+      font-weight: 600;
+      color: #ffffff;
+      letter-spacing: -0.01em;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      margin: 0;
+      transition: color 0.2s ease;
+    }
+
+    .work-card:hover .work-card-title {
+      color: var(--accent);
+    }
+
+    .work-card-tag {
+      font-size: 12px;
+      color: var(--mute);
+      font-family: var(--font-mono);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    /* Empty state */
+    .no-results-box {
+      text-align: center;
+      padding: 60px 20px;
+      background: var(--surface);
+      border: 1px dashed var(--line);
+      border-radius: 16px;
+      margin: 30px 0;
+      display: none;
+    }
+
+    .no-results-box i {
+      font-size: 40px;
+      color: var(--mute);
+      margin-bottom: 12px;
+      display: block;
+    }
+
+    .no-results-box h3 {
+      font-size: 20px;
+      margin-bottom: 8px;
+    }
+
+    .no-results-box p {
+      color: var(--mute);
+      max-width: 44ch;
+      margin: 0 auto 16px auto;
+    }
+
+    .btn-reset-filters {
+      background: var(--accent);
+      color: #ffffff;
+      border: 0;
+      padding: 8px 18px;
+      border-radius: 8px;
+      font-size: 13.5px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    /* Call to Action Banner (Matched to project.html) */
+    .project-cta-banner {
+      background: linear-gradient(135deg, #1b1b1b 0%, #232323 100%);
+      border: 1px solid var(--line-gold);
+      border-radius: 20px;
+      padding: 44px 36px;
+      margin-top: 60px;
+      box-shadow: 0 20px 48px rgba(0, 0, 0, 0.45);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .project-cta-banner::before {
+      content: "";
+      position: absolute;
+      top: -50%;
+      right: -10%;
+      width: 380px;
+      height: 380px;
+      background: radial-gradient(circle, var(--accent-glow) 0%, transparent 70%);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .cta-inner {
+      position: relative;
+      z-index: 2;
+      max-width: 720px;
+    }
+
+    .cta-inner h2 {
+      font-size: clamp(26px, 3.6vw, 36px);
+      letter-spacing: -0.01em;
+      margin-bottom: 14px;
+      color: #ffffff;
+    }
+
+    .cta-inner p {
+      font-size: 15.5px;
+      color: var(--ink-subtle);
+      line-height: 1.6;
+      margin-bottom: 24px;
+    }
+
+    .cta-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .btn-cta-gold {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--accent);
+      color: #ffffff;
+      font-size: 14px;
+      font-weight: 600;
+      padding: 10px 22px;
+      border-radius: 8px;
+      transition: all 0.2s ease;
+      border: 1px solid var(--accent);
+    }
+
+    .btn-cta-gold:hover {
+      background: var(--accent-hover);
+      border-color: var(--accent-hover);
+      color: #ffffff;
+      box-shadow: 0 6px 18px var(--accent-subtle);
+    }
+
+    .btn-cta-outline {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: transparent;
+      color: #ffffff;
+      font-size: 14px;
+      font-weight: 500;
+      padding: 10px 20px;
+      border-radius: 8px;
+      border: 1px solid var(--line);
+      transition: all 0.2s ease;
+    }
+
+    .btn-cta-outline:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+      background: var(--accent-subtle);
+    }
+
+    /* Lightbox Modal & Modular Navigation Bar */
+    .img-lightbox-modal {
+      position: fixed;
+      inset: 0;
+      z-index: 99999;
+      background: rgba(10, 10, 10, 0.92);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: max(16px, env(safe-area-inset-top, 0px)) max(16px, env(safe-area-inset-right, 0px)) max(16px, env(safe-area-inset-bottom, 0px)) max(16px, env(safe-area-inset-left, 0px));
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
+
+    .img-lightbox-modal.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .img-lightbox-container {
+      position: relative;
+      max-width: 1240px;
+      width: 100%;
+      height: 94vh;
+      max-height: 94vh;
+      display: flex;
+      flex-direction: column;
+      background: #141414;
+      border: 1px solid var(--line-gold);
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.9), 0 0 40px rgba(155, 128, 90, 0.15);
+      animation: modalZoomIn 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    @keyframes modalZoomIn {
+      from {
+        opacity: 0;
+        transform: scale(0.94);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    /* Main Stage */
+    .img-lightbox-stage {
+      position: relative;
+      flex: 1 1 auto;
+      min-height: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #0d0d0d;
+      overflow: hidden;
+      padding: 12px;
+    }
+
+    .img-lightbox-img-wrap {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      user-select: none;
+    }
+
+    .img-lightbox-img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      display: block;
+      border-radius: 8px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.7);
+      transition: opacity 0.15s ease;
+    }
+
+    /* Floating Side Navigation Buttons */
+    .lightbox-side-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 30;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: rgba(24, 24, 24, 0.88);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      cursor: pointer;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+      transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+      user-select: none;
+    }
+
+    .lightbox-side-btn.lightbox-prev {
+      left: 18px;
+    }
+
+    .lightbox-side-btn.lightbox-next {
+      right: 18px;
+    }
+
+    .lightbox-side-btn:hover:not(:disabled) {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #ffffff;
+      transform: translateY(-50%) scale(1.12);
+      box-shadow: 0 12px 32px var(--accent-subtle);
+    }
+
+    .lightbox-side-btn:disabled {
+      opacity: 0.3;
+      cursor: not-allowed;
+      pointer-events: none;
+    }
+
+    /* Close Button Top Corner */
+    .img-lightbox-close {
+      position: absolute;
+      top: 14px;
+      right: 14px;
+      z-index: 40;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: rgba(24, 24, 24, 0.88);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: #ffffff;
+      font-size: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
+      transition: background 0.2s ease, transform 0.2s ease, border-color 0.2s ease;
+    }
+
+    .img-lightbox-close:hover {
+      background: #e63946;
+      border-color: #e63946;
+      transform: scale(1.08);
+      color: #ffffff;
+    }
+
+    /* Modular Navigation Bar */
+    .img-lightbox-modular-bar {
+      flex: 0 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 12px 22px;
+      background: rgba(26, 26, 26, 0.95);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-top: 1px solid var(--line-gold);
+      flex-wrap: wrap;
+    }
+
+    /* Completely Remove Move To Top Icon in Modular Bar Section */
+    .scroll-top {
+      z-index: 990 !important;
+    }
+
+    .img-lightbox-modal.active ~ #scroll-top,
+    .img-lightbox-modal.active ~ .scroll-top,
+    body.lightbox-open #scroll-top,
+    body.lightbox-open .scroll-top,
+    body:has(.img-lightbox-modal.active) #scroll-top,
+    body:has(.img-lightbox-modal.active) .scroll-top {
+      display: none !important;
+      visibility: hidden !important;
+      opacity: 0 !important;
+      pointer-events: none !important;
+    }
+
+    .modular-info {
+      flex: 1 1 240px;
+      min-width: 0;
+    }
+
+    .modular-info h4 {
+      font-size: 15.5px;
+      font-weight: 600;
+      color: #ffffff;
+      margin: 0 0 3px 0;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .modular-info span {
+      font-size: 12.5px;
+      color: var(--mute);
+      display: block;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    /* Modular Center Navigation */
+    .modular-nav {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      flex: 0 0 auto;
+    }
+
+    .modular-nav-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      min-height: 38px;
+      padding: 0 16px;
+      border-radius: 999px;
+      border: 1px solid rgba(155, 128, 90, 0.35);
+      background: rgba(40, 40, 40, 0.85);
+      color: #ffffff;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      user-select: none;
+    }
+
+    .modular-nav-btn:hover:not(:disabled) {
+      background: var(--accent);
+      border-color: var(--accent-hover);
+      color: #ffffff;
+      transform: translateY(-1px);
+      box-shadow: 0 6px 18px var(--accent-glow);
+    }
+
+    .modular-nav-btn:disabled {
+      opacity: 0.35;
+      cursor: not-allowed;
+    }
+
+    .modular-counter {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--accent);
+      background: rgba(155, 128, 90, 0.12);
+      border: 1px solid rgba(155, 128, 90, 0.3);
+      padding: 6px 14px;
+      border-radius: 999px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      white-space: nowrap;
+      user-select: none;
+    }
+
+    .modular-counter .cnt-sub {
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 11.5px;
+    }
+
+    /* Modular Right Actions */
+    .modular-actions {
+      flex: 1 1 160px;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .modular-action-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      min-height: 36px;
+      padding: 0 14px;
+      border-radius: 8px;
+      background: rgba(155, 128, 90, 0.2);
+      border: 1px solid var(--accent-border);
+      color: #ffffff;
+      font-size: 12.5px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      white-space: nowrap;
+    }
+
+    .modular-action-btn:hover {
+      background: var(--accent);
+      border-color: var(--accent-hover);
+      color: #ffffff;
+      box-shadow: 0 4px 14px var(--accent-glow);
+    }
+
+    @media (max-width: 860px) {
+      .img-lightbox-container {
+        height: 96vh;
+        max-height: 96vh;
+        border-radius: 12px;
+      }
+      .img-lightbox-modular-bar {
+        padding: 10px 14px;
+        gap: 10px;
+      }
+      .modular-info {
+        flex: 1 1 100%;
+        text-align: center;
+      }
+      .modular-nav {
+        order: 2;
+        width: 100%;
+        justify-content: space-between;
+      }
+      .modular-actions {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+      }
+      .modular-nav-btn {
+        min-height: 34px;
+        padding: 0 12px;
+        font-size: 12px;
+      }
+      .lightbox-side-btn {
+        width: 38px;
+        height: 38px;
+        font-size: 18px;
+      }
+      .lightbox-side-btn.lightbox-prev {
+        left: 8px;
+      }
+      .lightbox-side-btn.lightbox-next {
+        right: 8px;
+      }
+    }
+
+    /* Responsive Queries */
+    @media (max-width: 900px) {
+      .controls-inner {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .search-wrapper {
+        max-width: 100%;
+      }
+
+      .project-cta-banner {
+        padding: 30px 24px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+      }
+
+      html {
+        scroll-behavior: auto;
+      }
+    }
+  </style>
+</head>
+
+<body class="project-page works-page">
+
+  <!-- Header / Navbar (Matched to project.html & index.html) -->
+  <header id="header" class="header d-flex flex-column justify-content-center">
+    <i class="header-toggle d-xl-none bi bi-list"></i>
+
+    <div class="header-container d-flex flex-column align-items-start">
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html#hero"><i class="bi bi-house navicon"></i>Home</a></li>
+          <li><a href="index.html#about"><i class="bi bi-person navicon"></i> About</a></li>
+          <li><a href="index.html#resume"><i class="bi bi-file-earmark-text navicon"></i> Resume</a></li>
+          <li><a href="certificate.html"><i class="bi bi-award navicon"></i> Certification</a></li>
+          <li><a href="works.html" class="active"><i class="bi bi-palette navicon"></i> Visual Works</a></li>
+          <li><a href="index.html#portfolio"><i class="bi bi-images navicon"></i> Portfolio</a></li>
+          <li><a href="index.html#social"><i class="bi bi-share navicon"></i> Social Links</a></li>
+          <li><a href="index.html#services"><i class="bi bi-hdd-stack navicon"></i> Services</a></li>
+          <li><a href="index.html#contact"><i class="bi bi-envelope navicon"></i> Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="social-links text-center">
+        <a href="https://www.linkedin.com/in/mohit-cg/" target="_blank" rel="noopener" class="linkedin"
+          title="LinkedIn"><i class="bi bi-linkedin"></i></a>
+        <a href="https://github.com/mohit-cg" target="_blank" rel="noopener" class="github" title="GitHub"><i
+            class="bi bi-github"></i></a>
+        <a href="https://www.figma.com/@mohit_cg" target="_blank" rel="noopener" class="figma" title="Figma">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma" width="20"
+            height="20">
+        </a>
+        <a href="https://www.instagram.com/team_codogram" target="_blank" rel="noopener" class="instagram"
+          title="Instagram"><i class="bi bi-instagram"></i></a>
+        <a href="https://www.youtube.com/@team_codogram" target="_blank" rel="noopener" class="youtube"
+          title="YouTube"><i class="bi bi-youtube"></i></a>
+      </div>
+    </div>
+  </header>
+
+  <main class="main" id="main">
+
+    <!-- Page Title & Back Button -->
+    <div class="page-title">
+      <div class="container d-flex justify-content-between align-items-center gap-3">
+        <h1 class="mb-0">Visual Design Portfolio &amp; Creative Works</h1>
+        <a href="index.html#visual-works" class="back-btn" title="Back to Visual Works">
+          <i class="bi bi-arrow-left"></i>
+          <span>Back</span>
+        </a>
+      </div>
+    </div><!-- End Page Title -->
+
+    <div class="wrap">
+
+      <!-- Hero Header Section (Matched to project.html) -->
+      <section class="vault-hero">
+        <div class="eyebrow-pill">
+          <i class="bi bi-palette-fill"></i> Verified Graphic Design &amp; Creative Archive
+        </div>
+        <h1>
+          Visual Design, Brand Systems &amp; <span class="gold-text">Creative Direction</span>
+        </h1>
+        <p class="hero-desc">
+          A comprehensive archive of <strong>387 curated works</strong> across event posters, landscape banners, high-CTR YouTube thumbnails, vector brand marks, neural AI concept art, and fintech infographics by <strong>Mohit Kumar</strong>.
+        </p>
+
+        <!-- Metric Highlights Bar -->
+        <div class="hero-metrics-bar">
+          <div class="metric-item">
+            <div class="metric-icon-box">
+              <i class="bi bi-layers-fill"></i>
+            </div>
+            <div class="metric-info">
+              <b id="statTotalWorks">387</b>
+              <span>Curated Assets</span>
+            </div>
+          </div>
+
+          <div class="metric-item">
+            <div class="metric-icon-box">
+              <i class="bi bi-grid-fill"></i>
+            </div>
+            <div class="metric-info">
+              <b>8</b>
+              <span>Design Disciplines</span>
+            </div>
+          </div>
+
+          <div class="metric-item">
+            <div class="metric-icon-box">
+              <i class="bi bi-play-circle-fill"></i>
+            </div>
+            <div class="metric-info">
+              <b>90</b>
+              <span>Thumbnails &amp; Banners</span>
+            </div>
+          </div>
+
+          <div class="metric-item">
+            <div class="metric-icon-box">
+              <i class="bi bi-robot"></i>
+            </div>
+            <div class="metric-info">
+              <b>132</b>
+              <span>AI Visuals</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sticky Controls Toolbar: Filter Chips & Live Search (Matched to project.html) -->
+      <div class="controls-panel" id="controlsPanel">
+        <div class="controls-inner">
+          <div class="chips-group" id="chipsGroup" role="group" aria-label="Filter works by discipline">
+            <button type="button" class="chip-btn active" data-filter="all">
+              <i class="bi bi-grid-fill"></i> All Disciplines <span class="chip-badge" id="badgeAll">387</span>
+            </button>
+            <button type="button" class="chip-btn" data-filter="posters">
+              <i class="bi bi-palette-fill"></i> Posters <span class="chip-badge">43</span>
+            </button>
+            <button type="button" class="chip-btn" data-filter="banners">
+              <i class="bi bi-window-fullscreen"></i> Wide Banners <span class="chip-badge">25</span>
+            </button>
+            <button type="button" class="chip-btn" data-filter="thumbnails">
+              <i class="bi bi-play-circle-fill"></i> YouTube Thumbnails <span class="chip-badge">71</span>
+            </button>
+            <button type="button" class="chip-btn" data-filter="ai">
+              <i class="bi bi-robot"></i> AI Visuals &amp; Concept Art <span class="chip-badge">132</span>
+            </button>
+            <button type="button" class="chip-btn" data-filter="logos">
+              <i class="bi bi-pentagon-fill"></i> Logos &amp; Brand Marks <span class="chip-badge">35</span>
+            </button>
+            <button type="button" class="chip-btn" data-filter="fintech">
+              <i class="bi bi-graph-up-arrow"></i> FinTech Internship Deliverables <span class="chip-badge">26</span>
+            </button>
+            <button type="button" class="chip-btn" data-filter="flyers">
+              <i class="bi bi-megaphone-fill"></i> Flyers &amp; Social Creatives <span class="chip-badge">44</span>
+            </button>
+            <button type="button" class="chip-btn" data-filter="mockups">
+              <i class="bi bi-box-seam"></i> 3D Mockups &amp; Design Systems <span class="chip-badge">11</span>
+            </button>
+          </div>
+
+          <div class="search-wrapper">
+            <i class="bi bi-search search-icon-left"></i>
+            <label for="workSearch" class="visually-hidden">Search visual works</label>
+            <input type="search" id="workSearch" placeholder="Search title, category or tag..." autocomplete="off">
+            <button type="button" id="clearSearch" class="search-clear-btn" aria-label="Clear search">
+              <i class="bi bi-x-circle-fill"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Main Visual Works Feed Container -->
+      <div id="worksFeed"></div>
+
+      <!-- Empty State Container when search returns 0 results -->
+      <div id="noResultsBox" class="no-results-box">
+        <i class="bi bi-search"></i>
+        <h3>No matching visual works found</h3>
+        <p>No design artwork matched your search query. Try clearing your search term or selecting "All Disciplines".</p>
+        <button type="button" id="btnResetFilters" class="btn-reset-filters">Reset All Filters</button>
+      </div>
+
+      <!-- Call to Action Banner (Matched to project.html) -->
+      <section class="project-cta-banner">
+        <div class="cta-inner">
+          <span class="eyebrow-pill"><i class="bi bi-chat-quote-fill"></i> Let's Collaborate</span>
+          <h2>Have an upcoming visual design or creative direction project?</h2>
+          <p>
+            Whether you need a bespoke brand identity system, YouTube thumbnails engineered for high click-through rates, event promotional posters, or tailored visual creative direction, I deliver purposeful creative work that commands attention.
+          </p>
+          <div class="cta-actions">
+            <a href="mailto:mohitkumar7232901@gmail.com" class="btn-cta-gold">
+              <i class="bi bi-envelope-fill"></i> Write to Mohit
+            </a>
+            <a href="project.html" class="btn-cta-outline">
+              <i class="bi bi-code-slash"></i> Engineering Case Studies
+            </a>
+            <a href="index.html#portfolio" class="btn-cta-outline">
+              <i class="bi bi-arrow-left"></i> Main Portfolio
+            </a>
+          </div>
+        </div>
+      </section>
+
+    </div><!-- End .wrap -->
+
+  </main>
+
+  <!-- Image Lightbox Modal for Full View with Modular Navigation Bar -->
+  <div id="imgLightbox" class="img-lightbox-modal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="img-lightbox-container">
+
+      <!-- Close Button Top Corner -->
+      <button type="button" id="imgLightboxClose" class="img-lightbox-close" aria-label="Close image preview" title="Close (Esc)">
+        <i class="bi bi-x-lg"></i>
+      </button>
+
+      <!-- Main Stage with Full Image & Floating Side Navigation -->
+      <div class="img-lightbox-stage">
+        <!-- Floating Previous Side Arrow -->
+        <button type="button" id="lightboxSidePrev" class="lightbox-side-btn lightbox-prev" aria-label="Previous artwork" title="Previous Image (←)">
+          <i class="bi bi-chevron-left"></i>
+        </button>
+
+        <!-- Full Resolution Image Display Wrap -->
+        <div class="img-lightbox-img-wrap">
+          <img id="imgLightboxTarget" src="" alt="Artwork Screenshot" class="img-lightbox-img">
+        </div>
+
+        <!-- Floating Next Side Arrow -->
+        <button type="button" id="lightboxSideNext" class="lightbox-side-btn lightbox-next" aria-label="Next artwork" title="Next Image (→)">
+          <i class="bi bi-chevron-right"></i>
+        </button>
+      </div>
+
+      <!-- Modular Control Bar at Bottom -->
+      <div class="img-lightbox-modular-bar">
+        <!-- Module 1: Info (Title & Category) -->
+        <div class="modular-info">
+          <h4 id="imgLightboxTitle">Artwork Title</h4>
+          <span id="imgLightboxSubtitle">Category &bull; Tag</span>
+        </div>
+
+        <!-- Module 2: Navigation (Previous, Item/Slide Counter, Next) -->
+        <div class="modular-nav">
+          <button type="button" id="btnPrevSlide" class="modular-nav-btn" aria-label="Previous image" title="Previous (←)">
+            <i class="bi bi-chevron-left"></i>
+            <span>Previous</span>
+          </button>
+          <div id="slideCounter" class="modular-counter">
+            1 / 1
+          </div>
+          <button type="button" id="btnNextSlide" class="modular-nav-btn" aria-label="Next image" title="Next (→)">
+            <span>Next</span>
+            <i class="bi bi-chevron-right"></i>
+          </button>
+        </div>
+
+        <!-- Module 3: Actions (Full Resolution Link) -->
+        <div class="modular-actions">
+          <a id="imgLightboxFullLink" href="" target="_blank" rel="noopener" class="modular-action-btn" title="Open full resolution in new tab">
+            <i class="bi bi-arrows-fullscreen"></i>
+            <span class="d-none d-sm-inline">Full Res</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Footer (Matched to project.html & index.html) -->
+  <footer id="footer" class="footer position-relative">
+    <div class="container">
+      <div class="copyright text-center">
+        <p>© <span>Copyright</span> <strong class="px-1 sitename">Mohit Kumar</strong> <span>All Rights Reserved</span>
+        </p>
+      </div>
+      <div class="credits">
+        Designed &amp; Developed by <a href="https://www.instagram.com/team_codogram" target="_blank"
+          rel="noopener">Codogram</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll Top (Matched to project.html) -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"
+    aria-label="Scroll to top">
+    <i class="bi bi-arrow-up-short"></i>
+  </a>
+
+  <!-- Visual Works Application Script (Matched to project.html engine) -->
+  <script>
+    (function () {
+      "use strict";
+
+      /**
+       * Mohit Kumar Verified Visual Works Data Repository
+       */
+      const W = [
+        {
+          "id": "posters",
+          "name": "Posters",
+          "color": "--accent",
+          "badgeIcon": "bi-palette-fill",
+          "ratio": "3 / 4",
+          "intro": "Event, cultural, promotional, and conceptual posters designed with bold typography and deliberate visual hierarchy.",
+          "items": [
+            {
+              "t": "Poster 01",
+              "tag": "100 Sub Celebration",
+              "img": "assets/img/portfolio/poster/100 sub celebration.png",
+              "slides": null
+            },
+            {
+              "t": "Poster 02",
+              "tag": "Geometric Visual Art",
+              "img": "assets/img/portfolio/poster/9015577.jpg",
+              "slides": null
+            },
+            {
+              "t": "Poster 03",
+              "tag": "Birthday Celebration",
+              "img": "assets/img/portfolio/poster/ADI_HBD_24.png",
+              "slides": null
+            },
+            {
+              "t": "Poster 04",
+              "tag": "Ambedkar Jayanti",
+              "img": "assets/img/portfolio/poster/ambedkar_23.jpg",
+              "slides": null
+            },
+            {
+              "t": "Poster 05",
+              "tag": "Ambedkar Jayanti",
+              "img": "assets/img/portfolio/poster/ambedkar_jayanti_23.jpg",
+              "slides": null
+            },
+            {
+              "t": "Poster 06",
+              "tag": "Artisan Coffee Branding",
+              "img": "assets/img/portfolio/poster/coffeemk.png",
+              "slides": null
+            },
+            {
+              "t": "Poster 07",
+              "tag": "Gandhi Jayanti",
+              "img": "assets/img/portfolio/poster/gandhi_jayanti_24.png",
+              "slides": null
+            },
+            {
+              "t": "Poster 08",
+              "tag": "Google Ads Creative",
+              "img": "assets/img/portfolio/poster/google_ads_cd.png",
+              "slides": null
+            },
+            {
+              "t": "Poster 09",
+              "tag": "Govardhan Puja Festive",
+              "img": "assets/img/portfolio/poster/govardhan-puja-wish-25.png",
+              "slides": null
+            },
+            {
+              "t": "Poster 10",
+              "tag": "Dhanteras Festive Wish",
+              "img": "assets/img/portfolio/poster/Happy_dhantares_2025.png",
+              "slides": null
+            },
+            {
+              "t": "Poster 11",
+              "tag": "Global Academy Promo",
+              "img": "assets/img/portfolio/poster/ib global instagram.png",
+              "slides": null
+            },
+            {
+              "t": "Poster 12",
+              "tag": "Global Academy Promo",
+              "img": "assets/img/portfolio/poster/Ib_global_post_1.png",
+              "slides": null
+            },
+            {
+              "t": "Poster 13",
+              "tag": "Instagram Ad Creative",
+              "img": "assets/img/portfolio/poster/insta_ad.png",
+              "slides": null
+            },
+            {
+              "t": "Poster 14",
+              "tag": "Yoga Day Poster",
+              "img": "assets/img/portfolio/poster/international_yoga_day_fas.jpg",
+              "slides": null
+            },
+            {
+              "t": "Poster 15",
+              "tag": "Makar Sankranti Festive",
+              "img": "assets/img/portfolio/poster/makar 2024.png",
+              "slides": null
+            },
+            {
+              "t": "Poster 16",
+              "tag": "Makar Sankranti Festive",
+              "img": "assets/img/portfolio/poster/makar_sanjranti.png",
+              "slides": null
+            },
+            {
+              "t": "Poster 17",
+              "tag": "Creative Poster Series #1",
+              "img": "assets/img/portfolio/poster/poster (1).png",
+              "slides": null
+            },
+            {
+              "t": "Poster 18",
+              "tag": "Creative Poster Series #10",
+              "img": "assets/img/portfolio/poster/poster (10).png",
+              "slides": null
+            },
+            {
+              "t": "Poster 19",
+              "tag": "Creative Poster Series #11",
+              "img": "assets/img/portfolio/poster/poster (11).png",
+              "slides": null
+            },
+            {
+              "t": "Poster 20",
+              "tag": "Creative Poster Series #12",
+              "img": "assets/img/portfolio/poster/poster (12).png",
+              "slides": null
+            },
+            {
+              "t": "Poster 21",
+              "tag": "Creative Poster Series #13",
+              "img": "assets/img/portfolio/poster/poster (13).png",
+              "slides": null
+            },
+            {
+              "t": "Poster 22",
+              "tag": "Creative Poster Series #14",
+              "img": "assets/img/portfolio/poster/poster (14).png",
+              "slides": null
+            },
+            {
+              "t": "Poster 23",
+              "tag": "Creative Poster Series #15",
+              "img": "assets/img/portfolio/poster/poster (15).png",
+              "slides": null
+            },
+            {
+              "t": "Poster 24",
+              "tag": "Creative Poster Series #16",
+              "img": "assets/img/portfolio/poster/poster (16).png",
+              "slides": null
+            },
+            {
+              "t": "Poster 25",
+              "tag": "Creative Poster Series #17",
+              "img": "assets/img/portfolio/poster/poster (17).png",
+              "slides": null
+            },
+            {
+              "t": "Poster 26",
+              "tag": "Creative Poster Series #18",
+              "img": "assets/img/portfolio/poster/poster (18).png",
+              "slides": null
+            },
+            {
+              "t": "Poster 27",
+              "tag": "Creative Poster Series #19",
+              "img": "assets/img/portfolio/poster/poster (19).png",
+              "slides": null
+            },
+            {
+              "t": "Poster 28",
+              "tag": "Creative Poster Series #2",
+              "img": "assets/img/portfolio/poster/poster (2).png",
+              "slides": null
+            },
+            {
+              "t": "Poster 29",
+              "tag": "Creative Poster Series #20",
+              "img": "assets/img/portfolio/poster/poster (20).png",
+              "slides": null
+            },
+            {
+              "t": "Poster 30",
+              "tag": "Creative Poster Series #21",
+              "img": "assets/img/portfolio/poster/poster (21).png",
+              "slides": null
+            },
+            {
+              "t": "Poster 31",
+              "tag": "Creative Poster Series #3",
+              "img": "assets/img/portfolio/poster/poster (3).png",
+              "slides": null
+            },
+            {
+              "t": "Poster 32",
+              "tag": "Creative Poster Series #4",
+              "img": "assets/img/portfolio/poster/poster (4).png",
+              "slides": null
+            },
+            {
+              "t": "Poster 33",
+              "tag": "Creative Poster Series #5",
+              "img": "assets/img/portfolio/poster/poster (5).png",
+              "slides": null
+            },
+            {
+              "t": "Poster 34",
+              "tag": "Creative Poster Series #6",
+              "img": "assets/img/portfolio/poster/poster (6).png",
+              "slides": null
+            },
+            {
+              "t": "Poster 35",
+              "tag": "Creative Poster Series #7",
+              "img": "assets/img/portfolio/poster/poster (7).png",
+              "slides": null
+            },
+            {
+              "t": "Poster 36",
+              "tag": "Creative Poster Series #8",
+              "img": "assets/img/portfolio/poster/poster (8).png",
+              "slides": null
+            },
+            {
+              "t": "Poster 37",
+              "tag": "Creative Poster Series #9",
+              "img": "assets/img/portfolio/poster/poster (9).png",
+              "slides": null
+            },
+            {
+              "t": "Poster 38",
+              "tag": "Brand Promo Creative",
+              "img": "assets/img/portfolio/poster/pyxelprolix_promo.png",
+              "slides": null
+            },
+            {
+              "t": "Poster 39",
+              "tag": "Ram Navami Festive",
+              "img": "assets/img/portfolio/poster/ram_navami_24_1.png",
+              "slides": null
+            },
+            {
+              "t": "Poster 40",
+              "tag": "Republic Day Celebration",
+              "img": "assets/img/portfolio/poster/republic day cg 24.png",
+              "slides": null
+            },
+            {
+              "t": "Poster 41",
+              "tag": "Republic Day Celebration",
+              "img": "assets/img/portfolio/poster/REPUBLIC DAY VPA 24.png",
+              "slides": null
+            },
+            {
+              "t": "Poster 42",
+              "tag": "Coffee Brand Showcase",
+              "img": "assets/img/portfolio/poster/starbucks_post.png",
+              "slides": null
+            },
+            {
+              "t": "Poster 43",
+              "tag": "Yoga Day Poster",
+              "img": "assets/img/portfolio/poster/yoga.png",
+              "slides": null
+            }
+          ]
+        },
+        {
+          "id": "banners",
+          "name": "Wide Banners",
+          "color": "--app",
+          "badgeIcon": "bi-window-fullscreen",
+          "ratio": "16 / 9",
+          "intro": "High-impact promotional banners, channel headers, and landscape creatives engineered for visual dominance.",
+          "items": [
+            {
+              "t": "Banner 01",
+              "tag": "Digital Web Banner #1",
+              "img": "assets/img/portfolio/banner/banner (1).png",
+              "slides": null
+            },
+            {
+              "t": "Banner 02",
+              "tag": "Digital Web Banner #2",
+              "img": "assets/img/portfolio/banner/banner (2).png",
+              "slides": null
+            },
+            {
+              "t": "Banner 03",
+              "tag": "Digital Web Banner #3",
+              "img": "assets/img/portfolio/banner/banner (3).png",
+              "slides": null
+            },
+            {
+              "t": "Banner 04",
+              "tag": "Digital Web Banner #4",
+              "img": "assets/img/portfolio/banner/banner (4).png",
+              "slides": null
+            },
+            {
+              "t": "Banner 05",
+              "tag": "Digital Web Banner #5",
+              "img": "assets/img/portfolio/banner/banner (5).png",
+              "slides": null
+            },
+            {
+              "t": "Banner 06",
+              "tag": "Digital Web Banner #6",
+              "img": "assets/img/portfolio/banner/banner (6).png",
+              "slides": null
+            },
+            {
+              "t": "Banner 07",
+              "tag": "Digital Web Banner #7",
+              "img": "assets/img/portfolio/banner/banner (7).png",
+              "slides": null
+            },
+            {
+              "t": "Banner 08",
+              "tag": "Digital Web Banner #8",
+              "img": "assets/img/portfolio/banner/banner (8).png",
+              "slides": null
+            },
+            {
+              "t": "Banner 09",
+              "tag": "Digital Web Banner #9",
+              "img": "assets/img/portfolio/banner/banner (9).png",
+              "slides": null
+            },
+            {
+              "t": "Banner 10",
+              "tag": "Figma Design Banner",
+              "img": "assets/img/portfolio/banner/Figma_banner (2).png",
+              "slides": null
+            },
+            {
+              "t": "Banner 11",
+              "tag": "Figma Design Banner",
+              "img": "assets/img/portfolio/banner/figma_banner.png",
+              "slides": null
+            },
+            {
+              "t": "Banner 12",
+              "tag": "Figma Design Banner",
+              "img": "assets/img/portfolio/banner/figma_banner_1.png",
+              "slides": null
+            },
+            {
+              "t": "Banner 13",
+              "tag": "Google Agentic Banner",
+              "img": "assets/img/portfolio/banner/Google_Agentic_Scrap_book_2.png",
+              "slides": null
+            },
+            {
+              "t": "Banner 14",
+              "tag": "Hackathon Header Art",
+              "img": "assets/img/portfolio/banner/hackoverse.png",
+              "slides": null
+            },
+            {
+              "t": "Banner 15",
+              "tag": "In-App Promo Banner",
+              "img": "assets/img/portfolio/banner/in_app_promo.png",
+              "slides": null
+            },
+            {
+              "t": "Banner 16",
+              "tag": "LinkedIn Header & Ads",
+              "img": "assets/img/portfolio/banner/linkedln banner 1.png",
+              "slides": null
+            },
+            {
+              "t": "Banner 17",
+              "tag": "LinkedIn Header & Ads",
+              "img": "assets/img/portfolio/banner/linkedln_ads.png",
+              "slides": null
+            },
+            {
+              "t": "Banner 18",
+              "tag": "Web Development Banner",
+              "img": "assets/img/portfolio/banner/wd.png",
+              "slides": null
+            },
+            {
+              "t": "Banner 19",
+              "tag": "YouTube Channel Art",
+              "img": "assets/img/portfolio/banner/youtube_banner.png",
+              "slides": null
+            },
+            {
+              "t": "Banner 20",
+              "tag": "BusMate Transit Platform Banner",
+              "img": "assets/img/portfolio/banner/busmate.png",
+              "slides": null
+            },
+            {
+              "t": "Banner 21",
+              "tag": "Design Thinking & HMW Banner",
+              "img": "assets/img/portfolio/banner/hmw.png",
+              "slides": null
+            },
+            {
+              "t": "Banner 22",
+              "tag": "Cinema & Movie Streaming Banner",
+              "img": "assets/img/portfolio/banner/movie.png",
+              "slides": null
+            },
+            {
+              "t": "Banner 23",
+              "tag": "Developer Portfolio Showcase Banner",
+              "img": "assets/img/portfolio/banner/port.png",
+              "slides": null
+            },
+            {
+              "t": "Banner 24",
+              "tag": "Vedant Brand Identity Banner",
+              "img": "assets/img/portfolio/banner/vedant.png",
+              "slides": null
+            },
+            {
+              "t": "Banner 25",
+              "tag": "Digital Marketing Web Banner",
+              "img": "assets/img/portfolio/banner/banner (1).jpg",
+              "slides": null
+            }
+          ]
+        },
+        {
+          "id": "thumbnails",
+          "name": "YouTube Thumbnails",
+          "color": "--ux",
+          "badgeIcon": "bi-play-circle-fill",
+          "ratio": "16 / 9",
+          "intro": "High-conversion gaming and tech YouTube thumbnails crafted with intense lighting, contrast, and focal intrigue.",
+          "items": [
+            {
+              "t": "Thumbnail 01",
+              "tag": "Assassin's Creed Gaming",
+              "img": "assets/img/portfolio/thumbnail/assassin thumbnail 1.jpg",
+              "slides": null
+            },
+            {
+              "t": "Thumbnail 02",
+              "tag": "Assassin's Creed Gaming",
+              "img": "assets/img/portfolio/thumbnail/assassin thumbnail 2.jpg",
+              "slides": null
+            },
+            {
+              "t": "Thumbnail 03",
+              "tag": "Assassin's Creed Gaming",
+              "img": "assets/img/portfolio/thumbnail/assassin thumbnail 3.jpg",
+              "slides": null
+            },
+            {
+              "t": "Thumbnail 04",
+              "tag": "Assassin's Creed Gaming",
+              "img": "assets/img/portfolio/thumbnail/assassin thumbnail.jpg",
+              "slides": null
+            },
+            {
+              "t": "Thumbnail 05",
+              "tag": "Black Flag Gaming",
+              "img": "assets/img/portfolio/thumbnail/black flag thumbnail.png",
+              "slides": null
+            },
+            {
+              "t": "Thumbnail 06",
+              "tag": "Free Fire Booyah",
+              "img": "assets/img/portfolio/thumbnail/booyah_mohit.png",
+              "slides": null
+            },
+            {
+              "t": "Thumbnail 07",
+              "tag": "Codogram Tech & Code",
+              "img": "assets/img/portfolio/thumbnail/CG thumbnail.jpg",
+              "slides": null
+            },
+            {
+              "t": "Thumbnail 08",
+              "tag": "Artisan Coffee Showcase",
+              "img": "assets/img/portfolio/thumbnail/coffee bundle thumbnail.png",
+              "slides": null
+            },
+            {
+              "t": "Thumbnail 09",
+              "tag": "Artisan Coffee Showcase",
+              "img": "assets/img/portfolio/thumbnail/coffeenight thumbnail.png",
+              "slides": null
+            },
+            {
+              "t": "Thumbnail 10",
+              "tag": "Tech Comparison Guide",
+              "img": "assets/img/portfolio/thumbnail/comparison thumbnail.png",
+              "slides": null
+            },
+            {
+              "t": "Thumbnail 11",
+              "tag": "Crimson Cinematic Gaming",
+              "img": "assets/img/portfolio/thumbnail/crimson 2.png",
+              "slides": null
+            },
+            {
+              "t": "Thumbnail 12",
+              "tag": "Crimson Cinematic Gaming",
+              "img": "assets/img/portfolio/thumbnail/crimson.png",
+              "slides": null
+            },
+            {
+              "t": "Thumbnail 13",
+              "tag": "Fortnite Battle Royale",
+              "img": "assets/img/portfolio/thumbnail/fortnite thumbnail 1.jpg",
+              "slides": null
+            },
+            {
+              "t": "Thumbnail 14",
+              "tag": "Fortnite Battle Royale",
+              "img": "assets/img/portfolio/thumbnail/fortnite thumbnail.jpg",
+              "slides": null
+            },
+            {
+              "t": "Thumbnail 15",
+              "tag": "Forza Horizon Racing",
+              "img": "assets/img/portfolio/thumbnail/forza.png",
+              "slides": null
+            },
+            {
+              "t": "Thumbnail 16",
+              "tag": "Free Fire Esports",
+              "img": "assets/img/portfolio/thumbnail/free fire 2 thumbnail.png",
+              "slides": null
+            },
+            {
+              "t": "Thumbnail 17",
+              "tag": "Free Fire Esports",
+              "img": "assets/img/portfolio/thumbnail/free fire 3 thumbnail.png",
+              "slides": null
+            },
+            {
+              "t": "Thumbnail 18",
+              "tag": "Free Fire Esports",
+              "img": "assets/img/portfolio/thumbnail/free fire 3.png",
+              "slides": null
+            },
+            {
+              "t": "Thumbnail 19",
+              "tag": "Free Fire Esports",
+              "img": "assets/img/portfolio/thumbnail/free fire 4.png",
+              "slides": null
+            },
+            {
+              "t": "Thumbnail 20",
+              "tag": "Free Fire Esports",
+              "img": "assets/img/portfolio/thumbnail/free fire 5.png",
+              "slides": null
+            },
+            {
+              "t": "Thumbnail 21",
+              "tag": "Free Fire Esports",
+              "img": "assets/img/portfolio/thumbnail/free fire live 1.png",
+              "slides": null
+            },
+            {
+              "t": "Thumbnail 22",
+              "tag": "Free Fire Esports",
+              "img": "assets/img/portfolio/thumbnail/free fire live.png",
+              "slides": null
+            },
+            {
+              "t": "Thumbnail 23",
+              "tag": "Free Fire Esports",
+              "img": "assets/img/portfolio/thumbnail/free fire thumbnail.jpg",
+              "slides": null
+            },
+            {
+              "t": "Thumbnail 24",
+              "tag": "Free Fire Esports",
+              "img": "assets/img/portfolio/thumbnail/free fire4.png",
+              "slides": null
+            },
+            {
+              "t": "Thumbnail 25",
+              "tag": "Free Fire Esports",
+              "img": "assets/img/portfolio/thumbnail/freefire thumbnail.png",
+              "slides": null
+            },
+            {
+              "t": "Thumbnail 26",
+              "tag": "Freeze Frame Highlights",
+              "img": "assets/img/portfolio/thumbnail/freeze_frame.png",
+              "slides": null
+            },
+            {
+              "t": "Thumbnail 27",
+              "tag": "Gamer Mohit Stream",
+              "img": "assets/img/portfolio/thumbnail/gamer_mohit_thumbnail.jpg",
+              "slides": null
+            },
+            {
+              "t": "Thumbnail 28",
+              "tag": "GTA V / GTA VI Gaming",
+              "img": "assets/img/portfolio/thumbnail/gta4 retro thumbnail.png",
+              "slides": null
+            },
+            {
+              "t": "Thumbnail 29",
+              "tag": "GTA V / GTA VI Gaming",
+              "img": "assets/img/portfolio/thumbnail/gta4 thumbnail.png",
+              "slides": null
+            },
+            {
+              "t": "Thumbnail 30",
+              "tag": "GTA V / GTA VI Gaming",
+              "img": "assets/img/portfolio/thumbnail/gta6 thumbnail 1.jpg",
+              "slides": null
+            },
+            {
+              "t": "Thumbnail 31",
+              "tag": "GTA V / GTA VI Gaming",
+              "img": "assets/img/portfolio/thumbnail/gta6 thumbnail.jpg",
+              "slides": null
+            },
+            {
+              "t": "Thumbnail 32",
+              "tag": "GTA V / GTA VI Gaming",
+              "img": "assets/img/portfolio/thumbnail/gta6 thumbnail2.png",
+              "slides": null
+            },
+            {
+              "t": "Thumbnail 33",
+              "tag": "GTA V / GTA VI Gaming",
+              "img": "assets/img/portfolio/thumbnail/gta_graphics.png",
+              "slides": null
+            },
+            {
+              "t": "Thumbnail 34",
+              "tag": "Half-Life Highlights",
+              "img": "assets/img/portfolio/thumbnail/hl_1.png",
+              "slides": null
+            },
+            {
+              "t": "Thumbnail 35",
+              "tag": "Half-Life Highlights",
+              "img": "assets/img/portfolio/thumbnail/hl_2.png",
+              "slides": null
+            },
+            {
+              "t": "Thumbnail 36",
+              "tag": "Half-Life Highlights",
+              "img": "assets/img/portfolio/thumbnail/hl_3.png",
+              "slides": null
+            },
+            {
+              "t": "Thumbnail 37",
+              "tag": "Half-Life Highlights",
+              "img": "assets/img/portfolio/thumbnail/hl_4.png",
+              "slides": null
+            },
+            {
+              "t": "Thumbnail 38",
+              "tag": "Half-Life Highlights",
+              "img": "assets/img/portfolio/thumbnail/hl_5.png",
+              "slides": null
+            },
+            {
+              "t": "Thumbnail 39",
+              "tag": "Half-Life Highlights",
+              "img": "assets/img/portfolio/thumbnail/hl_shorts.png",
+              "slides": null
+            },
+            {
+              "t": "Thumbnail 40",
+              "tag": "John Wick Action Gaming",
+              "img": "assets/img/portfolio/thumbnail/johnwick mobile thumbnail.png",
+              "slides": null
+            },
+            {
+              "t": "Thumbnail 41",
+              "tag": "John Wick Action Gaming",
+              "img": "assets/img/portfolio/thumbnail/johnwick thumbnail.png",
+              "slides": null
+            },
+            {
+              "t": "Thumbnail 42",
+              "tag": "Light Concept Art",
+              "img": "assets/img/portfolio/thumbnail/light thumbnail.png",
+              "slides": null
+            },
+            {
+              "t": "Thumbnail 43",
+              "tag": "Metro Exodus Gaming",
+              "img": "assets/img/portfolio/thumbnail/metro thumbnail.png",
+              "slides": null
+            },
+            {
+              "t": "Thumbnail 44",
+              "tag": "Minecraft Survival Build",
+              "img": "assets/img/portfolio/thumbnail/minecraft.png",
+              "slides": null
+            },
+            {
+              "t": "Thumbnail 45",
+              "tag": "Game Trailer Premiere",
+              "img": "assets/img/portfolio/thumbnail/new trailer thumbnail.png",
+              "slides": null
+            },
+            {
+              "t": "Thumbnail 46",
+              "tag": "Pragmata Sci-Fi Concept",
+              "img": "assets/img/portfolio/thumbnail/pragmata thumbnail.png",
+              "slides": null
+            },
+            {
+              "t": "Thumbnail 47",
+              "tag": "Raji: An Ancient Epic",
+              "img": "assets/img/portfolio/thumbnail/raji thumbnail.png",
+              "slides": null
+            },
+            {
+              "t": "Thumbnail 48",
+              "tag": "Retro Arcade Gaming",
+              "img": "assets/img/portfolio/thumbnail/retro classic thumbnail.png",
+              "slides": null
+            },
+            {
+              "t": "Thumbnail 49",
+              "tag": "YouTube Shorts Viral Art",
+              "img": "assets/img/portfolio/thumbnail/Shorts Thumbnail.png",
+              "slides": null
+            },
+            {
+              "t": "Thumbnail 50",
+              "tag": "Tekken 8 Tournament",
+              "img": "assets/img/portfolio/thumbnail/tekken8.png",
+              "slides": null
+            },
+            {
+              "t": "Thumbnail 51",
+              "tag": "Twitch Stream Art",
+              "img": "assets/img/portfolio/thumbnail/twitch_banner.png",
+              "slides": null
+            },
+            {
+              "t": "Thumbnail 52",
+              "tag": "Uncrowned King Gaming",
+              "img": "assets/img/portfolio/thumbnail/uncrowned thumbnail.png",
+              "slides": null
+            },
+            {
+              "t": "Thumbnail 53",
+              "tag": "High-CTR YouTube Art",
+              "img": "assets/img/portfolio/thumbnail/Untitled design (1).png",
+              "slides": null
+            },
+            {
+              "t": "Thumbnail 54",
+              "tag": "High-CTR YouTube Art",
+              "img": "assets/img/portfolio/thumbnail/Untitled design.png",
+              "slides": null
+            },
+            {
+              "t": "Thumbnail 55",
+              "tag": "Where Winds Meet Gameplay",
+              "img": "assets/img/portfolio/thumbnail/wwm.png",
+              "slides": null
+            },
+            {
+              "t": "Thumbnail 56",
+              "tag": "Where Winds Meet Gameplay",
+              "img": "assets/img/portfolio/thumbnail/wwm8.png",
+              "slides": null
+            },
+            {
+              "t": "Thumbnail 57",
+              "tag": "Where Winds Meet Gameplay",
+              "img": "assets/img/portfolio/thumbnail/wwm9.png",
+              "slides": null
+            },
+            {
+              "t": "Thumbnail 58",
+              "tag": "Where Winds Meet Gameplay",
+              "img": "assets/img/portfolio/thumbnail/wwmepi1.png",
+              "slides": null
+            },
+            {
+              "t": "Thumbnail 59",
+              "tag": "Where Winds Meet Gameplay",
+              "img": "assets/img/portfolio/thumbnail/wwmepi10.png",
+              "slides": null
+            },
+            {
+              "t": "Thumbnail 60",
+              "tag": "Where Winds Meet Gameplay",
+              "img": "assets/img/portfolio/thumbnail/wwmepi11.png",
+              "slides": null
+            },
+            {
+              "t": "Thumbnail 61",
+              "tag": "Where Winds Meet Gameplay",
+              "img": "assets/img/portfolio/thumbnail/wwmepi12.png",
+              "slides": null
+            },
+            {
+              "t": "Thumbnail 62",
+              "tag": "Where Winds Meet Gameplay",
+              "img": "assets/img/portfolio/thumbnail/wwmepi13.png",
+              "slides": null
+            },
+            {
+              "t": "Thumbnail 63",
+              "tag": "Where Winds Meet Gameplay",
+              "img": "assets/img/portfolio/thumbnail/wwmepi14.png",
+              "slides": null
+            },
+            {
+              "t": "Thumbnail 64",
+              "tag": "Where Winds Meet Gameplay",
+              "img": "assets/img/portfolio/thumbnail/wwmepi2.png",
+              "slides": null
+            },
+            {
+              "t": "Thumbnail 65",
+              "tag": "Where Winds Meet Gameplay",
+              "img": "assets/img/portfolio/thumbnail/wwmepi2spl.png",
+              "slides": null
+            },
+            {
+              "t": "Thumbnail 66",
+              "tag": "Where Winds Meet Gameplay",
+              "img": "assets/img/portfolio/thumbnail/wwmepi3.png",
+              "slides": null
+            },
+            {
+              "t": "Thumbnail 67",
+              "tag": "Where Winds Meet Gameplay",
+              "img": "assets/img/portfolio/thumbnail/wwmepi4.png",
+              "slides": null
+            },
+            {
+              "t": "Thumbnail 68",
+              "tag": "Where Winds Meet Gameplay",
+              "img": "assets/img/portfolio/thumbnail/wwmepi5.png",
+              "slides": null
+            },
+            {
+              "t": "Thumbnail 69",
+              "tag": "Where Winds Meet Gameplay",
+              "img": "assets/img/portfolio/thumbnail/wwmepi6.png",
+              "slides": null
+            },
+            {
+              "t": "Thumbnail 70",
+              "tag": "Where Winds Meet Gameplay",
+              "img": "assets/img/portfolio/thumbnail/wwmepi7.png",
+              "slides": null
+            },
+            {
+              "t": "Thumbnail 71",
+              "tag": "YouTube Community Creative",
+              "img": "assets/img/portfolio/thumbnail/youtube_post.png",
+              "slides": null
+            }
+          ]
+        },
+        {
+          "id": "ai",
+          "name": "AI Visuals & Concept Art",
+          "color": "--brand",
+          "badgeIcon": "bi-robot",
+          "ratio": "1 / 1",
+          "intro": "Futuristic gamer emblems, neural world-building, and concept illustrations directed via precision prompt engineering.",
+          "items": [
+            {
+              "t": "AI Visual 01",
+              "tag": "AI Neural Code Visual",
+              "img": "assets/img/portfolio/ai work/%23codogram_design (1).png",
+              "slides": null
+            },
+            {
+              "t": "AI Visual 02",
+              "tag": "AI Neural Code Visual",
+              "img": "assets/img/portfolio/ai work/%23codogram_design.png",
+              "slides": null
+            },
+            {
+              "t": "AI Visual 03",
+              "tag": "AI Neural Concept Art",
+              "img": "assets/img/portfolio/ai work/ChatGPT Image Sep 12, 2026, 01_07_04 AM.png",
+              "slides": null
+            },
+            {
+              "t": "AI Visual 04",
+              "tag": "Diwali Neon Glow",
+              "img": "assets/img/portfolio/ai work/Elite Gamer Diwali Glow.png",
+              "slides": null
+            },
+            {
+              "t": "AI Visual 05",
+              "tag": "Elite Gamer AI Avatar",
+              "img": "assets/img/portfolio/ai work/Elite Gamer Mohit- YouTube Thumbnail (1).png",
+              "slides": null
+            },
+            {
+              "t": "AI Visual 06",
+              "tag": "Elite Gamer AI Avatar",
+              "img": "assets/img/portfolio/ai work/Elite Gamer Mohit- YouTube Thumbnail (10).png",
+              "slides": null
+            },
+            {
+              "t": "AI Visual 07",
+              "tag": "Elite Gamer AI Avatar",
+              "img": "assets/img/portfolio/ai work/Elite Gamer Mohit- YouTube Thumbnail (100).png",
+              "slides": null
+            },
+            {
+              "t": "AI Visual 08",
+              "tag": "Elite Gamer AI Avatar",
+              "img": "assets/img/portfolio/ai work/Elite Gamer Mohit- YouTube Thumbnail (101).png",
+              "slides": null
+            },
+            {
+              "t": "AI Visual 09",
+              "tag": "Elite Gamer AI Avatar",
+              "img": "assets/img/portfolio/ai work/Elite Gamer Mohit- YouTube Thumbnail (11).png",
+              "slides": null
+            },
+            {
+              "t": "AI Visual 10",
+              "tag": "Elite Gamer AI Avatar",
+              "img": "assets/img/portfolio/ai work/Elite Gamer Mohit- YouTube Thumbnail (12).png",
+              "slides": null
+            },
+            {
+              "t": "AI Visual 11",
+              "tag": "Elite Gamer AI Avatar",
+              "img": "assets/img/portfolio/ai work/Elite Gamer Mohit- YouTube Thumbnail (13).png",
+              "slides": null
+            },
+            {
+              "t": "AI Visual 12",
+              "tag": "Elite Gamer AI Avatar",
+              "img": "assets/img/portfolio/ai work/Elite Gamer Mohit- YouTube Thumbnail (14).png",
+              "slides": null
+            },
+            {
+              "t": "AI Visual 13",
+              "tag": "Elite Gamer AI Avatar",
+              "img": "assets/img/portfolio/ai work/Elite Gamer Mohit- YouTube Thumbnail (15).png",
+              "slides": null
+            },
+            {
+              "t": "AI Visual 14",
+              "tag": "Elite Gamer AI Avatar",
+              "img": "assets/img/portfolio/ai work/Elite Gamer Mohit- YouTube Thumbnail (16).png",
+              "slides": null
+            },
+            {
+              "t": "AI Visual 15",
+              "tag": "Elite Gamer AI Avatar",
+              "img": "assets/img/portfolio/ai work/Elite Gamer Mohit- YouTube Thumbnail (17).png",
+              "slides": null
+            },
+            {
+              "t": "AI Visual 16",
+              "tag": "Elite Gamer AI Avatar",
+              "img": "assets/img/portfolio/ai work/Elite Gamer Mohit- YouTube Thumbnail (18).png",
+              "slides": null
+            },
+            {
+              "t": "AI Visual 17",
+              "tag": "Elite Gamer AI Avatar",
+              "img": "assets/img/portfolio/ai work/Elite Gamer Mohit- YouTube Thumbnail (19).png",
+              "slides": null
+            },
+            {
+              "t": "AI Visual 18",
+              "tag": "Elite Gamer AI Avatar",
+              "img": "assets/img/portfolio/ai work/Elite Gamer Mohit- YouTube Thumbnail (2).png",
+              "slides": null
+            },
+            {
+              "t": "AI Visual 19",
+              "tag": "Elite Gamer AI Avatar",
+              "img": "assets/img/portfolio/ai work/Elite Gamer Mohit- YouTube Thumbnail (20).png",
+              "slides": null
+            },
+            {
+              "t": "AI Visual 20",
+              "tag": "Elite Gamer AI Avatar",
+              "img": "assets/img/portfolio/ai work/Elite Gamer Mohit- YouTube Thumbnail (21).png",
+              "slides": null
+            },
+            {
+              "t": "AI Visual 21",
+              "tag": "Elite Gamer AI Avatar",
+              "img": "assets/img/portfolio/ai work/Elite Gamer Mohit- YouTube Thumbnail (22).png",
+              "slides": null
+            },
+            {
+              "t": "AI Visual 22",
+              "tag": "Elite Gamer AI Avatar",
+              "img": "assets/img/portfolio/ai work/Elite Gamer Mohit- YouTube Thumbnail (23).png",
+              "slides": null
+            },
+            {
+              "t": "AI Visual 23",
+              "tag": "Elite Gamer AI Avatar",
+              "img": "assets/img/portfolio/ai work/Elite Gamer Mohit- YouTube Thumbnail (24).png",
+              "slides": null
+            },
+            {
+              "t": "AI Visual 24",
+              "tag": "Elite Gamer AI Avatar",
+              "img": "assets/img/portfolio/ai work/Elite Gamer Mohit- YouTube Thumbnail (25).png",
+              "slides": null
+            },
+            {
+              "t": "AI Visual 25",
+              "tag": "Elite Gamer AI Avatar",
+              "img": "assets/img/portfolio/ai work/Elite Gamer Mohit- YouTube Thumbnail (26).png",
+              "slides": null
+            },
+            {
+              "t": "AI Visual 26",
+              "tag": "Elite Gamer AI Avatar",
+              "img": "assets/img/portfolio/ai work/Elite Gamer Mohit- YouTube Thumbnail (27).png",
+              "slides": null
+            },
+            {
+              "t": "AI Visual 27",
+              "tag": "Elite Gamer AI Avatar",
+              "img": "assets/img/portfolio/ai work/Elite Gamer Mohit- YouTube Thumbnail (28).png",
+              "slides": null
+            },
+            {
+              "t": "AI Visual 28",
+              "tag": "Elite Gamer AI Avatar",
+              "img": "assets/img/portfolio/ai work/Elite Gamer Mohit- YouTube Thumbnail (29).png",
+              "slides": null
+            },
+            {
+              "t": "AI Visual 29",
+              "tag": "Elite Gamer AI Avatar",
+              "img": "assets/img/portfolio/ai work/Elite Gamer Mohit- YouTube Thumbnail (3).png",
+              "slides": null
+            },
+            {
+              "t": "AI Visual 30",
+              "tag": "Elite Gamer AI Avatar",
+              "img": "assets/img/portfolio/ai work/Elite Gamer Mohit- YouTube Thumbnail (30).png",
+              "slides": null
+            },
+            {
+              "t": "AI Visual 31",
+              "tag": "Elite Gamer AI Avatar",
+              "img": "assets/img/portfolio/ai work/Elite Gamer Mohit- YouTube Thumbnail (31).png",
+              "slides": null
+            },
+            {
+              "t": "AI Visual 32",
+              "tag": "Elite Gamer AI Avatar",
+              "img": "assets/img/portfolio/ai work/Elite Gamer Mohit- YouTube Thumbnail (32).png",
+              "slides": null
+            },
+            {
+              "t": "AI Visual 33",
+              "tag": "Elite Gamer AI Avatar",
+              "img": "assets/img/portfolio/ai work/Elite Gamer Mohit- YouTube Thumbnail (33).png",
+              "slides": null
+            },
+            {
+              "t": "AI Visual 34",
+              "tag": "Elite Gamer AI Avatar",
+              "img": "assets/img/portfolio/ai work/Elite Gamer Mohit- YouTube Thumbnail (34).png",
+              "slides": null
+            },
+            {
+              "t": "AI Visual 35",
+              "tag": "Elite Gamer AI Avatar",
+              "img": "assets/img/portfolio/ai work/Elite Gamer Mohit- YouTube Thumbnail (35).png",
+              "slides": null
+            },
+            {
+              "t": "AI Visual 36",
+              "tag": "Elite Gamer AI Avatar",
+              "img": "assets/img/portfolio/ai work/Elite Gamer Mohit- YouTube Thumbnail (36).png",
+              "slides": null
+            },
+            {
+              "t": "AI Visual 37",
+              "tag": "Elite Gamer AI Avatar",
+              "img": "assets/img/portfolio/ai work/Elite Gamer Mohit- YouTube Thumbnail (37).png",
+              "slides": null
+            },
+            {
+              "t": "AI Visual 38",
+              "tag": "Elite Gamer AI Avatar",
+              "img": "assets/img/portfolio/ai work/Elite Gamer Mohit- YouTube Thumbnail (38).png",
+              "slides": null
+            },
+            {
+              "t": "AI Visual 39",
+              "tag": "Elite Gamer AI Avatar",
+              "img": "assets/img/portfolio/ai work/Elite Gamer Mohit- YouTube Thumbnail (39).png",
+              "slides": null
+            },
+            {
+              "t": "AI Visual 40",
+              "tag": "Elite Gamer AI Avatar",
+              "img": "assets/img/portfolio/ai work/Elite Gamer Mohit- YouTube Thumbnail (4).png",
+              "slides": null
+            },
+            {
+              "t": "AI Visual 41",
+              "tag": "Elite Gamer AI Avatar",
+              "img": "assets/img/portfolio/ai work/Elite Gamer Mohit- YouTube Thumbnail (40).png",
+              "slides": null
+            },
+            {
+              "t": "AI Visual 42",
+              "tag": "Elite Gamer AI Avatar",
+              "img": "assets/img/portfolio/ai work/Elite Gamer Mohit- YouTube Thumbnail (41).png",
+              "slides": null
+            },
+            {
+              "t": "AI Visual 43",
+              "tag": "Elite Gamer AI Avatar",
+              "img": "assets/img/portfolio/ai work/Elite Gamer Mohit- YouTube Thumbnail (42).png",
+              "slides": null
+            },
+            {
+              "t": "AI Visual 44",
+              "tag": "Elite Gamer AI Avatar",
+              "img": "assets/img/portfolio/ai work/Elite Gamer Mohit- YouTube Thumbnail (43).png",
+              "slides": null
+            },
+            {
+              "t": "AI Visual 45",
+              "tag": "Elite Gamer AI Avatar",
+              "img": "assets/img/portfolio/ai work/Elite Gamer Mohit- YouTube Thumbnail (44).png",
+              "slides": null
+            },
+            {
+              "t": "AI Visual 46",
+              "tag": "Elite Gamer AI Avatar",
+              "img": "assets/img/portfolio/ai work/Elite Gamer Mohit- YouTube Thumbnail (45).png",
+              "slides": null
+            },
+            {
+              "t": "AI Visual 47",
+              "tag": "Elite Gamer AI Avatar",
+              "img": "assets/img/portfolio/ai work/Elite Gamer Mohit- YouTube Thumbnail (46).png",
+              "slides": null
+            },
+            {
+              "t": "AI Visual 48",
+              "tag": "Elite Gamer AI Avatar",
+              "img": "assets/img/portfolio/ai work/Elite Gamer Mohit- YouTube Thumbnail (47).png",
+              "slides": null
+            },
+            {
+              "t": "AI Visual 49",
+              "tag": "Elite Gamer AI Avatar",
+              "img": "assets/img/portfolio/ai work/Elite Gamer Mohit- YouTube Thumbnail (48).png",
+              "slides": null
+            },
+            {
+              "t": "AI Visual 50",
+              "tag": "Elite Gamer AI Avatar",
+              "img": "assets/img/portfolio/ai work/Elite Gamer Mohit- YouTube Thumbnail (49).png",
+              "slides": null
+            },
+            {
+              "t": "AI Visual 51",
+              "tag": "Elite Gamer AI Avatar",
+              "img": "assets/img/portfolio/ai work/Elite Gamer Mohit- YouTube Thumbnail (5).png",
+              "slides": null
+            },
+            {
+              "t": "AI Visual 52",
+              "tag": "Elite Gamer AI Avatar",
+              "img": "assets/img/portfolio/ai work/Elite Gamer Mohit- YouTube Thumbnail (50).png",
+              "slides": null
+            },
+            {
+              "t": "AI Visual 53",
+              "tag": "Elite Gamer AI Avatar",
+              "img": "assets/img/portfolio/ai work/Elite Gamer Mohit- YouTube Thumbnail (51).png",
+              "slides": null
+            },
+            {
+              "t": "AI Visual 54",
+              "tag": "Elite Gamer AI Avatar",
+              "img": "assets/img/portfolio/ai work/Elite Gamer Mohit- YouTube Thumbnail (52).png",
+              "slides": null
+            },
+            {
+              "t": "AI Visual 55",
+              "tag": "Elite Gamer AI Avatar",
+              "img": "assets/img/portfolio/ai work/Elite Gamer Mohit- YouTube Thumbnail (53).png",
+              "slides": null
+            },
+            {
+              "t": "AI Visual 56",
+              "tag": "Elite Gamer AI Avatar",
+              "img": "assets/img/portfolio/ai work/Elite Gamer Mohit- YouTube Thumbnail (54).png",
+              "slides": null
+            },
+            {
+              "t": "AI Visual 57",
+              "tag": "Elite Gamer AI Avatar",
+              "img": "assets/img/portfolio/ai work/Elite Gamer Mohit- YouTube Thumbnail (55).png",
+              "slides": null
+            },
+            {
+              "t": "AI Visual 58",
+              "tag": "Elite Gamer AI Avatar",
+              "img": "assets/img/portfolio/ai work/Elite Gamer Mohit- YouTube Thumbnail (56).png",
+              "slides": null
+            },
+            {
+              "t": "AI Visual 59",
+              "tag": "Elite Gamer AI Avatar",
+              "img": "assets/img/portfolio/ai work/Elite Gamer Mohit- YouTube Thumbnail (57).png",
+              "slides": null
+            },
+            {
+              "t": "AI Visual 60",
+              "tag": "Elite Gamer AI Avatar",
+              "img": "assets/img/portfolio/ai work/Elite Gamer Mohit- YouTube Thumbnail (58).png",
+              "slides": null
+            },
+            {
+              "t": "AI Visual 61",
+              "tag": "Elite Gamer AI Avatar",
+              "img": "assets/img/portfolio/ai work/Elite Gamer Mohit- YouTube Thumbnail (59).png",
+              "slides": null
+            },
+            {
+              "t": "AI Visual 62",
+              "tag": "Elite Gamer AI Avatar",
+              "img": "assets/img/portfolio/ai work/Elite Gamer Mohit- YouTube Thumbnail (6).png",
+              "slides": null
+            },
+            {
+              "t": "AI Visual 63",
+              "tag": "Elite Gamer AI Avatar",
+              "img": "assets/img/portfolio/ai work/Elite Gamer Mohit- YouTube Thumbnail (60).png",
+              "slides": null
+            },
+            {
+              "t": "AI Visual 64",
+              "tag": "Elite Gamer AI Avatar",
+              "img": "assets/img/portfolio/ai work/Elite Gamer Mohit- YouTube Thumbnail (61).png",
+              "slides": null
+            },
+            {
+              "t": "AI Visual 65",
+              "tag": "Elite Gamer AI Avatar",
+              "img": "assets/img/portfolio/ai work/Elite Gamer Mohit- YouTube Thumbnail (62).png",
+              "slides": null
+            },
+            {
+              "t": "AI Visual 66",
+              "tag": "Elite Gamer AI Avatar",
+              "img": "assets/img/portfolio/ai work/Elite Gamer Mohit- YouTube Thumbnail (63).png",
+              "slides": null
+            },
+            {
+              "t": "AI Visual 67",
+              "tag": "Elite Gamer AI Avatar",
+              "img": "assets/img/portfolio/ai work/Elite Gamer Mohit- YouTube Thumbnail (64).png",
+              "slides": null
+            },
+            {
+              "t": "AI Visual 68",
+              "tag": "Elite Gamer AI Avatar",
+              "img": "assets/img/portfolio/ai work/Elite Gamer Mohit- YouTube Thumbnail (65).png",
+              "slides": null
+            },
+            {
+              "t": "AI Visual 69",
+              "tag": "Elite Gamer AI Avatar",
+              "img": "assets/img/portfolio/ai work/Elite Gamer Mohit- YouTube Thumbnail (66).png",
+              "slides": null
+            },
+            {
+              "t": "AI Visual 70",
+              "tag": "Elite Gamer AI Avatar",
+              "img": "assets/img/portfolio/ai work/Elite Gamer Mohit- YouTube Thumbnail (67).png",
+              "slides": null
+            },
+            {
+              "t": "AI Visual 71",
+              "tag": "Elite Gamer AI Avatar",
+              "img": "assets/img/portfolio/ai work/Elite Gamer Mohit- YouTube Thumbnail (68).png",
+              "slides": null
+            },
+            {
+              "t": "AI Visual 72",
+              "tag": "Elite Gamer AI Avatar",
+              "img": "assets/img/portfolio/ai work/Elite Gamer Mohit- YouTube Thumbnail (69).png",
+              "slides": null
+            },
+            {
+              "t": "AI Visual 73",
+              "tag": "Elite Gamer AI Avatar",
+              "img": "assets/img/portfolio/ai work/Elite Gamer Mohit- YouTube Thumbnail (7).png",
+              "slides": null
+            },
+            {
+              "t": "AI Visual 74",
+              "tag": "Elite Gamer AI Avatar",
+              "img": "assets/img/portfolio/ai work/Elite Gamer Mohit- YouTube Thumbnail (70).png",
+              "slides": null
+            },
+            {
+              "t": "AI Visual 75",
+              "tag": "Elite Gamer AI Avatar",
+              "img": "assets/img/portfolio/ai work/Elite Gamer Mohit- YouTube Thumbnail (71).png",
+              "slides": null
+            },
+            {
+              "t": "AI Visual 76",
+              "tag": "Elite Gamer AI Avatar",
+              "img": "assets/img/portfolio/ai work/Elite Gamer Mohit- YouTube Thumbnail (72).png",
+              "slides": null
+            },
+            {
+              "t": "AI Visual 77",
+              "tag": "Elite Gamer AI Avatar",
+              "img": "assets/img/portfolio/ai work/Elite Gamer Mohit- YouTube Thumbnail (73).png",
+              "slides": null
+            },
+            {
+              "t": "AI Visual 78",
+              "tag": "Elite Gamer AI Avatar",
+              "img": "assets/img/portfolio/ai work/Elite Gamer Mohit- YouTube Thumbnail (74).png",
+              "slides": null
+            },
+            {
+              "t": "AI Visual 79",
+              "tag": "Elite Gamer AI Avatar",
+              "img": "assets/img/portfolio/ai work/Elite Gamer Mohit- YouTube Thumbnail (75).png",
+              "slides": null
+            },
+            {
+              "t": "AI Visual 80",
+              "tag": "Elite Gamer AI Avatar",
+              "img": "assets/img/portfolio/ai work/Elite Gamer Mohit- YouTube Thumbnail (76).png",
+              "slides": null
+            },
+            {
+              "t": "AI Visual 81",
+              "tag": "Elite Gamer AI Avatar",
+              "img": "assets/img/portfolio/ai work/Elite Gamer Mohit- YouTube Thumbnail (77).png",
+              "slides": null
+            },
+            {
+              "t": "AI Visual 82",
+              "tag": "Elite Gamer AI Avatar",
+              "img": "assets/img/portfolio/ai work/Elite Gamer Mohit- YouTube Thumbnail (78).png",
+              "slides": null
+            },
+            {
+              "t": "AI Visual 83",
+              "tag": "Elite Gamer AI Avatar",
+              "img": "assets/img/portfolio/ai work/Elite Gamer Mohit- YouTube Thumbnail (79).png",
+              "slides": null
+            },
+            {
+              "t": "AI Visual 84",
+              "tag": "Elite Gamer AI Avatar",
+              "img": "assets/img/portfolio/ai work/Elite Gamer Mohit- YouTube Thumbnail (8).png",
+              "slides": null
+            },
+            {
+              "t": "AI Visual 85",
+              "tag": "Elite Gamer AI Avatar",
+              "img": "assets/img/portfolio/ai work/Elite Gamer Mohit- YouTube Thumbnail (80).png",
+              "slides": null
+            },
+            {
+              "t": "AI Visual 86",
+              "tag": "Elite Gamer AI Avatar",
+              "img": "assets/img/portfolio/ai work/Elite Gamer Mohit- YouTube Thumbnail (81).png",
+              "slides": null
+            },
+            {
+              "t": "AI Visual 87",
+              "tag": "Elite Gamer AI Avatar",
+              "img": "assets/img/portfolio/ai work/Elite Gamer Mohit- YouTube Thumbnail (82).png",
+              "slides": null
+            },
+            {
+              "t": "AI Visual 88",
+              "tag": "Elite Gamer AI Avatar",
+              "img": "assets/img/portfolio/ai work/Elite Gamer Mohit- YouTube Thumbnail (83).png",
+              "slides": null
+            },
+            {
+              "t": "AI Visual 89",
+              "tag": "Elite Gamer AI Avatar",
+              "img": "assets/img/portfolio/ai work/Elite Gamer Mohit- YouTube Thumbnail (84).png",
+              "slides": null
+            },
+            {
+              "t": "AI Visual 90",
+              "tag": "Elite Gamer AI Avatar",
+              "img": "assets/img/portfolio/ai work/Elite Gamer Mohit- YouTube Thumbnail (85).png",
+              "slides": null
+            },
+            {
+              "t": "AI Visual 91",
+              "tag": "Elite Gamer AI Avatar",
+              "img": "assets/img/portfolio/ai work/Elite Gamer Mohit- YouTube Thumbnail (86).png",
+              "slides": null
+            },
+            {
+              "t": "AI Visual 92",
+              "tag": "Elite Gamer AI Avatar",
+              "img": "assets/img/portfolio/ai work/Elite Gamer Mohit- YouTube Thumbnail (87).png",
+              "slides": null
+            },
+            {
+              "t": "AI Visual 93",
+              "tag": "Elite Gamer AI Avatar",
+              "img": "assets/img/portfolio/ai work/Elite Gamer Mohit- YouTube Thumbnail (88).png",
+              "slides": null
+            },
+            {
+              "t": "AI Visual 94",
+              "tag": "Elite Gamer AI Avatar",
+              "img": "assets/img/portfolio/ai work/Elite Gamer Mohit- YouTube Thumbnail (89).png",
+              "slides": null
+            },
+            {
+              "t": "AI Visual 95",
+              "tag": "Elite Gamer AI Avatar",
+              "img": "assets/img/portfolio/ai work/Elite Gamer Mohit- YouTube Thumbnail (9).png",
+              "slides": null
+            },
+            {
+              "t": "AI Visual 96",
+              "tag": "Elite Gamer AI Avatar",
+              "img": "assets/img/portfolio/ai work/Elite Gamer Mohit- YouTube Thumbnail (90).png",
+              "slides": null
+            },
+            {
+              "t": "AI Visual 97",
+              "tag": "Elite Gamer AI Avatar",
+              "img": "assets/img/portfolio/ai work/Elite Gamer Mohit- YouTube Thumbnail (91).png",
+              "slides": null
+            },
+            {
+              "t": "AI Visual 98",
+              "tag": "Elite Gamer AI Avatar",
+              "img": "assets/img/portfolio/ai work/Elite Gamer Mohit- YouTube Thumbnail (92).png",
+              "slides": null
+            },
+            {
+              "t": "AI Visual 99",
+              "tag": "Elite Gamer AI Avatar",
+              "img": "assets/img/portfolio/ai work/Elite Gamer Mohit- YouTube Thumbnail (93).png",
+              "slides": null
+            },
+            {
+              "t": "AI Visual 100",
+              "tag": "Elite Gamer AI Avatar",
+              "img": "assets/img/portfolio/ai work/Elite Gamer Mohit- YouTube Thumbnail (94).png",
+              "slides": null
+            },
+            {
+              "t": "AI Visual 101",
+              "tag": "Elite Gamer AI Avatar",
+              "img": "assets/img/portfolio/ai work/Elite Gamer Mohit- YouTube Thumbnail (95).png",
+              "slides": null
+            },
+            {
+              "t": "AI Visual 102",
+              "tag": "Elite Gamer AI Avatar",
+              "img": "assets/img/portfolio/ai work/Elite Gamer Mohit- YouTube Thumbnail (96).png",
+              "slides": null
+            },
+            {
+              "t": "AI Visual 103",
+              "tag": "Elite Gamer AI Avatar",
+              "img": "assets/img/portfolio/ai work/Elite Gamer Mohit- YouTube Thumbnail (97).png",
+              "slides": null
+            },
+            {
+              "t": "AI Visual 104",
+              "tag": "Elite Gamer AI Avatar",
+              "img": "assets/img/portfolio/ai work/Elite Gamer Mohit- YouTube Thumbnail (98).png",
+              "slides": null
+            },
+            {
+              "t": "AI Visual 105",
+              "tag": "Elite Gamer AI Avatar",
+              "img": "assets/img/portfolio/ai work/Elite Gamer Mohit- YouTube Thumbnail (99).png",
+              "slides": null
+            },
+            {
+              "t": "AI Visual 106",
+              "tag": "Elite Gamer AI Avatar",
+              "img": "assets/img/portfolio/ai work/Elite Gamer Mohit- YouTube Thumbnail.png",
+              "slides": null
+            },
+            {
+              "t": "AI Visual 107",
+              "tag": "Gemini Neural Visual",
+              "img": "assets/img/portfolio/ai work/Gemini_Generated_Image_548yol548yol548y.png",
+              "slides": null
+            },
+            {
+              "t": "AI Visual 108",
+              "tag": "Gemini Neural Visual",
+              "img": "assets/img/portfolio/ai work/Gemini_Generated_Image_pr4q9spr4q9spr4q.png",
+              "slides": null
+            },
+            {
+              "t": "AI Visual 109",
+              "tag": "Neon Anime Gamer Badge",
+              "img": "assets/img/portfolio/ai work/Neon Anime Gamer Welcome Badge (1).png",
+              "slides": null
+            },
+            {
+              "t": "AI Visual 110",
+              "tag": "Typographic Concept Logo",
+              "img": "assets/img/portfolio/ai work/Red Beige Minimal Simple Typographic Chic Logo.png",
+              "slides": null
+            },
+            {
+              "t": "AI Visual 111",
+              "tag": "Gaming Reaction Visual",
+              "img": "assets/img/portfolio/ai work/Roll Numbers and Gaming Reactions.png",
+              "slides": null
+            },
+            {
+              "t": "AI Visual 112",
+              "tag": "Viral Shorts Concept",
+              "img": "assets/img/portfolio/ai work/Shorts Thumbnail (1).png",
+              "slides": null
+            },
+            {
+              "t": "AI Visual 113",
+              "tag": "Viral Shorts Concept",
+              "img": "assets/img/portfolio/ai work/Shorts Thumbnail (10).png",
+              "slides": null
+            },
+            {
+              "t": "AI Visual 114",
+              "tag": "Viral Shorts Concept",
+              "img": "assets/img/portfolio/ai work/Shorts Thumbnail (11).png",
+              "slides": null
+            },
+            {
+              "t": "AI Visual 115",
+              "tag": "Viral Shorts Concept",
+              "img": "assets/img/portfolio/ai work/Shorts Thumbnail (12).png",
+              "slides": null
+            },
+            {
+              "t": "AI Visual 116",
+              "tag": "Viral Shorts Concept",
+              "img": "assets/img/portfolio/ai work/Shorts Thumbnail (13).png",
+              "slides": null
+            },
+            {
+              "t": "AI Visual 117",
+              "tag": "Viral Shorts Concept",
+              "img": "assets/img/portfolio/ai work/Shorts Thumbnail (14).png",
+              "slides": null
+            },
+            {
+              "t": "AI Visual 118",
+              "tag": "Viral Shorts Concept",
+              "img": "assets/img/portfolio/ai work/Shorts Thumbnail (15).png",
+              "slides": null
+            },
+            {
+              "t": "AI Visual 119",
+              "tag": "Viral Shorts Concept",
+              "img": "assets/img/portfolio/ai work/Shorts Thumbnail (2).png",
+              "slides": null
+            },
+            {
+              "t": "AI Visual 120",
+              "tag": "Viral Shorts Concept",
+              "img": "assets/img/portfolio/ai work/Shorts Thumbnail (3).png",
+              "slides": null
+            },
+            {
+              "t": "AI Visual 121",
+              "tag": "Viral Shorts Concept",
+              "img": "assets/img/portfolio/ai work/Shorts Thumbnail (4).png",
+              "slides": null
+            },
+            {
+              "t": "AI Visual 122",
+              "tag": "Viral Shorts Concept",
+              "img": "assets/img/portfolio/ai work/Shorts Thumbnail (5).png",
+              "slides": null
+            },
+            {
+              "t": "AI Visual 123",
+              "tag": "Viral Shorts Concept",
+              "img": "assets/img/portfolio/ai work/Shorts Thumbnail (6).png",
+              "slides": null
+            },
+            {
+              "t": "AI Visual 124",
+              "tag": "Viral Shorts Concept",
+              "img": "assets/img/portfolio/ai work/Shorts Thumbnail (7).png",
+              "slides": null
+            },
+            {
+              "t": "AI Visual 125",
+              "tag": "Viral Shorts Concept",
+              "img": "assets/img/portfolio/ai work/Shorts Thumbnail (8).png",
+              "slides": null
+            },
+            {
+              "t": "AI Visual 126",
+              "tag": "Viral Shorts Concept",
+              "img": "assets/img/portfolio/ai work/Shorts Thumbnail (9).png",
+              "slides": null
+            },
+            {
+              "t": "AI Visual 127",
+              "tag": "Viral Shorts Concept",
+              "img": "assets/img/portfolio/ai work/Shorts Thumbnail.png",
+              "slides": null
+            },
+            {
+              "t": "AI Visual 128",
+              "tag": "Game Night Invitation",
+              "img": "assets/img/portfolio/ai work/Snooker Game Night Invitation.png",
+              "slides": null
+            },
+            {
+              "t": "AI Visual 129",
+              "tag": "AI UI/UX Concept Interface",
+              "img": "assets/img/portfolio/ai work/ui-ux.jpeg",
+              "slides": null
+            },
+            {
+              "t": "AI Visual 130",
+              "tag": "AI Concept Art",
+              "img": "assets/img/portfolio/ai work/Untitled design1.png",
+              "slides": null
+            },
+            {
+              "t": "AI Visual 131",
+              "tag": "AI Concept Art",
+              "img": "assets/img/portfolio/ai work/Untitled.png",
+              "slides": null
+            },
+            {
+              "t": "AI Visual 132",
+              "tag": "Festive Diwali Coffee Glow",
+              "img": "assets/img/portfolio/ai work/Warm Diwali Coffee Glow.png",
+              "slides": null
+            }
+          ]
+        },
+        {
+          "id": "logos",
+          "name": "Logos & Brand Marks",
+          "color": "--web",
+          "badgeIcon": "bi-pentagon-fill",
+          "ratio": "1 / 1",
+          "intro": "Scalable vector symbols, modern geometric monograms, and custom emblems tailored for enduring brand recall.",
+          "items": [
+            {
+              "t": "Logo 01",
+              "tag": "Modern Neural Crest",
+              "img": "assets/img/portfolio/logo/ChatGPT Image Feb 25, 2026, 06_40_18 PM.png",
+              "slides": null
+            },
+            {
+              "t": "Logo 02",
+              "tag": "Artisan Coffee Logo",
+              "img": "assets/img/portfolio/logo/coffee_logo.png",
+              "slides": null
+            },
+            {
+              "t": "Logo 03",
+              "tag": "Gamer Mohit Brand Crest",
+              "img": "assets/img/portfolio/logo/egm.png",
+              "slides": null
+            },
+            {
+              "t": "Logo 04",
+              "tag": "Gamer Mohit Brand Crest",
+              "img": "assets/img/portfolio/logo/elite gamermohit.png",
+              "slides": null
+            },
+            {
+              "t": "Logo 05",
+              "tag": "Gamer Mohit Brand Crest",
+              "img": "assets/img/portfolio/logo/elitegamermohit2.png",
+              "slides": null
+            },
+            {
+              "t": "Logo 06",
+              "tag": "Gamer Mohit Brand Crest",
+              "img": "assets/img/portfolio/logo/gamer mohit logo.png",
+              "slides": null
+            },
+            {
+              "t": "Logo 07",
+              "tag": "Yoga Wellness Mark",
+              "img": "assets/img/portfolio/logo/international_yoga_day_02.png",
+              "slides": null
+            },
+            {
+              "t": "Logo 08",
+              "tag": "Brand Identity Mark #1",
+              "img": "assets/img/portfolio/logo/logo (1).png",
+              "slides": null
+            },
+            {
+              "t": "Logo 09",
+              "tag": "Brand Identity Mark #10",
+              "img": "assets/img/portfolio/logo/logo (10).png",
+              "slides": null
+            },
+            {
+              "t": "Logo 10",
+              "tag": "Brand Identity Mark #11",
+              "img": "assets/img/portfolio/logo/logo (11).png",
+              "slides": null
+            },
+            {
+              "t": "Logo 11",
+              "tag": "Brand Identity Mark #12",
+              "img": "assets/img/portfolio/logo/logo (12).png",
+              "slides": null
+            },
+            {
+              "t": "Logo 12",
+              "tag": "Brand Identity Mark #13",
+              "img": "assets/img/portfolio/logo/logo (13).png",
+              "slides": null
+            },
+            {
+              "t": "Logo 13",
+              "tag": "Brand Identity Mark #14",
+              "img": "assets/img/portfolio/logo/logo (14).png",
+              "slides": null
+            },
+            {
+              "t": "Logo 14",
+              "tag": "Brand Identity Mark #15",
+              "img": "assets/img/portfolio/logo/logo (15).png",
+              "slides": null
+            },
+            {
+              "t": "Logo 15",
+              "tag": "Brand Identity Mark #16",
+              "img": "assets/img/portfolio/logo/logo (16).png",
+              "slides": null
+            },
+            {
+              "t": "Logo 16",
+              "tag": "Brand Identity Mark #17",
+              "img": "assets/img/portfolio/logo/logo (17).png",
+              "slides": null
+            },
+            {
+              "t": "Logo 17",
+              "tag": "Brand Identity Mark #18",
+              "img": "assets/img/portfolio/logo/logo (18).png",
+              "slides": null
+            },
+            {
+              "t": "Logo 18",
+              "tag": "Brand Identity Mark #19",
+              "img": "assets/img/portfolio/logo/logo (19).png",
+              "slides": null
+            },
+            {
+              "t": "Logo 19",
+              "tag": "Brand Identity Mark #2",
+              "img": "assets/img/portfolio/logo/logo (2).png",
+              "slides": null
+            },
+            {
+              "t": "Logo 20",
+              "tag": "Brand Identity Mark #20",
+              "img": "assets/img/portfolio/logo/logo (20).png",
+              "slides": null
+            },
+            {
+              "t": "Logo 21",
+              "tag": "Brand Identity Mark #21",
+              "img": "assets/img/portfolio/logo/logo (21).png",
+              "slides": null
+            },
+            {
+              "t": "Logo 22",
+              "tag": "Brand Identity Mark #22",
+              "img": "assets/img/portfolio/logo/logo (22).png",
+              "slides": null
+            },
+            {
+              "t": "Logo 23",
+              "tag": "Brand Identity Mark #23",
+              "img": "assets/img/portfolio/logo/logo (23).png",
+              "slides": null
+            },
+            {
+              "t": "Logo 24",
+              "tag": "Brand Identity Mark #24",
+              "img": "assets/img/portfolio/logo/logo (24).png",
+              "slides": null
+            },
+            {
+              "t": "Logo 25",
+              "tag": "Brand Identity Mark #3",
+              "img": "assets/img/portfolio/logo/logo (3).png",
+              "slides": null
+            },
+            {
+              "t": "Logo 26",
+              "tag": "Brand Identity Mark #4",
+              "img": "assets/img/portfolio/logo/logo (4).png",
+              "slides": null
+            },
+            {
+              "t": "Logo 27",
+              "tag": "Brand Identity Mark #5",
+              "img": "assets/img/portfolio/logo/logo (5).png",
+              "slides": null
+            },
+            {
+              "t": "Logo 28",
+              "tag": "Brand Identity Mark #6",
+              "img": "assets/img/portfolio/logo/logo (6).png",
+              "slides": null
+            },
+            {
+              "t": "Logo 29",
+              "tag": "Brand Identity Mark #7",
+              "img": "assets/img/portfolio/logo/logo (7).png",
+              "slides": null
+            },
+            {
+              "t": "Logo 30",
+              "tag": "Brand Identity Mark #8",
+              "img": "assets/img/portfolio/logo/logo (8).png",
+              "slides": null
+            },
+            {
+              "t": "Logo 31",
+              "tag": "Brand Identity Mark #9",
+              "img": "assets/img/portfolio/logo/logo (9).png",
+              "slides": null
+            },
+            {
+              "t": "Logo 32",
+              "tag": "Startup Identity Mark",
+              "img": "assets/img/portfolio/logo/logo startup starter.png",
+              "slides": null
+            },
+            {
+              "t": "Logo 33",
+              "tag": "Red Moon Creator Avatar",
+              "img": "assets/img/portfolio/logo/Red Moon Anime Creator Avatar.png",
+              "slides": null
+            },
+            {
+              "t": "Logo 34",
+              "tag": "Slay & Shine Fashion Mark",
+              "img": "assets/img/portfolio/logo/Slay&Shine1.png",
+              "slides": null
+            },
+            {
+              "t": "Logo 35",
+              "tag": "Neon Gamer Badge",
+              "img": "assets/img/portfolio/logo/Transparent Neon Welcome Gamer Badge.png",
+              "slides": null
+            }
+          ]
+        },
+        {
+          "id": "fintech",
+          "name": "FinTech Internship Deliverables",
+          "color": "--accent",
+          "badgeIcon": "bi-graph-up-arrow",
+          "ratio": "1 / 1",
+          "intro": "Financial literacy infographics, stock market guides, and chart pattern breakdowns produced during industry internships.",
+          "items": [
+            {
+              "t": "FinTech 01",
+              "tag": "4 Investment Mistakes (6 Slides)",
+              "img": "assets/img/portfolio/intern work/4 Investment Mistakes/1.jpg",
+              "slides": [
+                "assets/img/portfolio/intern work/4 Investment Mistakes/1.jpg",
+                "assets/img/portfolio/intern work/4 Investment Mistakes/2.jpg",
+                "assets/img/portfolio/intern work/4 Investment Mistakes/3.jpg",
+                "assets/img/portfolio/intern work/4 Investment Mistakes/4.jpg",
+                "assets/img/portfolio/intern work/4 Investment Mistakes/5.jpg",
+                "assets/img/portfolio/intern work/4 Investment Mistakes/6.jpg"
+              ]
+            },
+            {
+              "t": "FinTech 02",
+              "tag": "5 Financial lesson (7 Slides)",
+              "img": "assets/img/portfolio/intern work/5 Financial lesson/1.jpg",
+              "slides": [
+                "assets/img/portfolio/intern work/5 Financial lesson/1.jpg",
+                "assets/img/portfolio/intern work/5 Financial lesson/2.jpg",
+                "assets/img/portfolio/intern work/5 Financial lesson/3.jpg",
+                "assets/img/portfolio/intern work/5 Financial lesson/4.jpg",
+                "assets/img/portfolio/intern work/5 Financial lesson/5.jpg",
+                "assets/img/portfolio/intern work/5 Financial lesson/6.jpg",
+                "assets/img/portfolio/intern work/5 Financial lesson/7.jpg"
+              ]
+            },
+            {
+              "t": "FinTech 03",
+              "tag": "52 Week (4 Slides)",
+              "img": "assets/img/portfolio/intern work/52 Week/1.jpg",
+              "slides": [
+                "assets/img/portfolio/intern work/52 Week/1.jpg",
+                "assets/img/portfolio/intern work/52 Week/2.jpg",
+                "assets/img/portfolio/intern work/52 Week/3.jpg",
+                "assets/img/portfolio/intern work/52 Week/4.jpg"
+              ]
+            },
+            {
+              "t": "FinTech 04",
+              "tag": "Technical Chart Pattern Analysis",
+              "img": "assets/img/portfolio/intern work/8.jpg",
+              "slides": [
+                "assets/img/portfolio/intern work/8.jpg"
+              ]
+            },
+            {
+              "t": "FinTech 05",
+              "tag": "A long term investment",
+              "img": "assets/img/portfolio/intern work/A long term investment/1.jpg",
+              "slides": [
+                "assets/img/portfolio/intern work/A long term investment/1.jpg"
+              ]
+            },
+            {
+              "t": "FinTech 06",
+              "tag": "Animals of Investing World (5 Slides)",
+              "img": "assets/img/portfolio/intern work/Animals of Investing World/1.jpg",
+              "slides": [
+                "assets/img/portfolio/intern work/Animals of Investing World/1.jpg",
+                "assets/img/portfolio/intern work/Animals of Investing World/2.jpg",
+                "assets/img/portfolio/intern work/Animals of Investing World/3.jpg",
+                "assets/img/portfolio/intern work/Animals of Investing World/4.jpg",
+                "assets/img/portfolio/intern work/Animals of Investing World/5.jpg"
+              ]
+            },
+            {
+              "t": "FinTech 07",
+              "tag": "Assets (6 Slides)",
+              "img": "assets/img/portfolio/intern work/Assets/1.jpg",
+              "slides": [
+                "assets/img/portfolio/intern work/Assets/1.jpg",
+                "assets/img/portfolio/intern work/Assets/2.jpg",
+                "assets/img/portfolio/intern work/Assets/3.jpg",
+                "assets/img/portfolio/intern work/Assets/4.jpg",
+                "assets/img/portfolio/intern work/Assets/5.jpg",
+                "assets/img/portfolio/intern work/Assets/6.jpg"
+              ]
+            },
+            {
+              "t": "FinTech 08",
+              "tag": "Basics of Equity (7 Slides)",
+              "img": "assets/img/portfolio/intern work/Basics of Equity/1.jpg",
+              "slides": [
+                "assets/img/portfolio/intern work/Basics of Equity/1.jpg",
+                "assets/img/portfolio/intern work/Basics of Equity/2.jpg",
+                "assets/img/portfolio/intern work/Basics of Equity/3.jpg",
+                "assets/img/portfolio/intern work/Basics of Equity/4.jpg",
+                "assets/img/portfolio/intern work/Basics of Equity/5.jpg",
+                "assets/img/portfolio/intern work/Basics of Equity/6.jpg",
+                "assets/img/portfolio/intern work/Basics of Equity/7.jpg"
+              ]
+            },
+            {
+              "t": "FinTech 09",
+              "tag": "Beware of 5 behavioral biases (4 Slides)",
+              "img": "assets/img/portfolio/intern work/Beware of 5 behavioral biases/1.jpg",
+              "slides": [
+                "assets/img/portfolio/intern work/Beware of 5 behavioral biases/1.jpg",
+                "assets/img/portfolio/intern work/Beware of 5 behavioral biases/2.jpg",
+                "assets/img/portfolio/intern work/Beware of 5 behavioral biases/3.jpg",
+                "assets/img/portfolio/intern work/Beware of 5 behavioral biases/4.jpg"
+              ]
+            },
+            {
+              "t": "FinTech 10",
+              "tag": "Biggest Stock Market (4 Slides)",
+              "img": "assets/img/portfolio/intern work/Biggest Stock Market/1.jpg",
+              "slides": [
+                "assets/img/portfolio/intern work/Biggest Stock Market/1.jpg",
+                "assets/img/portfolio/intern work/Biggest Stock Market/2.jpg",
+                "assets/img/portfolio/intern work/Biggest Stock Market/3.jpg",
+                "assets/img/portfolio/intern work/Biggest Stock Market/4.jpg"
+              ]
+            },
+            {
+              "t": "FinTech 11",
+              "tag": "Bubble in Stock Market (4 Slides)",
+              "img": "assets/img/portfolio/intern work/Bubble in Stock Market/1.jpg",
+              "slides": [
+                "assets/img/portfolio/intern work/Bubble in Stock Market/1.jpg",
+                "assets/img/portfolio/intern work/Bubble in Stock Market/2.jpg",
+                "assets/img/portfolio/intern work/Bubble in Stock Market/3.jpg",
+                "assets/img/portfolio/intern work/Bubble in Stock Market/4.jpg"
+              ]
+            },
+            {
+              "t": "FinTech 12",
+              "tag": "Harmonic Bullish Bat Pattern",
+              "img": "assets/img/portfolio/intern work/bullishbat.jpg",
+              "slides": [
+                "assets/img/portfolio/intern work/bullishbat.jpg"
+              ]
+            },
+            {
+              "t": "FinTech 13",
+              "tag": "Cyclical Stocks (3 Slides)",
+              "img": "assets/img/portfolio/intern work/Cyclical Stocks/1.jpg",
+              "slides": [
+                "assets/img/portfolio/intern work/Cyclical Stocks/1.jpg",
+                "assets/img/portfolio/intern work/Cyclical Stocks/2.jpg",
+                "assets/img/portfolio/intern work/Cyclical Stocks/3.jpg"
+              ]
+            },
+            {
+              "t": "FinTech 14",
+              "tag": "Decoding Financial Statement (6 Slides)",
+              "img": "assets/img/portfolio/intern work/Decoding Financial Statement/1.jpg",
+              "slides": [
+                "assets/img/portfolio/intern work/Decoding Financial Statement/1.jpg",
+                "assets/img/portfolio/intern work/Decoding Financial Statement/2.jpg",
+                "assets/img/portfolio/intern work/Decoding Financial Statement/3.jpg",
+                "assets/img/portfolio/intern work/Decoding Financial Statement/4.jpg",
+                "assets/img/portfolio/intern work/Decoding Financial Statement/5.jpg",
+                "assets/img/portfolio/intern work/Decoding Financial Statement/6.jpg"
+              ]
+            },
+            {
+              "t": "FinTech 15",
+              "tag": "Financial Ratio (8 Slides)",
+              "img": "assets/img/portfolio/intern work/Financial Ratio/1.1.jpg",
+              "slides": [
+                "assets/img/portfolio/intern work/Financial Ratio/1.1.jpg",
+                "assets/img/portfolio/intern work/Financial Ratio/1.jpg",
+                "assets/img/portfolio/intern work/Financial Ratio/2.jpg",
+                "assets/img/portfolio/intern work/Financial Ratio/3.jpg",
+                "assets/img/portfolio/intern work/Financial Ratio/4.jpg",
+                "assets/img/portfolio/intern work/Financial Ratio/5.jpg",
+                "assets/img/portfolio/intern work/Financial Ratio/6.jpg",
+                "assets/img/portfolio/intern work/Financial Ratio/7.jpg"
+              ]
+            },
+            {
+              "t": "FinTech 16",
+              "tag": "Fundamental Health (5 Slides)",
+              "img": "assets/img/portfolio/intern work/Fundamental Health/1.jpg",
+              "slides": [
+                "assets/img/portfolio/intern work/Fundamental Health/1.jpg",
+                "assets/img/portfolio/intern work/Fundamental Health/2.jpg",
+                "assets/img/portfolio/intern work/Fundamental Health/3.jpg",
+                "assets/img/portfolio/intern work/Fundamental Health/4.jpg",
+                "assets/img/portfolio/intern work/Fundamental Health/5.jpg"
+              ]
+            },
+            {
+              "t": "FinTech 17",
+              "tag": "Pe (3 Slides)",
+              "img": "assets/img/portfolio/intern work/Pe/1.jpg",
+              "slides": [
+                "assets/img/portfolio/intern work/Pe/1.jpg",
+                "assets/img/portfolio/intern work/Pe/2.jpg",
+                "assets/img/portfolio/intern work/Pe/3.jpg"
+              ]
+            },
+            {
+              "t": "FinTech 18",
+              "tag": "Peter Lynch (5 Slides)",
+              "img": "assets/img/portfolio/intern work/Peter Lynch/1.jpg",
+              "slides": [
+                "assets/img/portfolio/intern work/Peter Lynch/1.jpg",
+                "assets/img/portfolio/intern work/Peter Lynch/2.jpg",
+                "assets/img/portfolio/intern work/Peter Lynch/3.jpg",
+                "assets/img/portfolio/intern work/Peter Lynch/4.jpg",
+                "assets/img/portfolio/intern work/Peter Lynch/5.jpg"
+              ]
+            },
+            {
+              "t": "FinTech 19",
+              "tag": "Revealing 5 secrets (4 Slides)",
+              "img": "assets/img/portfolio/intern work/Revealing 5 secrets/1.jpg",
+              "slides": [
+                "assets/img/portfolio/intern work/Revealing 5 secrets/1.jpg",
+                "assets/img/portfolio/intern work/Revealing 5 secrets/2.jpg",
+                "assets/img/portfolio/intern work/Revealing 5 secrets/3.jpg",
+                "assets/img/portfolio/intern work/Revealing 5 secrets/4.jpg"
+              ]
+            },
+            {
+              "t": "FinTech 20",
+              "tag": "The Intelligent Investor",
+              "img": "assets/img/portfolio/intern work/The Intelligent Investor/1.jpg",
+              "slides": [
+                "assets/img/portfolio/intern work/The Intelligent Investor/1.jpg"
+              ]
+            },
+            {
+              "t": "FinTech 21",
+              "tag": "What are Buy Sell (4 Slides)",
+              "img": "assets/img/portfolio/intern work/What are Buy Sell/1.jpg",
+              "slides": [
+                "assets/img/portfolio/intern work/What are Buy Sell/1.jpg",
+                "assets/img/portfolio/intern work/What are Buy Sell/2.jpg",
+                "assets/img/portfolio/intern work/What are Buy Sell/3.jpg",
+                "assets/img/portfolio/intern work/What are Buy Sell/4.jpg"
+              ]
+            },
+            {
+              "t": "FinTech 22",
+              "tag": "What are Market (4 Slides)",
+              "img": "assets/img/portfolio/intern work/What are Market/1.jpg",
+              "slides": [
+                "assets/img/portfolio/intern work/What are Market/1.jpg",
+                "assets/img/portfolio/intern work/What are Market/2.jpg",
+                "assets/img/portfolio/intern work/What are Market/3.jpg",
+                "assets/img/portfolio/intern work/What are Market/4.jpg"
+              ]
+            },
+            {
+              "t": "FinTech 23",
+              "tag": "What are Stocks (4 Slides)",
+              "img": "assets/img/portfolio/intern work/What are Stocks/1.jpg",
+              "slides": [
+                "assets/img/portfolio/intern work/What are Stocks/1.jpg",
+                "assets/img/portfolio/intern work/What are Stocks/2.jpg",
+                "assets/img/portfolio/intern work/What are Stocks/3.jpg",
+                "assets/img/portfolio/intern work/What are Stocks/4.jpg"
+              ]
+            },
+            {
+              "t": "FinTech 24",
+              "tag": "What is Index (4 Slides)",
+              "img": "assets/img/portfolio/intern work/What is Index/1.jpg",
+              "slides": [
+                "assets/img/portfolio/intern work/What is Index/1.jpg",
+                "assets/img/portfolio/intern work/What is Index/2.jpg",
+                "assets/img/portfolio/intern work/What is Index/3.jpg",
+                "assets/img/portfolio/intern work/What is Index/4.jpg"
+              ]
+            },
+            {
+              "t": "FinTech 25",
+              "tag": "What is OHLC (4 Slides)",
+              "img": "assets/img/portfolio/intern work/What is OHLC/1.jpg",
+              "slides": [
+                "assets/img/portfolio/intern work/What is OHLC/1.jpg",
+                "assets/img/portfolio/intern work/What is OHLC/2.jpg",
+                "assets/img/portfolio/intern work/What is OHLC/3.jpg",
+                "assets/img/portfolio/intern work/What is OHLC/4.jpg"
+              ]
+            },
+            {
+              "t": "FinTech 26",
+              "tag": "What is Trading Volume (3 Slides)",
+              "img": "assets/img/portfolio/intern work/What is Trading Volume/1.jpg",
+              "slides": [
+                "assets/img/portfolio/intern work/What is Trading Volume/1.jpg",
+                "assets/img/portfolio/intern work/What is Trading Volume/2.jpg",
+                "assets/img/portfolio/intern work/What is Trading Volume/3.jpg"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "flyers",
+          "name": "Flyers & Social Creatives",
+          "color": "--app",
+          "badgeIcon": "bi-megaphone-fill",
+          "ratio": "9 / 16",
+          "intro": "Instagram story collages, cafe specials, party flyers, and social creatives built for mobile engagement.",
+          "items": [
+            {
+              "t": "Flyer 01",
+              "tag": "AI & ML Conference Flyer",
+              "img": "assets/img/portfolio/flyer/ai_ml_poster_mcr.png",
+              "slides": null
+            },
+            {
+              "t": "Flyer 02",
+              "tag": "Doodle Collage Story",
+              "img": "assets/img/portfolio/flyer/Beige Doodle Friends Photo Collage Instagram Story.png",
+              "slides": null
+            },
+            {
+              "t": "Flyer 03",
+              "tag": "Coffee Instagram Story",
+              "img": "assets/img/portfolio/flyer/Best Coffee Instagram Story (1).png",
+              "slides": null
+            },
+            {
+              "t": "Flyer 04",
+              "tag": "Coffee Instagram Story",
+              "img": "assets/img/portfolio/flyer/Brown Beige and Black Modern Coffee Cafe Collage Instagram Story_20261117_004322_0000.png",
+              "slides": null
+            },
+            {
+              "t": "Flyer 05",
+              "tag": "Club Party Event Flyer",
+              "img": "assets/img/portfolio/flyer/Club Party 1.png",
+              "slides": null
+            },
+            {
+              "t": "Flyer 06",
+              "tag": "Club Party Event Flyer",
+              "img": "assets/img/portfolio/flyer/Club Party.png",
+              "slides": null
+            },
+            {
+              "t": "Flyer 07",
+              "tag": "Coffee Instagram Story",
+              "img": "assets/img/portfolio/flyer/coffeestory.png",
+              "slides": null
+            },
+            {
+              "t": "Flyer 08",
+              "tag": "Promotional Event Flyer #1",
+              "img": "assets/img/portfolio/flyer/flyer (1).png",
+              "slides": null
+            },
+            {
+              "t": "Flyer 09",
+              "tag": "Promotional Event Flyer #10",
+              "img": "assets/img/portfolio/flyer/flyer (10).png",
+              "slides": null
+            },
+            {
+              "t": "Flyer 10",
+              "tag": "Promotional Event Flyer #11",
+              "img": "assets/img/portfolio/flyer/flyer (11).png",
+              "slides": null
+            },
+            {
+              "t": "Flyer 11",
+              "tag": "Promotional Event Flyer #12",
+              "img": "assets/img/portfolio/flyer/flyer (12).png",
+              "slides": null
+            },
+            {
+              "t": "Flyer 12",
+              "tag": "Promotional Event Flyer #13",
+              "img": "assets/img/portfolio/flyer/flyer (13).png",
+              "slides": null
+            },
+            {
+              "t": "Flyer 13",
+              "tag": "Promotional Event Flyer #14",
+              "img": "assets/img/portfolio/flyer/flyer (14).png",
+              "slides": null
+            },
+            {
+              "t": "Flyer 14",
+              "tag": "Promotional Event Flyer #15",
+              "img": "assets/img/portfolio/flyer/flyer (15).png",
+              "slides": null
+            },
+            {
+              "t": "Flyer 15",
+              "tag": "Promotional Event Flyer #16",
+              "img": "assets/img/portfolio/flyer/flyer (16).png",
+              "slides": null
+            },
+            {
+              "t": "Flyer 16",
+              "tag": "Promotional Event Flyer #17",
+              "img": "assets/img/portfolio/flyer/flyer (17).png",
+              "slides": null
+            },
+            {
+              "t": "Flyer 17",
+              "tag": "Promotional Event Flyer #18",
+              "img": "assets/img/portfolio/flyer/flyer (18).png",
+              "slides": null
+            },
+            {
+              "t": "Flyer 18",
+              "tag": "Promotional Event Flyer #19",
+              "img": "assets/img/portfolio/flyer/flyer (19).png",
+              "slides": null
+            },
+            {
+              "t": "Flyer 19",
+              "tag": "Promotional Event Flyer #2",
+              "img": "assets/img/portfolio/flyer/flyer (2).png",
+              "slides": null
+            },
+            {
+              "t": "Flyer 20",
+              "tag": "Promotional Event Flyer #3",
+              "img": "assets/img/portfolio/flyer/flyer (3).png",
+              "slides": null
+            },
+            {
+              "t": "Flyer 21",
+              "tag": "Promotional Event Flyer #4",
+              "img": "assets/img/portfolio/flyer/flyer (4).png",
+              "slides": null
+            },
+            {
+              "t": "Flyer 22",
+              "tag": "Promotional Event Flyer #5",
+              "img": "assets/img/portfolio/flyer/flyer (5).png",
+              "slides": null
+            },
+            {
+              "t": "Flyer 23",
+              "tag": "Promotional Event Flyer #6",
+              "img": "assets/img/portfolio/flyer/flyer (6).png",
+              "slides": null
+            },
+            {
+              "t": "Flyer 24",
+              "tag": "Promotional Event Flyer #7",
+              "img": "assets/img/portfolio/flyer/flyer (7).png",
+              "slides": null
+            },
+            {
+              "t": "Flyer 25",
+              "tag": "Promotional Event Flyer #8",
+              "img": "assets/img/portfolio/flyer/flyer (8).png",
+              "slides": null
+            },
+            {
+              "t": "Flyer 26",
+              "tag": "Promotional Event Flyer #9",
+              "img": "assets/img/portfolio/flyer/flyer (9).png",
+              "slides": null
+            },
+            {
+              "t": "Flyer 27",
+              "tag": "Holi Festival Celebration",
+              "img": "assets/img/portfolio/flyer/holi_cg_23.jpg",
+              "slides": null
+            },
+            {
+              "t": "Flyer 28",
+              "tag": "Global Academy Flyer",
+              "img": "assets/img/portfolio/flyer/ib global academy.png",
+              "slides": null
+            },
+            {
+              "t": "Flyer 29",
+              "tag": "Global Academy Flyer",
+              "img": "assets/img/portfolio/flyer/ib global flyer 2.png",
+              "slides": null
+            },
+            {
+              "t": "Flyer 30",
+              "tag": "Global Academy Flyer",
+              "img": "assets/img/portfolio/flyer/ib global flyer.png",
+              "slides": null
+            },
+            {
+              "t": "Flyer 31",
+              "tag": "Social Media Story Creative",
+              "img": "assets/img/portfolio/flyer/insta_story.png",
+              "slides": null
+            },
+            {
+              "t": "Flyer 32",
+              "tag": "Social Media Story Creative",
+              "img": "assets/img/portfolio/flyer/insta_story_1.png",
+              "slides": null
+            },
+            {
+              "t": "Flyer 33",
+              "tag": "Social Media Story Creative",
+              "img": "assets/img/portfolio/flyer/insta_story_1_1.png",
+              "slides": null
+            },
+            {
+              "t": "Flyer 34",
+              "tag": "Social Media Story Creative",
+              "img": "assets/img/portfolio/flyer/insta_story_2.png",
+              "slides": null
+            },
+            {
+              "t": "Flyer 35",
+              "tag": "Industrial Mining Flyer",
+              "img": "assets/img/portfolio/flyer/jms mining.png",
+              "slides": null
+            },
+            {
+              "t": "Flyer 36",
+              "tag": "University Student Event",
+              "img": "assets/img/portfolio/flyer/JSSSU_ROHIT.jpg",
+              "slides": null
+            },
+            {
+              "t": "Flyer 37",
+              "tag": "Monochrome Photo Collage",
+              "img": "assets/img/portfolio/flyer/Monochrome Simple Elegant Love Photo Collage (1).png",
+              "slides": null
+            },
+            {
+              "t": "Flyer 38",
+              "tag": "College Fest Creative",
+              "img": "assets/img/portfolio/flyer/nip.png",
+              "slides": null
+            },
+            {
+              "t": "Flyer 39",
+              "tag": "College Fest Creative",
+              "img": "assets/img/portfolio/flyer/nip2k24.png",
+              "slides": null
+            },
+            {
+              "t": "Flyer 40",
+              "tag": "Agency Promotional Flyer",
+              "img": "assets/img/portfolio/flyer/vpa.jpg",
+              "slides": null
+            },
+            {
+              "t": "Flyer 41",
+              "tag": "Agency Promotional Flyer",
+              "img": "assets/img/portfolio/flyer/vpa1.jpg",
+              "slides": null
+            },
+            {
+              "t": "Flyer 42",
+              "tag": "Royal Wedding Invitation",
+              "img": "assets/img/portfolio/flyer/Wedding_Card_1.png",
+              "slides": null
+            },
+            {
+              "t": "Flyer 43",
+              "tag": "Royal Wedding Invitation",
+              "img": "assets/img/portfolio/flyer/Wedding_Card_2.png",
+              "slides": null
+            },
+            {
+              "t": "Flyer 44",
+              "tag": "World Bamboo Day Flyer",
+              "img": "assets/img/portfolio/flyer/wORLD bAMBOO DAY.png",
+              "slides": null
+            }
+          ]
+        },
+        {
+          "id": "mockups",
+          "name": "3D Mockups & Design Systems",
+          "color": "--ux",
+          "badgeIcon": "bi-box-seam",
+          "ratio": "4 / 3",
+          "intro": "Magazine cover mockups, 3D stationery layouts, and credential certificates presenting designs in real-world contexts.",
+          "items": [
+            {
+              "t": "Mockup 01",
+              "tag": "Editorial 3D Cover Mockup",
+              "img": "assets/img/portfolio/mockup/cover_mockup1.png",
+              "slides": null
+            },
+            {
+              "t": "Mockup 02",
+              "tag": "Design System Component UI",
+              "img": "assets/img/portfolio/mockup/Group 1171274883.png",
+              "slides": null
+            },
+            {
+              "t": "Mockup 03",
+              "tag": "Design System Component UI",
+              "img": "assets/img/portfolio/mockup/Group 1171274887.png",
+              "slides": null
+            },
+            {
+              "t": "Mockup 04",
+              "tag": "3D Product Mockup #1",
+              "img": "assets/img/portfolio/mockup/mockup (1).png",
+              "slides": null
+            },
+            {
+              "t": "Mockup 05",
+              "tag": "3D Product Mockup #2",
+              "img": "assets/img/portfolio/mockup/mockup (2).png",
+              "slides": null
+            },
+            {
+              "t": "Mockup 06",
+              "tag": "3D Product Mockup #3",
+              "img": "assets/img/portfolio/mockup/mockup (3).png",
+              "slides": null
+            },
+            {
+              "t": "Mockup 07",
+              "tag": "3D Product Mockup #4",
+              "img": "assets/img/portfolio/mockup/mockup (4).png",
+              "slides": null
+            },
+            {
+              "t": "Mockup 08",
+              "tag": "3D Product Mockup #5",
+              "img": "assets/img/portfolio/mockup/mockup (5).png",
+              "slides": null
+            },
+            {
+              "t": "Mockup 09",
+              "tag": "3D Product Mockup",
+              "img": "assets/img/portfolio/mockup/Untitled design (1).png",
+              "slides": null
+            },
+            {
+              "t": "Mockup 10",
+              "tag": "Certificate Award Template",
+              "img": "assets/img/portfolio/certidesign/certificatedesign (1).png",
+              "slides": null
+            },
+            {
+              "t": "Mockup 11",
+              "tag": "Certificate Award Template",
+              "img": "assets/img/portfolio/certidesign/certificatedesign (2).png",
+              "slides": null
+            }
+          ]
+        }
+      ];
+
+      let currentFilter = "all";
+      // Dynamic Chip Badges Sync from W
+      function syncChipBadges() {
+        document.querySelectorAll(".chip-btn").forEach(btn => {
+          const f = btn.getAttribute("data-filter");
+          const badge = btn.querySelector(".chip-badge");
+          if (!badge) return;
+          if (f === "all") {
+            const tot = W.reduce((acc, c) => acc + c.items.length, 0);
+            badge.textContent = tot;
+          } else {
+            const c = W.find(x => x.id === f);
+            if (c) badge.textContent = c.items.length;
+          }
+        });
+        const statTotal = document.getElementById("statTotalWorks");
+        if (statTotal) {
+          statTotal.textContent = W.reduce((acc, c) => acc + c.items.length, 0);
+        }
+      }
+      syncChipBadges();
+
+      let searchQuery = "";
+
+      const feedEl = document.getElementById("worksFeed");
+      const noResultsBox = document.getElementById("noResultsBox");
+      const searchInput = document.getElementById("workSearch");
+      const clearSearchBtn = document.getElementById("clearSearch");
+      const resetFiltersBtn = document.getElementById("btnResetFilters");
+      const chipsGroup = document.getElementById("chipsGroup");
+
+      // Mobile Header Toggle (matching project.html, certificate.html & index.html)
+      const headerToggleBtn = document.querySelector('.header-toggle');
+      if (headerToggleBtn) {
+        const headerToggle = function () {
+          const header = document.querySelector('#header');
+          if (header) header.classList.toggle('header-show');
+          headerToggleBtn.classList.toggle('bi-list');
+          headerToggleBtn.classList.toggle('bi-x');
+        };
+        headerToggleBtn.addEventListener('click', headerToggle);
+
+        document.querySelectorAll('#navmenu a').forEach(function (link) {
+          link.addEventListener('click', function () {
+            const header = document.querySelector('#header');
+            if (header && header.classList.contains('header-show')) {
+              headerToggle();
+            }
+          });
+        });
+      }
+
+      // Scroll top button
+      const scrollTop = document.querySelector('#scroll-top');
+      if (scrollTop) {
+        const toggleScrollTop = function () {
+          if (window.scrollY > 150) {
+            scrollTop.classList.add('active');
+          } else {
+            scrollTop.classList.remove('active');
+          }
+        };
+        window.addEventListener('scroll', toggleScrollTop, { passive: true });
+        scrollTop.addEventListener('click', function (e) {
+          e.preventDefault();
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+      }
+
+      // Lightbox state & references
+      let currentVisibleGallery = [];
+      let currentGalleryIndex = 0;
+      const lightboxModal = document.getElementById("imgLightbox");
+      const lightboxImg = document.getElementById("imgLightboxTarget");
+      const lightboxTitle = document.getElementById("imgLightboxTitle");
+      const lightboxSubtitle = document.getElementById("imgLightboxSubtitle");
+      const lightboxCloseBtn = document.getElementById("imgLightboxClose");
+      const lightboxFullLink = document.getElementById("imgLightboxFullLink");
+      const slideCounter = document.getElementById("slideCounter");
+      const btnPrevSlide = document.getElementById("btnPrevSlide");
+      const btnNextSlide = document.getElementById("btnNextSlide");
+      const lightboxSidePrev = document.getElementById("lightboxSidePrev");
+      const lightboxSideNext = document.getElementById("lightboxSideNext");
+
+      function openLightboxByIndex(index) {
+        if (!lightboxModal || !currentVisibleGallery.length) return;
+        if (index < 0) index = currentVisibleGallery.length - 1;
+        if (index >= currentVisibleGallery.length) index = 0;
+        currentGalleryIndex = index;
+
+        const g = currentVisibleGallery[currentGalleryIndex];
+        if (!g) return;
+
+        if (lightboxTitle) lightboxTitle.textContent = g.title;
+        if (lightboxSubtitle) {
+          lightboxSubtitle.textContent = g.catName + " • " + g.tag;
+        }
+
+        if (lightboxImg) {
+          lightboxImg.style.opacity = "0.6";
+          lightboxImg.src = g.img;
+          lightboxImg.alt = g.title;
+          lightboxImg.onload = function () {
+            lightboxImg.style.opacity = "1";
+          };
+        }
+        if (lightboxFullLink) {
+          lightboxFullLink.href = g.img;
+        }
+
+        if (slideCounter) {
+          if (g.totalSlides > 1) {
+            slideCounter.innerHTML = `<span class="cnt-item">${currentGalleryIndex + 1} / ${currentVisibleGallery.length}</span> <span class="cnt-sub">• Slide ${g.slideIndex + 1} of ${g.totalSlides}</span>`;
+          } else {
+            slideCounter.innerHTML = `<span class="cnt-item">${currentGalleryIndex + 1} / ${currentVisibleGallery.length}</span>`;
+          }
+        }
+
+        const hasMultiple = currentVisibleGallery.length > 1;
+        [btnPrevSlide, btnNextSlide, lightboxSidePrev, lightboxSideNext].forEach(btn => {
+          if (btn) btn.disabled = !hasMultiple;
+        });
+
+        // Preload neighbor images for instant navigation
+        if (hasMultiple) {
+          const nextIdx = (currentGalleryIndex + 1) % currentVisibleGallery.length;
+          const prevIdx = (currentGalleryIndex - 1 + currentVisibleGallery.length) % currentVisibleGallery.length;
+          const preNext = new Image();
+          preNext.src = currentVisibleGallery[nextIdx].img;
+          const prePrev = new Image();
+          prePrev.src = currentVisibleGallery[prevIdx].img;
+        }
+
+        lightboxModal.classList.add("active");
+        lightboxModal.setAttribute("aria-hidden", "false");
+        document.body.style.overflow = "hidden";
+        document.body.classList.add("lightbox-open");
+        if (scrollTop) {
+          scrollTop.classList.remove("active");
+          scrollTop.style.display = "none";
+        }
+      }
+
+      function nextGalleryItem() {
+        if (currentVisibleGallery.length <= 1) return;
+        openLightboxByIndex((currentGalleryIndex + 1) % currentVisibleGallery.length);
+      }
+
+      function prevGalleryItem() {
+        if (currentVisibleGallery.length <= 1) return;
+        openLightboxByIndex((currentGalleryIndex - 1 + currentVisibleGallery.length) % currentVisibleGallery.length);
+      }
+
+      function closeLightbox() {
+        if (!lightboxModal) return;
+        lightboxModal.classList.remove("active");
+        lightboxModal.setAttribute("aria-hidden", "true");
+        document.body.style.overflow = "";
+        document.body.classList.remove("lightbox-open");
+        if (scrollTop) {
+          scrollTop.style.display = "";
+          toggleScrollTop();
+        }
+      }
+
+      if (btnNextSlide) btnNextSlide.addEventListener("click", nextGalleryItem);
+      if (btnPrevSlide) btnPrevSlide.addEventListener("click", prevGalleryItem);
+      if (lightboxSideNext) lightboxSideNext.addEventListener("click", nextGalleryItem);
+      if (lightboxSidePrev) lightboxSidePrev.addEventListener("click", prevGalleryItem);
+      if (lightboxCloseBtn) lightboxCloseBtn.addEventListener("click", closeLightbox);
+
+      if (lightboxModal) {
+        lightboxModal.addEventListener("click", function (e) {
+          if (e.target === lightboxModal) closeLightbox();
+        });
+
+        // Touch swipe gestures for mobile devices
+        let touchStartX = 0;
+        let touchEndX = 0;
+        lightboxModal.addEventListener("touchstart", function (e) {
+          if (e.touches && e.touches.length === 1) {
+            touchStartX = e.touches[0].screenX;
+          }
+        }, { passive: true });
+
+        lightboxModal.addEventListener("touchend", function (e) {
+          if (e.changedTouches && e.changedTouches.length === 1) {
+            touchEndX = e.changedTouches[0].screenX;
+            const diff = touchEndX - touchStartX;
+            if (diff < -45) {
+              nextGalleryItem(); // Swipe Left -> Next
+            } else if (diff > 45) {
+              prevGalleryItem(); // Swipe Right -> Previous
+            }
+          }
+        }, { passive: true });
+      }
+
+      document.addEventListener("keydown", function (e) {
+        if (lightboxModal && lightboxModal.classList.contains("active")) {
+          if (e.key === "Escape") closeLightbox();
+          if (e.key === "ArrowRight") nextGalleryItem();
+          if (e.key === "ArrowLeft") prevGalleryItem();
+        }
+      });
+
+      /**
+       * Render All Visual Works into Feed
+       */
+      function renderWorks() {
+        if (!feedEl) return;
+        feedEl.innerHTML = "";
+
+        let totalVisibleCards = 0;
+        const q = searchQuery.toLowerCase().trim();
+        currentVisibleGallery = [];
+
+        W.forEach(cat => {
+          // Check if category is active
+          const matchesCategory = (currentFilter === "all" || currentFilter === cat.id);
+          if (!matchesCategory) return;
+
+          // Filter items by search query
+          const filteredItems = cat.items.filter(item => {
+            if (!q) return true;
+            const fullText = (item.t + " " + item.tag + " " + cat.name + " " + item.img).toLowerCase();
+            return fullText.includes(q);
+          });
+
+          if (filteredItems.length === 0) return;
+
+          totalVisibleCards += filteredItems.length;
+
+          // Register items and slides into flat gallery sequence
+          filteredItems.forEach(item => {
+            if (item.slides && item.slides.length > 1) {
+              item.slides.forEach((slideImg, sIdx) => {
+                currentVisibleGallery.push({
+                  item: item,
+                  catName: cat.name,
+                  slideIndex: sIdx,
+                  totalSlides: item.slides.length,
+                  img: slideImg,
+                  title: item.t,
+                  tag: item.tag
+                });
+              });
+            } else {
+              currentVisibleGallery.push({
+                item: item,
+                catName: cat.name,
+                slideIndex: 0,
+                totalSlides: 1,
+                img: item.img,
+                title: item.t,
+                tag: item.tag
+              });
+            }
+          });
+
+          // Build Category Section
+          const sec = document.createElement("section");
+          sec.className = "cat";
+          sec.id = cat.id;
+          sec.style.setProperty("--c", "var(" + cat.color + ")");
+
+          let gridCols;
+          if (cat.id === 'posters') gridCols = 'repeat(auto-fill, minmax(min(100%, 250px), 1fr))';
+          else if (cat.id === 'banners') gridCols = 'repeat(auto-fill, minmax(min(100%, 360px), 1fr))';
+          else if (cat.id === 'thumbnails') gridCols = 'repeat(auto-fill, minmax(min(100%, 280px), 1fr))';
+          else if (cat.id === 'ai') gridCols = 'repeat(auto-fill, minmax(min(100%, 220px), 1fr))';
+          else if (cat.id === 'logos') gridCols = 'repeat(auto-fill, minmax(min(100%, 200px), 1fr))';
+          else if (cat.id === 'fintech') gridCols = 'repeat(auto-fill, minmax(min(100%, 270px), 1fr))';
+          else if (cat.id === 'flyers') gridCols = 'repeat(auto-fill, minmax(min(100%, 230px), 1fr))';
+          else gridCols = 'repeat(auto-fill, minmax(min(100%, 300px), 1fr))';
+
+          let secHtml = `
+            <div class="cat-head">
+              <div class="cat-head-title">
+                <span class="cat-dot"></span>
+                <h2>${cat.name}</h2>
+                <span class="cat-count-pill">${filteredItems.length} ${filteredItems.length === 1 ? 'Work' : 'Works'}</span>
+              </div>
+              <p>${cat.intro}</p>
+            </div>
+            <div class="works-grid" style="grid-template-columns: ${gridCols}">
+          `;
+
+          secHtml += filteredItems.map((p, idx) => `
+            <article class="work-card" data-cat="${cat.id}" data-idx="${idx}">
+              <div class="vis" role="button" tabindex="0" aria-label="Zoom ${p.t}" style="aspect-ratio: ${cat.ratio};">
+                <img src="${p.img}" alt="${p.t}" class="vis-img" loading="lazy" decoding="async">
+                <div class="vis-overlay"></div>
+                <div class="vis-top-badge">
+                  <i class="bi ${cat.badgeIcon}"></i> ${cat.name}
+                </div>
+                ${p.slides && p.slides.length > 1 ? `<div class="vis-slide-count"><i class="bi bi-collection-fill"></i> ${p.slides.length} Slides</div>` : ''}
+                <div class="vis-zoom-pill">
+                  <i class="bi bi-arrows-fullscreen"></i> Tap to Zoom
+                </div>
+              </div>
+              <div class="work-card-body">
+                <h3 class="work-card-title" title="${p.t}">${p.t}</h3>
+                <span class="work-card-tag">${p.tag}</span>
+              </div>
+            </article>
+          `).join("");
+
+          secHtml += `</div>`;
+          sec.innerHTML = secHtml;
+
+          // Attach click listeners to cards
+          sec.querySelectorAll(".vis").forEach((visEl, itemIndex) => {
+            const item = filteredItems[itemIndex];
+            const triggerZoom = () => {
+              const targetIdx = currentVisibleGallery.findIndex(g => g.item === item);
+              openLightboxByIndex(targetIdx >= 0 ? targetIdx : 0);
+            };
+            visEl.addEventListener("click", triggerZoom);
+            visEl.addEventListener("keydown", (e) => {
+              if (e.key === "Enter" || e.key === " ") {
+                e.preventDefault();
+                triggerZoom();
+              }
+            });
+          });
+
+          feedEl.appendChild(sec);
+        });
+
+        if (noResultsBox) {
+          noResultsBox.style.display = totalVisibleCards === 0 ? "block" : "none";
+        }
+      }
+
+      // Filter Chips Click Listeners
+      if (chipsGroup) {
+        chipsGroup.addEventListener("click", function (e) {
+          const btn = e.target.closest(".chip-btn");
+          if (!btn) return;
+          const filter = btn.getAttribute("data-filter");
+          if (!filter) return;
+
+          currentFilter = filter;
+          chipsGroup.querySelectorAll(".chip-btn").forEach(b => b.classList.remove("active"));
+          btn.classList.add("active");
+
+          renderWorks();
+        });
+      }
+
+      // Live Search Listeners
+      if (searchInput) {
+        searchInput.addEventListener("input", function (e) {
+          searchQuery = e.target.value;
+          if (clearSearchBtn) {
+            clearSearchBtn.style.display = searchQuery.length > 0 ? "block" : "none";
+          }
+          renderWorks();
+        });
+      }
+
+      if (clearSearchBtn) {
+        clearSearchBtn.addEventListener("click", function () {
+          searchQuery = "";
+          if (searchInput) {
+            searchInput.value = "";
+            searchInput.focus();
+          }
+          clearSearchBtn.style.display = "none";
+          renderWorks();
+        });
+      }
+
+      if (resetFiltersBtn) {
+        resetFiltersBtn.addEventListener("click", function () {
+          currentFilter = "all";
+          searchQuery = "";
+          if (searchInput) searchInput.value = "";
+          if (clearSearchBtn) clearSearchBtn.style.display = "none";
+          if (chipsGroup) {
+            chipsGroup.querySelectorAll(".chip-btn").forEach(b => {
+              b.classList.toggle("active", b.getAttribute("data-filter") === "all");
+            });
+          }
+          renderWorks();
+        });
+      }
+
+      // URL Hash Support for Category Quick-Jumping (Matched to project.html)
+      window.addEventListener("DOMContentLoaded", function () {
+        renderWorks();
+
+        if (window.location.hash) {
+          const hashId = window.location.hash.replace("#", "").toLowerCase().replace("work-", "");
+          const validCat = W.some(c => c.id === hashId);
+          if (validCat) {
+            currentFilter = hashId;
+            if (chipsGroup) {
+              chipsGroup.querySelectorAll(".chip-btn").forEach(b => {
+                b.classList.toggle("active", b.getAttribute("data-filter") === hashId);
+              });
+            }
+            renderWorks();
+            setTimeout(function () {
+              const el = document.getElementById(hashId);
+              if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+            }, 200);
+          }
+        }
+      });
+
+    })();
+  </script>
+
+</body>
+
+</html>

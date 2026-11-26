@@ -1,0 +1,856 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mohit Kumar · Links &amp; Socials</title>
+  <link href="assets/img/cg.png" rel="icon">
+  <script src="./_runtime/react.js"></script>
+  <script src="./_runtime/react-dom.js"></script>
+  <script src="./_runtime/support.js"></script>
+</head>
+
+<body>
+  <x-dc>
+    <helmet>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Instrument+Serif:ital@0;1&amp;family=Poppins:wght@500;600;700;800&amp;display=swap">
+      <style>
+        :root {
+          --bg: #1f1f1f;
+          --surface: #232323;
+          --surface-card: rgba(35, 35, 35, 0.72);
+          --surface-hover: #292929;
+          --accent: #9b805a;
+          --accent-hover: #b8986c;
+          --accent-light: #dfca9b;
+          --accent-subtle: rgba(155, 128, 90, 0.16);
+          --accent-border: rgba(155, 128, 90, 0.35);
+          --accent-glow: rgba(155, 128, 90, 0.28);
+          --fg: #ffffff;
+          --muted: rgba(255, 255, 255, 0.68);
+          --line: rgba(255, 255, 255, 0.08);
+        }
+
+        html {
+          scroll-behavior: smooth
+        }
+
+        body {
+          margin: 0;
+          background: var(--bg);
+          color: var(--fg);
+          font-family: 'Inter', system-ui, sans-serif;
+          -webkit-font-smoothing: antialiased
+        }
+
+        a {
+          color: var(--muted);
+          text-decoration: none
+        }
+
+        a:hover {
+          color: var(--fg)
+        }
+
+        /* ambient background */
+        .orb {
+          position: absolute;
+          border-radius: 50%;
+          filter: blur(110px);
+          opacity: .35;
+          pointer-events: none;
+          animation: drift 22s ease-in-out infinite alternate
+        }
+
+        .orb.b {
+          animation-duration: 28s;
+          animation-direction: alternate-reverse
+        }
+
+        @keyframes drift {
+          0% {
+            transform: translate(0, 0) scale(1)
+          }
+
+          50% {
+            transform: translate(70px, -50px) scale(1.15)
+          }
+
+          100% {
+            transform: translate(-60px, 60px) scale(.95)
+          }
+        }
+
+        /* entrance + hero motion */
+        @keyframes rise {
+          from {
+            opacity: 0;
+            transform: translateY(26px)
+          }
+
+          to {
+            opacity: 1;
+            transform: none
+          }
+        }
+
+        .rise {
+          animation: rise .9s cubic-bezier(.2, .7, .2, 1) backwards
+        }
+
+        @keyframes spin {
+          to {
+            transform: rotate(360deg)
+          }
+        }
+
+        .ring {
+          animation: spin 8s linear infinite
+        }
+
+        @keyframes bob {
+
+          0%,
+          100% {
+            transform: translateY(0)
+          }
+
+          50% {
+            transform: translateY(-7px)
+          }
+        }
+
+        .bob {
+          animation: bob 6s ease-in-out infinite
+        }
+
+        @keyframes shimmer {
+          to {
+            background-position: 200% center
+          }
+        }
+
+        .name {
+          font-family: 'Poppins', sans-serif;
+          font-weight: 700;
+          background: linear-gradient(90deg, #ffffff 0%, #dfca9b 25%, #9b805a 50%, #f7ecd7 75%, #ffffff 100%);
+          background-size: 200% auto;
+          -webkit-background-clip: text;
+          background-clip: text;
+          color: transparent;
+          animation: shimmer 7s linear infinite
+        }
+
+        @keyframes grow {
+          from {
+            transform: scaleX(0)
+          }
+
+          to {
+            transform: scaleX(1)
+          }
+        }
+
+        .line {
+          transform-origin: left;
+          animation: grow 1.2s cubic-bezier(.2, .7, .2, 1) backwards
+        }
+
+        /* back button & quick-jump pills */
+        .back-btn {
+          display: inline-flex;
+          align-items: center;
+          gap: 8px;
+          min-height: 40px;
+          box-sizing: border-box;
+          padding: 0 18px;
+          border-radius: 999px;
+          border: 1px solid rgba(155, 128, 90, .32);
+          background: rgba(35, 35, 35, .82);
+          backdrop-filter: blur(12px);
+          color: #ffffff;
+          font-size: 14px;
+          font-weight: 600;
+          text-decoration: none;
+          transition: background .25s, border-color .25s, transform .25s, box-shadow .25s
+        }
+
+        .back-btn:hover {
+          background: var(--accent);
+          border-color: var(--accent-light);
+          transform: translateY(-2px);
+          box-shadow: 0 8px 24px -6px var(--accent-glow);
+          color: #ffffff
+        }
+
+        .back-btn svg {
+          transition: transform .25s ease
+        }
+
+        .back-btn:hover svg {
+          transform: translateX(-3px)
+        }
+
+        .pill {
+          display: inline-flex;
+          align-items: center;
+          gap: 8px;
+          min-height: 44px;
+          box-sizing: border-box;
+          padding: 0 20px;
+          border-radius: 999px;
+          border: 1px solid rgba(255, 255, 255, .1);
+          background: rgba(35, 35, 35, .75);
+          backdrop-filter: blur(10px);
+          color: var(--fg);
+          font-size: 15px;
+          font-weight: 500;
+          text-decoration: none;
+          transition: background .25s, border-color .25s, transform .25s, box-shadow .25s
+        }
+
+        .pill:hover {
+          background: rgba(155, 128, 90, .16);
+          border-color: rgba(155, 128, 90, .55);
+          transform: translateY(-2px);
+          color: var(--fg);
+          box-shadow: 0 8px 20px -6px rgba(155, 128, 90, .3)
+        }
+
+        .pill:focus-visible,
+        .card:focus-visible {
+          outline: 2px solid var(--accent);
+          outline-offset: 3px
+        }
+
+        .pill .n {
+          font-size: 12px;
+          color: var(--accent);
+          font-weight: 600
+        }
+
+        /* section chrome */
+        .sec {
+          border-top: 1px solid var(--line);
+          padding-top: 44px;
+          scroll-margin-top: 24px
+        }
+
+        .eyebrow {
+          font-size: 12px;
+          font-weight: 600;
+          letter-spacing: 3px;
+          text-transform: uppercase;
+          color: var(--accent)
+        }
+
+        .h2 {
+          margin: 0;
+          font-family: 'Instrument Serif', Georgia, serif;
+          font-weight: 400;
+          font-size: 46px;
+          line-height: 1.05;
+          letter-spacing: -.5px;
+          color: var(--fg)
+        }
+
+        /* link card */
+        .card {
+          position: relative;
+          overflow: hidden;
+          flex: 1 1 300px;
+          min-height: 88px;
+          box-sizing: border-box;
+          display: flex;
+          align-items: center;
+          gap: 16px;
+          padding: 16px 18px;
+          border-radius: 20px;
+          text-decoration: none;
+          border: 1px solid var(--line);
+          background: var(--surface-card);
+          backdrop-filter: blur(12px);
+          color: var(--fg);
+          transition: transform .35s cubic-bezier(.2, .7, .2, 1), border-color .3s, box-shadow .3s, background .3s
+        }
+
+        .card::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: -60%;
+          width: 40%;
+          background: linear-gradient(100deg, transparent, rgba(255, 255, 255, .09), transparent);
+          transform: skewX(-20deg);
+          transition: left .8s cubic-bezier(.2, .7, .2, 1);
+          pointer-events: none
+        }
+
+        .card:hover {
+          transform: translateY(-5px);
+          border-color: var(--c);
+          background: rgba(42, 42, 42, .92);
+          box-shadow: 0 22px 44px -18px var(--c);
+          color: var(--fg)
+        }
+
+        .card:hover::before {
+          left: 130%
+        }
+
+        .av {
+          position: relative;
+          width: 56px;
+          height: 56px;
+          flex: none
+        }
+
+        .avin {
+          width: 56px;
+          height: 56px;
+          box-sizing: border-box;
+          border-radius: 50%;
+          border: 2px solid var(--c);
+          background: var(--surface);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-family: 'Instrument Serif', Georgia, serif;
+          font-size: 23px;
+          color: var(--fg);
+          transition: transform .35s;
+          object-fit: cover;
+        }
+
+        img.avin {
+          display: block;
+          width: 56px;
+          height: 56px;
+          object-fit: cover;
+          border-radius: 50%;
+        }
+
+        .card:hover .avin {
+          transform: scale(1.06)
+        }
+
+        .badge {
+          position: absolute;
+          right: -4px;
+          bottom: -4px;
+          width: 24px;
+          height: 24px;
+          box-sizing: border-box;
+          border-radius: 50%;
+          background: var(--c);
+          color: var(--ic);
+          border: 2px solid var(--bg);
+          display: flex;
+          align-items: center;
+          justify-content: center
+        }
+
+        .tile {
+          width: 56px;
+          height: 56px;
+          border-radius: 16px;
+          flex: none;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: rgba(255, 255, 255, .06);
+          color: var(--fg);
+          transition: background .3s, color .3s, transform .35s
+        }
+
+        .card:hover .tile {
+          background: var(--c);
+          color: var(--ic);
+          transform: rotate(-8deg) scale(1.07)
+        }
+
+        .txt {
+          display: flex;
+          flex-direction: column;
+          gap: 2px;
+          flex: 1;
+          min-width: 0
+        }
+
+        .t1 {
+          font-weight: 600;
+          font-size: 17px;
+          color: var(--fg)
+        }
+
+        .t2 {
+          font-size: 14px;
+          color: var(--muted);
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap
+        }
+
+        .arrow {
+          flex: none;
+          color: var(--muted);
+          transition: transform .3s, color .3s
+        }
+
+        .card:hover .arrow {
+          transform: translate(4px, -4px);
+          color: var(--fg)
+        }
+
+        @media (prefers-reduced-motion:reduce) {
+          html {
+            scroll-behavior: auto
+          }
+
+          .orb,
+          .ring,
+          .bob,
+          .name,
+          .rise,
+          .line {
+            animation: none
+          }
+
+          .card,
+          .tile,
+          .avin,
+          .arrow,
+          .pill,
+          .card::before {
+            transition: none
+          }
+        }
+      </style>
+    </helmet>
+    <div id="top"
+      style="position:relative;overflow:hidden;box-sizing:border-box;min-height:100vh;display:flex;flex-direction:column;align-items:center;padding:36px 24px 64px;background:#1f1f1f;color:#ffffff;font-family:'Inter',system-ui,sans-serif">
+      <!-- Warm Luxury Ambient Orbs matching main website -->
+      <div class="orb"
+        style="width:520px;height:520px;left:-160px;top:-100px;background:radial-gradient(circle, rgba(155, 128, 90, 0.35) 0%, rgba(155, 128, 90, 0) 70%);">
+      </div>
+      <div class="orb b"
+        style="width:480px;height:480px;right:-140px;top:260px;background:radial-gradient(circle, rgba(184, 152, 108, 0.28) 0%, rgba(184, 152, 108, 0) 70%);">
+      </div>
+      <div class="orb"
+        style="width:440px;height:440px;left:15%;bottom:180px;background:radial-gradient(circle, rgba(155, 128, 90, 0.22) 0%, rgba(155, 128, 90, 0) 70%);">
+      </div>
+
+      <!-- TOP BAR NAVIGATION -->
+      <header
+        style="position:relative;width:100%;max-width:1040px;display:flex;align-items:center;justify-content:space-between;margin-bottom:32px;z-index:10">
+        <a class="back-btn" href="index.html" title="Back to Home">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+            <polyline points="9 22 9 12 15 12 15 22" />
+          </svg>
+          Home
+        </a>
+        <a class="back-btn" href="index.html#contact" style="font-size:13px;padding:0 16px">
+          Get in Touch
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="margin-left:4px">
+            <path d="M5 12h14M12 5l7 7-7 7" />
+          </svg>
+        </a>
+      </header>
+
+      <div
+        style="position:relative;width:100%;max-width:1040px;display:flex;flex-direction:column;align-items:stretch;gap:72px">
+
+        <!-- HERO -->
+        <div style="display:flex;flex-direction:column;align-items:center;gap:18px;text-align:center">
+          <div class="rise bob" style="position:relative;width:128px;height:128px">
+            <div class="ring"
+              style="position:absolute;top:0;right:0;bottom:0;left:0;border-radius:50%;background:conic-gradient(from 0deg, #9b805a, #dfca9b, #b8986c, #ffdca8, #9b805a)">
+            </div>
+            <div
+              style="position:absolute;top:4px;right:4px;bottom:4px;left:4px;border-radius:50%;background:#232323;border:1px solid rgba(155,128,90,.3);display:flex;align-items:center;justify-content:center;overflow:hidden">
+              <img src="assets/img/cg.png" alt="Codogram"
+                style="width:100%;height:100%;object-fit:cover;transform:scale(1.04);border-radius:50%;display:block">
+            </div>
+          </div>
+          <div class="eyebrow rise" style="animation-delay:.1s">UI/UX Designer · Android Developer · Creator</div>
+          <h1 class="name rise"
+            style="animation-delay:.2s;margin:0;font-family:'Poppins',sans-serif;font-weight:700;font-size:clamp(40px,7vw,72px);line-height:1.1;letter-spacing:-0.5px">
+            Mohit Kumar</h1>
+          <p class="rise"
+            style="animation-delay:.3s;margin:0;max-width:540px;font-size:18px;line-height:1.6;color:var(--muted)">
+            Designer, developer &amp; founder of Codogram. Discover all my work, projects, channels, and social profiles
+            below.</p>
+          <nav class="rise" aria-label="Jump to a section"
+            style="animation-delay:.45s;display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:6px">
+            <a class="pill" href="#work"><span class="n">01</span>Work</a>
+            <a class="pill" href="#video"><span class="n">02</span>Watch</a>
+            <a class="pill" href="#photos"><span class="n">03</span>Photos</a>
+            <a class="pill" href="#community"><span class="n">04</span>Community</a>
+          </nav>
+        </div>
+
+        <!-- 01 WORK -->
+        <div id="work" class="sec" style="display:flex;flex-wrap:wrap;align-items:flex-start;gap:32px 56px">
+          <div class="rise"
+            style="animation-delay:.55s;flex:1 1 240px;max-width:300px;display:flex;flex-direction:column;gap:14px">
+            <div class="eyebrow">01 · Work</div>
+            <h2 class="h2">Professional</h2>
+            <p style="margin:0;font-size:16px;line-height:1.6;color:var(--muted)">My career, code repositories, design
+              systems, and verified credentials.</p>
+            <div class="line"
+              style="animation-delay:.8s;width:56px;height:3px;border-radius:3px;background:linear-gradient(90deg, #9b805a, #dfca9b)">
+            </div>
+          </div>
+          <div style="flex:999 1 460px;min-width:0;display:flex;flex-wrap:wrap;gap:14px">
+            <a class="card rise" href="https://www.linkedin.com/in/mohit-cg/" target="_blank" rel="noopener noreferrer"
+              style="--c:#0077b5;--ic:#ffffff;animation-delay:.65s">
+              <span class="tile"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path
+                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z">
+                  </path>
+                </svg></span>
+              <span class="txt"><span class="t1">LinkedIn</span><span class="t2">in/mohit-cg</span></span>
+              <svg class="arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M7 17L17 7M9 7h8v8"></path>
+              </svg>
+            </a>
+            <a class="card rise" href="https://github.com/mohit-cg" target="_blank" rel="noopener noreferrer"
+              style="--c:#e6edf3;--ic:#1f1f1f;animation-delay:.72s">
+              <span class="tile"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path
+                    d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12">
+                  </path>
+                </svg></span>
+              <span class="txt"><span class="t1">GitHub</span><span class="t2">@mohit-cg</span></span>
+              <svg class="arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M7 17L17 7M9 7h8v8"></path>
+              </svg>
+            </a>
+            <a class="card rise" href="https://www.figma.com/@mohit_cg" target="_blank" rel="noopener noreferrer"
+              style="--c:#f24e1e;--ic:#ffffff;animation-delay:.79s">
+              <span class="tile"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path
+                    d="M8 24c2.208 0 4-1.792 4-4v-4H8c-2.208 0-4 1.792-4 4s1.792 4 4 4zM4 12c0-2.208 1.792-4 4-4h4v8H8c-2.208 0-4-1.792-4-4zm0-8c0-2.208 1.792-4 4-4h4v8H8C5.792 8 4 6.208 4 4zm8-4h4c2.208 0 4 1.792 4 4s-1.792 4-4 4h-4V0zm0 8h4c2.208 0 4 1.792 4 4s-1.792 4-4 4h-4V8z" />
+                </svg></span>
+              <span class="txt"><span class="t1">Figma</span><span class="t2">@mohit_cg</span></span>
+              <svg class="arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M7 17L17 7M9 7h8v8"></path>
+              </svg>
+            </a>
+            <a class="card rise" href="index.html" style="--c:#9b805a;--ic:#ffffff;animation-delay:.86s">
+              <span class="tile"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <circle cx="12" cy="12" r="9"></circle>
+                  <path d="M3 12h18"></path>
+                  <path d="M12 3c2.8 2.6 4 5.6 4 9s-1.2 6.4-4 9c-2.8-2.6-4-5.6-4-9s1.2-6.4 4-9z"></path>
+                </svg></span>
+              <span class="txt"><span class="t1">Portfolio</span><span class="t2">mohitkumar.dev</span></span>
+              <svg class="arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M7 17L17 7M9 7h8v8"></path>
+              </svg>
+            </a>
+            <a class="card rise" href="certificate.html" style="--c:#b8986c;--ic:#ffffff;animation-delay:.93s">
+              <span class="tile"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <circle cx="12" cy="8" r="6"></circle>
+                  <path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"></path>
+                </svg></span>
+              <span class="txt"><span class="t1">Credential Vault</span><span class="t2">35 Verified
+                  Certificates</span></span>
+              <svg class="arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M7 17L17 7M9 7h8v8"></path>
+              </svg>
+            </a>
+            <a class="card rise" href="works.html" style="--c:#dfca9b;--ic:#1f1f1f;animation-delay:.98s">
+              <span class="tile"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                  <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                  <polyline points="21 15 16 10 5 21"></polyline>
+                </svg></span>
+              <span class="txt"><span class="t1">Design Portfolio</span><span class="t2">380+ Curated
+                  Artworks</span></span>
+              <svg class="arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M7 17L17 7M9 7h8v8"></path>
+              </svg>
+            </a>
+            <a class="card rise" href="mailto:mohitkumar7232901@gmail.com"
+              style="--c:#dfca9b;--ic:#1f1f1f;animation-delay:1.0s">
+              <span class="tile"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <rect x="3" y="5" width="18" height="14" rx="3"></rect>
+                  <path d="M3.5 7.5l8.5 6 8.5-6"></path>
+                </svg></span>
+              <span class="txt"><span class="t1">Email</span><span class="t2">mohitkumar7232901@gmail.com</span></span>
+              <svg class="arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M7 17L17 7M9 7h8v8"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- 02 WATCH -->
+        <div id="video" class="sec" style="display:flex;flex-wrap:wrap;align-items:flex-start;gap:32px 56px">
+          <div class="rise"
+            style="animation-delay:1.05s;flex:1 1 240px;max-width:300px;display:flex;flex-direction:column;gap:14px">
+            <div class="eyebrow">02 · Watch</div>
+            <h2 class="h2">YouTube</h2>
+            <p style="margin:0;font-size:16px;line-height:1.6;color:var(--muted)">Tutorials, design breakdowns, and dev
+              showcases from Team Codogram.</p>
+            <div class="line"
+              style="animation-delay:1.2s;width:56px;height:3px;border-radius:3px;background:linear-gradient(90deg, #ff3b4a, #ff7a85)">
+            </div>
+          </div>
+          <div style="flex:999 1 460px;min-width:0;display:flex;flex-wrap:wrap;gap:14px">
+            <a class="card rise" href="https://www.youtube.com/@EGMohit" target="_blank" rel="noopener noreferrer"
+              style="--c:#f59e0b;--ic:#ffffff;animation-delay:1.15s">
+              <span class="av"><img src="assets/img/portfolio/logo/elitegamermohit2.png" alt="Elite Gamer Mohit"
+                  class="avin" loading="lazy" decoding="async"><span class="badge"><svg width="12" height="12"
+                    viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path
+                      d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z">
+                    </path>
+                  </svg></span></span>
+              <span class="txt"><span class="t1">Elite Gamer Mohit</span><span class="t2">@EGMohit</span></span>
+              <svg class="arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M7 17L17 7M9 7h8v8"></path>
+              </svg>
+            </a>
+            <a class="card rise" href="https://www.youtube.com/@team_codogram" target="_blank" rel="noopener noreferrer"
+              style="--c:#0ea5e9;--ic:#ffffff;animation-delay:1.22s">
+              <span class="av"><img src="assets/img/cg.png" alt="Codogram" class="avin" loading="lazy"
+                  decoding="async"><span class="badge"><svg width="12" height="12" viewBox="0 0 24 24"
+                    fill="currentColor" aria-hidden="true">
+                    <path
+                      d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z">
+                    </path>
+                  </svg></span></span>
+              <span class="txt"><span class="t1">Codogram</span><span class="t2">@team_codogram</span></span>
+              <svg class="arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M7 17L17 7M9 7h8v8"></path>
+              </svg>
+            </a>
+            <a class="card rise" href="https://www.youtube.com/@AniCG.o2" target="_blank" rel="noopener noreferrer"
+              style="--c:#ff2a5f;--ic:#ffffff;animation-delay:1.29s">
+              <span class="av"><img src="assets/img/portfolio/logo/Red Moon Anime Creator Avatar.png" alt="AniCG"
+                  class="avin" loading="lazy" decoding="async"><span class="badge"><svg width="12" height="12"
+                    viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path
+                      d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z">
+                    </path>
+                  </svg></span></span>
+              <span class="txt"><span class="t1">AniCG</span><span class="t2">@AniCG.o2</span></span>
+              <svg class="arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M7 17L17 7M9 7h8v8"></path>
+              </svg>
+            </a>
+            <a class="card rise" href="https://www.youtube.com/@Caffeine_diaries" target="_blank"
+              rel="noopener noreferrer" style="--c:#c88a4b;--ic:#ffffff;animation-delay:1.36s">
+              <span class="av"><img src="assets/img/portfolio/logo/coffee_logo.png" alt="Caffeine Diaries" class="avin"
+                  loading="lazy" decoding="async"><span class="badge"><svg width="12" height="12" viewBox="0 0 24 24"
+                    fill="currentColor" aria-hidden="true">
+                    <path
+                      d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z">
+                    </path>
+                  </svg></span></span>
+              <span class="txt"><span class="t1">Caffeine Diaries</span><span class="t2">@Caffeine_diaries</span></span>
+              <svg class="arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M7 17L17 7M9 7h8v8"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- 03 PHOTOS -->
+        <div id="photos" class="sec" style="display:flex;flex-wrap:wrap;align-items:flex-start;gap:32px 56px">
+          <div class="rise"
+            style="animation-delay:1.45s;flex:1 1 240px;max-width:300px;display:flex;flex-direction:column;gap:14px">
+            <div class="eyebrow">03 · Photos</div>
+            <h2 class="h2">Instagram</h2>
+            <p style="margin:0;font-size:16px;line-height:1.6;color:var(--muted)">Visual design, daily UI, creative
+              reels, and behind-the-scenes engineering.</p>
+            <div class="line"
+              style="animation-delay:1.6s;width:56px;height:3px;border-radius:3px;background:linear-gradient(90deg, #e1306c, #f77737)">
+            </div>
+          </div>
+          <div style="flex:999 1 460px;min-width:0;display:flex;flex-wrap:wrap;gap:14px">
+            <a class="card rise" href="https://www.instagram.com/mohit_cg/" target="_blank" rel="noopener noreferrer"
+              style="--c:#f59e0b;--ic:#ffffff;animation-delay:1.55s">
+              <span class="av"><img src="assets/img/portfolio/logo/elitegamermohit2.png" alt="Elite Gamer Mohit"
+                  class="avin" loading="lazy" decoding="async"><span class="badge"><svg width="12" height="12"
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"
+                    stroke-linejoin="round" aria-hidden="true">
+                    <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+                    <circle cx="12" cy="12" r="4"></circle>
+                    <circle cx="17.5" cy="6.5" r="0.6" fill="currentColor"></circle>
+                  </svg></span></span>
+              <span class="txt"><span class="t1">Elite Gamer Mohit</span><span class="t2">@mohit_cg</span></span>
+              <svg class="arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M7 17L17 7M9 7h8v8"></path>
+              </svg>
+            </a>
+            <a class="card rise" href="https://www.instagram.com/team_codogram" target="_blank"
+              rel="noopener noreferrer" style="--c:#0ea5e9;--ic:#ffffff;animation-delay:1.62s">
+              <span class="av"><img src="assets/img/cg.png" alt="Codogram" class="avin" loading="lazy"
+                  decoding="async"><span class="badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"
+                    aria-hidden="true">
+                    <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+                    <circle cx="12" cy="12" r="4"></circle>
+                    <circle cx="17.5" cy="6.5" r="0.6" fill="currentColor"></circle>
+                  </svg></span></span>
+              <span class="txt"><span class="t1">Codogram</span><span class="t2">@team_codogram</span></span>
+              <svg class="arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M7 17L17 7M9 7h8v8"></path>
+              </svg>
+            </a>
+            <a class="card rise" href="https://www.instagram.com/mohit_cg/" target="_blank" rel="noopener noreferrer"
+              style="--c:#ff2a5f;--ic:#ffffff;animation-delay:1.69s">
+              <span class="av"><img src="assets/img/portfolio/logo/Red Moon Anime Creator Avatar.png" alt="AniCG"
+                  class="avin" loading="lazy" decoding="async"><span class="badge"><svg width="12" height="12"
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"
+                    stroke-linejoin="round" aria-hidden="true">
+                    <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+                    <circle cx="12" cy="12" r="4"></circle>
+                    <circle cx="17.5" cy="6.5" r="0.6" fill="currentColor"></circle>
+                  </svg></span></span>
+              <span class="txt"><span class="t1">AniCG</span><span class="t2">@mohit_cg</span></span>
+              <svg class="arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M7 17L17 7M9 7h8v8"></path>
+              </svg>
+            </a>
+            <a class="card rise" href="https://www.instagram.com/caffeine_diaries.o/" target="_blank"
+              rel="noopener noreferrer" style="--c:#c88a4b;--ic:#ffffff;animation-delay:1.76s">
+              <span class="av"><img src="assets/img/portfolio/logo/coffee_logo.png" alt="Caffeine Diaries" class="avin"
+                  loading="lazy" decoding="async"><span class="badge"><svg width="12" height="12" viewBox="0 0 24 24"
+                    fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"
+                    aria-hidden="true">
+                    <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+                    <circle cx="12" cy="12" r="4"></circle>
+                    <circle cx="17.5" cy="6.5" r="0.6" fill="currentColor"></circle>
+                  </svg></span></span>
+              <span class="txt"><span class="t1">Caffeine Diaries</span><span
+                  class="t2">@caffeine_diaries.o</span></span>
+              <svg class="arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M7 17L17 7M9 7h8v8"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- 04 COMMUNITY -->
+        <div id="community" class="sec" style="display:flex;flex-wrap:wrap;align-items:flex-start;gap:32px 56px">
+          <div class="rise"
+            style="animation-delay:1.85s;flex:1 1 240px;max-width:300px;display:flex;flex-direction:column;gap:14px">
+            <div class="eyebrow">04 · Community</div>
+            <h2 class="h2">Say Hello</h2>
+            <p style="margin:0;font-size:16px;line-height:1.6;color:var(--muted)">Quick updates, direct messaging,
+              collaborations, and inquiries. Come say hi.</p>
+            <div class="line"
+              style="animation-delay:2.0s;width:56px;height:3px;border-radius:3px;background:linear-gradient(90deg, #9b805a, #dfca9b)">
+            </div>
+          </div>
+          <div style="flex:999 1 460px;min-width:0;display:flex;flex-wrap:wrap;gap:14px">
+            <a class="card rise" href="https://x.com/_mohit_cg" target="_blank" rel="noopener noreferrer"
+              style="--c:#ffffff;--ic:#1f1f1f;animation-delay:1.95s">
+              <span class="tile"><svg width="21" height="21" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path
+                    d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z">
+                  </path>
+                </svg></span>
+              <span class="txt"><span class="t1">Twitter / X</span><span class="t2">@_mohit_cg</span></span>
+              <svg class="arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M7 17L17 7M9 7h8v8"></path>
+              </svg>
+            </a>
+            <a class="card rise" href="https://t.me/Codogram" target="_blank" rel="noopener noreferrer"
+              style="--c:#35aeef;--ic:#ffffff;animation-delay:2.02s">
+              <span class="tile"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M21.5 3.5L2.5 10.8l6.3 2.2 2.2 6.5 3-4.2 4.5 3.3z"></path>
+                  <path d="M8.8 13l12.7-9.5"></path>
+                </svg></span>
+              <span class="txt"><span class="t1">Telegram</span><span class="t2">@Codogram</span></span>
+              <svg class="arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M7 17L17 7M9 7h8v8"></path>
+              </svg>
+            </a>
+            <a class="card rise" href="index.html#contact" style="--c:#9b805a;--ic:#ffffff;animation-delay:2.09s">
+              <span class="tile"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                </svg></span>
+              <span class="txt"><span class="t1">Send a Message</span><span class="t2">Direct Portfolio
+                  Contact</span></span>
+              <svg class="arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M7 17L17 7M9 7h8v8"></path>
+              </svg>
+            </a>
+            <a class="card rise" href="https://www.linkedin.com/in/mohit-cg/" target="_blank" rel="noopener noreferrer"
+              style="--c:#0077b5;--ic:#ffffff;animation-delay:2.16s">
+              <span class="tile"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path
+                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z">
+                  </path>
+                </svg></span>
+              <span class="txt"><span class="t1">InMail / Message</span><span class="t2">LinkedIn
+                  Connection</span></span>
+              <svg class="arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M7 17L17 7M9 7h8v8"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- FOOTER -->
+        <div class="rise"
+          style="animation-delay:2.2s;border-top:1px solid var(--line);padding-top:28px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px">
+          <div style="font-size:14px;color:var(--muted)">Designed &amp; Developed by <a
+              href="https://www.instagram.com/team_codogram" target="_blank" rel="noopener"
+              style="color:#dfca9b;font-weight:600">Codogram</a> · Mohit Kumar</div>
+          <a class="pill" href="#top">Back to top<svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 19V5M6 11l6-6 6 6"></path>
+            </svg></a>
+        </div>
+
+      </div>
+    </div>
+  </x-dc>
+  <script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1280,"height":1800}}'>
+class Component extends DCLogic {
+renderVals() {
+return {};
+}
+}
+</script>
+</body>
+
+</html>

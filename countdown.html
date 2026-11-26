@@ -1,0 +1,1216 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+	<title>Under Construction - Mohit Kumar</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8">
+
+	<style>
+		:where(html) :is(html, body, div, span, p, a, h1, h2, h3, h4, h5, h6, label, input, select, option, optgroup, textarea, button, form, fieldset, legend, ul, ol, li, dl, dt, dd, figure, figcaption, section, article, header, footer, nav, main, aside, strong, b, em, i, small, sub, sup, blockquote, pre, code, picture, progress, output, summary, details, address, abbr, mark),
+		:is(html, body) {
+			all: revert;
+		}
+
+		:where(html) input::-webkit-datetime-edit,
+		:where(html) input::-webkit-datetime-edit-fields-wrapper,
+		:where(html) input::-webkit-datetime-edit-text,
+		:where(html) input::-webkit-datetime-edit-month-field,
+		:where(html) input::-webkit-datetime-edit-day-field,
+		:where(html) input::-webkit-datetime-edit-year-field {
+			all: revert;
+		}
+
+		:where(html) :is(img, svg) {
+			vertical-align: revert;
+		}
+
+		:where(html) :is(img, table, thead, tbody, tfoot, tr, th, td, caption, hr, iframe, video) {
+			box-sizing: revert;
+		}
+
+		:where(html) img {
+			border-style: revert;
+		}
+
+		:where(html) table {
+			border-collapse: revert;
+			caption-side: revert;
+		}
+
+		:where(html) caption {
+			padding-top: revert;
+			padding-bottom: revert;
+			color: revert;
+			text-align: revert;
+		}
+
+		:where(html) th {
+			text-align: revert;
+		}
+
+		:where(html) :is(thead, tbody, tfoot, tr, td, th) {
+			border-color: revert;
+			border-style: revert;
+			border-width: revert;
+		}
+
+		:where(html) hr {
+			margin: revert;
+			color: revert;
+			background-color: revert;
+			border: revert;
+			opacity: revert;
+			height: revert;
+			overflow: revert;
+		}
+
+		@media print {
+			:is(*, html) {
+				text-shadow: none !important;
+				-webkit-box-shadow: none !important;
+				box-shadow: none !important;
+			}
+		}
+
+		:is(*, html) {
+			-webkit-box-sizing: inherit;
+			box-sizing: inherit;
+		}
+
+		@font-face {
+			font-family: 'Open Sans';
+			font-style: normal;
+			font-weight: 400;
+			font-stretch: 100%;
+			src: url(fonts/open-sans-400-latin-ext.woff2) format('woff2');
+			unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+			font-display: swap;
+		}
+
+		@font-face {
+			font-family: 'Open Sans';
+			font-style: normal;
+			font-weight: 400;
+			font-stretch: 100%;
+			src: url(fonts/open-sans-400-latin.woff2) format('woff2');
+			unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+			font-display: swap;
+		}
+
+		@font-face {
+			font-family: 'Open Sans';
+			font-style: normal;
+			font-weight: 700;
+			font-stretch: 100%;
+			src: url(fonts/open-sans-700-latin-ext.woff2) format('woff2');
+			unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+			font-display: swap;
+		}
+
+		@font-face {
+			font-family: 'Open Sans';
+			font-style: normal;
+			font-weight: 700;
+			font-stretch: 100%;
+			src: url(fonts/open-sans-700-latin.woff2) format('woff2');
+			unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+			font-display: swap;
+		}
+
+		@font-face {
+			font-family: 'Poppins';
+			font-style: normal;
+			font-weight: 400;
+			src: url(fonts/poppins-400-latin-ext.woff2) format('woff2');
+			unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+			font-display: swap;
+		}
+
+		@font-face {
+			font-family: 'Poppins';
+			font-style: normal;
+			font-weight: 400;
+			src: url(fonts/poppins-400-latin.woff2) format('woff2');
+			unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+			font-display: swap;
+		}
+
+		@font-face {
+			font-family: 'Poppins';
+			font-style: normal;
+			font-weight: 500;
+			src: url(fonts/poppins-500-latin-ext.woff2) format('woff2');
+			unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+			font-display: swap;
+		}
+
+		@font-face {
+			font-family: 'Poppins';
+			font-style: normal;
+			font-weight: 500;
+			src: url(fonts/poppins-500-latin.woff2) format('woff2');
+			unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+			font-display: swap;
+		}
+
+		.ion {
+			display: inline-block;
+			line-height: 1;
+			font-size: inherit;
+			font-style: normal;
+		}
+
+		.cl-icon {
+			height: 1em;
+			width: auto;
+			fill: currentColor;
+			display: inline-block;
+		}
+
+		html {
+			font-family: sans-serif;
+			line-height: 1.15;
+			-ms-text-size-adjust: 100%;
+			-webkit-text-size-adjust: 100%;
+		}
+
+		body {
+			margin: 0;
+		}
+
+		section {
+			display: block;
+		}
+
+		h1 {
+			font-size: 2em;
+			margin: 0.67em 0;
+		}
+
+		a {
+			background-color: transparent;
+			-webkit-text-decoration-skip: objects;
+		}
+
+		a:active,
+		a:hover {
+			outline-width: 0;
+		}
+
+		b {
+			font-weight: inherit;
+		}
+
+		b {
+			font-weight: bolder;
+		}
+
+		img {
+			border-style: none;
+		}
+
+		button,
+		input {
+			font-family: sans-serif;
+			font-size: 100%;
+			line-height: 1.15;
+			margin: 0;
+		}
+
+		button,
+		input {
+			overflow: visible;
+		}
+
+		button {
+			text-transform: none;
+		}
+
+		button,
+		html [type="button"],
+		[type="submit"] {
+			-webkit-appearance: button;
+		}
+
+		button::-moz-focus-inner,
+		[type="button"]::-moz-focus-inner,
+		[type="submit"]::-moz-focus-inner {
+			border-style: none;
+			padding: 0;
+		}
+
+		button:-moz-focusring,
+		[type="button"]:-moz-focusring,
+		[type="submit"]:-moz-focusring {
+			outline: 1px dotted ButtonText;
+		}
+
+		[type="number"]::-webkit-inner-spin-button,
+		[type="number"]::-webkit-outer-spin-button {
+			height: auto;
+		}
+
+		::-webkit-file-upload-button {
+			-webkit-appearance: button;
+			font: inherit;
+		}
+
+		canvas {
+			display: inline-block;
+		}
+
+		@media print {
+
+			*::before,
+			*::after,
+			p::first-letter,
+			div::first-letter,
+			li::first-letter,
+			p::first-line,
+			div::first-line,
+			li::first-line {
+				text-shadow: none !important;
+				-webkit-box-shadow: none !important;
+				box-shadow: none !important;
+			}
+
+			a,
+			a:visited {
+				text-decoration: underline;
+			}
+
+			img {
+				page-break-inside: avoid;
+			}
+
+			p {
+				orphans: 3;
+				widows: 3;
+			}
+		}
+
+		html {
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+		}
+
+		*::before,
+		*::after {
+			-webkit-box-sizing: inherit;
+			box-sizing: inherit;
+		}
+
+		@-ms-viewport {
+			width: device-width;
+		}
+
+		html {
+			-ms-overflow-style: scrollbar;
+			-webkit-tap-highlight-color: transparent;
+		}
+
+		body {
+			font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+			font-size: 1rem;
+			font-weight: normal;
+			line-height: 1.5;
+			color: #292b2c;
+			background-color: #fff;
+		}
+
+		h1 {
+			margin-top: 0;
+			margin-bottom: .5rem;
+		}
+
+		p {
+			margin-top: 0;
+			margin-bottom: 1rem;
+		}
+
+		ul {
+			margin-top: 0;
+			margin-bottom: 1rem;
+		}
+
+		ul ul {
+			margin-bottom: 0;
+		}
+
+		a {
+			color: #0275d8;
+			text-decoration: none;
+		}
+
+		a:focus,
+		a:hover {
+			color: #014c8c;
+			text-decoration: underline;
+		}
+
+		a:not([href]):not([tabindex]) {
+			color: inherit;
+			text-decoration: none;
+		}
+
+		a:not([href]):not([tabindex]):focus,
+		a:not([href]):not([tabindex]):hover {
+			color: inherit;
+			text-decoration: none;
+		}
+
+		a:not([href]):not([tabindex]):focus {
+			outline: 0;
+		}
+
+		img {
+			vertical-align: middle;
+		}
+
+		a,
+		button,
+		input {
+			-ms-touch-action: manipulation;
+			touch-action: manipulation;
+		}
+
+		button:focus {
+			outline: 1px dotted;
+			outline: 5px auto -webkit-focus-ring-color;
+		}
+
+		input,
+		button {
+			line-height: inherit;
+		}
+
+		input[type="date"],
+		input[type="time"] {
+			-webkit-appearance: listbox;
+		}
+
+		h1,
+		.h1 {
+			margin-bottom: 0.5rem;
+			font-family: inherit;
+			font-weight: 500;
+			line-height: 1.1;
+			color: inherit;
+		}
+
+		h1,
+		.h1 {
+			font-size: 2.5rem;
+		}
+
+		.cl-container {
+			position: relative;
+			margin-left: auto;
+			margin-right: auto;
+			padding-right: 15px;
+			padding-left: 15px;
+		}
+
+		@media (min-width: 576px) {
+			.cl-container {
+				padding-right: 15px;
+				padding-left: 15px;
+			}
+		}
+
+		@media (min-width: 768px) {
+			.cl-container {
+				padding-right: 15px;
+				padding-left: 15px;
+			}
+		}
+
+		@media (min-width: 992px) {
+			.cl-container {
+				padding-right: 15px;
+				padding-left: 15px;
+			}
+		}
+
+		@media (min-width: 1200px) {
+			.cl-container {
+				padding-right: 15px;
+				padding-left: 15px;
+			}
+		}
+
+		@media (min-width: 576px) {
+			.cl-container {
+				width: 540px;
+				max-width: 100%;
+			}
+		}
+
+		@media (min-width: 768px) {
+			.cl-container {
+				width: 720px;
+				max-width: 100%;
+			}
+		}
+
+		@media (min-width: 992px) {
+			.cl-container {
+				width: 960px;
+				max-width: 100%;
+			}
+		}
+
+		@media (min-width: 1200px) {
+			.cl-container {
+				width: 1140px;
+				max-width: 100%;
+			}
+		}
+
+		.show>a {
+			outline: 0;
+		}
+
+		.ClassyCountdown-wrapper>div {
+			display: inline-block;
+			position: relative;
+			width: calc(25% - 20px);
+			margin: 10px;
+		}
+
+		.ClassyCountdown-wrapper .ClassyCountdown-value {
+			width: 100%;
+			line-height: 1em;
+			position: absolute;
+			top: 50%;
+			left: 0;
+			transform: translateY(-50%);
+			text-align: center;
+			display: block;
+			pointer-events: none;
+		}
+
+		html {
+			font-size: 100%;
+			height: 100%;
+			width: 100%;
+			overflow-x: hidden;
+			margin: 0px;
+			padding: 0px;
+			touch-action: manipulation;
+		}
+
+		body {
+			font-size: 16px;
+			font-family: 'Open Sans', sans-serif;
+			width: 100%;
+			height: 100%;
+			margin: 0;
+			font-weight: 400;
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+			word-wrap: break-word;
+			overflow-x: hidden;
+			color: #333;
+		}
+
+		h1,
+		p,
+		a,
+		ul,
+		span,
+		li,
+		img,
+		button {
+			margin: 0;
+			padding: 0;
+		}
+
+		h1 {
+			line-height: 1.5;
+			font-weight: inherit;
+		}
+
+		h1 {
+			font-family: 'Poppins', sans-serif;
+		}
+
+		p {
+			line-height: 1.6;
+			font-size: 1.05em;
+			font-weight: 400;
+			color: #555;
+		}
+
+		h1 {
+			font-size: 3.5em;
+			line-height: 1;
+		}
+
+		a,
+		button {
+			display: inline-block;
+			text-decoration: none;
+			color: inherit;
+			transition: all .3s;
+			line-height: 1;
+		}
+
+		a:focus,
+		a:active,
+		a:hover,
+		button:focus,
+		button:active,
+		button:hover {
+			text-decoration: none;
+			color: #E45F74;
+		}
+
+		b {
+			font-weight: 500;
+		}
+
+		img {
+			width: 100%;
+		}
+
+		li {
+			list-style: none;
+			display: inline-block;
+		}
+
+		span {
+			display: inline-block;
+		}
+
+		button {
+			outline: 0;
+			border: 0;
+			background: none;
+			cursor: pointer;
+		}
+
+		.center-text {
+			text-align: center;
+		}
+
+		.display-table {
+			display: table;
+			height: 100%;
+			width: 100%;
+		}
+
+		.display-table-cell {
+			display: table-cell;
+			vertical-align: middle;
+		}
+
+		::-webkit-input-placeholder {
+			font-size: .9em;
+			letter-spacing: 1px;
+		}
+
+		::-moz-placeholder {
+			font-size: .9em;
+			letter-spacing: 1px;
+		}
+
+		.full-height {
+			height: 100%;
+		}
+
+		.cl-position-static {
+			position: static;
+		}
+
+		.main-area {
+			position: relative;
+			height: 100vh;
+		}
+
+		.left-section {
+			float: left;
+			width: 50%;
+			position: relative;
+		}
+
+		.left-section .top-nav {
+			position: absolute;
+			top: 36px;
+			left: 0;
+			right: 40px;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			z-index: 10;
+		}
+
+		.left-section .logo {
+			font-family: 'Poppins', sans-serif;
+			font-size: 24px;
+			font-weight: 700;
+			letter-spacing: 0.5px;
+			color: #1f1f1f;
+			text-decoration: none;
+			line-height: 1;
+			transition: color .3s ease;
+		}
+
+		.left-section .logo:hover {
+			color: #9b805a;
+		}
+
+		.left-section .top-back-btn {
+			display: inline-flex;
+			align-items: center;
+			gap: 6px;
+			font-family: 'Poppins', sans-serif;
+			font-size: 0.88em;
+			font-weight: 600;
+			color: #333333;
+			padding: 8px 16px;
+			border-radius: 30px;
+			border: 1px solid rgba(0, 0, 0, 0.12);
+			background: #ffffff;
+			text-decoration: none;
+			transition: all .25s ease;
+			box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+		}
+
+		.left-section .top-back-btn:hover {
+			color: #ffffff;
+			background: #9b805a;
+			border-color: #9b805a;
+			transform: translateY(-1px);
+			box-shadow: 0 4px 12px rgba(155, 128, 90, 0.25);
+		}
+
+		.back-home-wrap {
+			margin-top: 25px;
+		}
+
+		.btn-back-home {
+			display: inline-flex;
+			align-items: center;
+			gap: 8px;
+			padding: 12px 28px;
+			font-family: 'Poppins', sans-serif;
+			font-size: 0.95em;
+			font-weight: 600;
+			letter-spacing: 0.3px;
+			border-radius: 40px;
+			color: #ffffff;
+			background: #1f1f1f;
+			text-decoration: none;
+			transition: all .3s ease;
+			box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+		}
+
+		.btn-back-home:hover {
+			color: #ffffff;
+			background: #9b805a;
+			transform: translateY(-2px);
+			box-shadow: 0 6px 18px rgba(155, 128, 90, 0.35);
+		}
+
+		.btn-back-home svg {
+			transition: transform .25s ease;
+		}
+
+		.btn-back-home:hover svg {
+			transform: translateX(-3px);
+		}
+
+		.left-section .main-content {
+			padding: 40px 40px 40px 0;
+		}
+
+		.main-content .title {
+			margin-bottom: 15px;
+		}
+
+		.main-content .email-input-area {
+			margin: 40px 0 20px;
+			position: relative;
+			width: 400px;
+			height: 47px;
+		}
+
+		.main-content .email-input-area .email-input {
+			width: 100%;
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			border-radius: 40px;
+			border: 0;
+			outline: 0;
+			padding: 0 140px 0 25px;
+			transition: all .2s;
+			background: #F1F2F3;
+			box-shadow: inset 0 0 1px rgba(0, 0, 0, .1);
+			border: 1px solid transparent;
+		}
+
+		.main-content .email-input-area .email-input:focus {
+			border-color: #f89fbc;
+		}
+
+		.main-content .email-input-area .submit-btn {
+			width: 120px;
+			text-align: center;
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			right: 0;
+			font-size: .9em;
+			border-radius: 0 40px 40px 0;
+			transition: all .3s;
+			background: #F84982;
+			color: #fff;
+		}
+
+		.main-content .email-input-area .submit-btn:hover {
+			background: #e40b52;
+		}
+
+		.main-content .post-desc {
+			color: #999;
+		}
+
+		.left-section .footer-icons {
+			position: absolute;
+			bottom: 30px;
+		}
+
+		.left-section .footer-icons>li>a {
+			display: inline-block;
+			font-size: 1.07em;
+			padding: 0 0px;
+		}
+
+		.left-section .footer-icons>li:first-child {
+			margin-right: 10px;
+		}
+
+		.left-section .footer-icons>li>a>i {
+			display: inline-block;
+			height: 35px;
+			line-height: 33px;
+			transition: all .2s;
+			border-radius: 40px;
+			text-align: center;
+			width: 35px;
+		}
+
+		.left-section .footer-icons>li>a:hover>i {
+			border: 1px solid;
+		}
+
+		.left-section .footer-icons>li>a>i[class*="facebook"] {
+			color: #2A61D6;
+			border-color: #2A61D6;
+		}
+
+		.left-section .footer-icons>li>a>i[class*="twitter"] {
+			color: #3AA4F8;
+			border-color: #3AA4F8;
+		}
+
+		.left-section .footer-icons>li>a>i[class*="google"] {
+			color: #F43846;
+			border-color: #F43846;
+		}
+
+		.left-section .footer-icons>li>a>i[class*="instagram"] {
+			color: #8F614A;
+			border-color: #8F614A;
+		}
+
+		.left-section .footer-icons>li>a>i[class*="pinterest"] {
+			color: #E1C013;
+			border-color: #E1C013;
+		}
+
+		.right-section {
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			right: 0;
+			width: 50%;
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+			z-index: 1;
+		}
+
+		.right-section:after {
+			content: '';
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			right: 0;
+			left: 0;
+			z-index: -2;
+			opacity: .3;
+			background: linear-gradient(to right, #23074d, #cc5333);
+		}
+
+		#rounded-countdown {
+			width: 80%;
+			margin: 0 auto;
+		}
+
+		@media only screen and (max-width: 1200px) {
+			#rounded-countdown {
+				width: 100%;
+			}
+		}
+
+		@media only screen and (max-width: 992px) {
+			.main-area {
+				position: relative;
+				height: 200vh;
+			}
+
+			.left-section {
+				float: none;
+				width: 100%;
+				height: 50%;
+			}
+
+			.left-section .main-content {
+				padding: 40px 0;
+			}
+
+			.main-content .email-input-area {
+				width: 100%;
+			}
+
+			.main-content .email-input-area .email-input {
+				padding: 0 115px 0 20px;
+			}
+
+			.main-content .email-input-area .submit-btn {
+				width: 100px;
+			}
+
+			.left-section .footer-icons>li>a>i {
+				height: 30px;
+				line-height: 28px;
+				width: 30px;
+			}
+
+			.right-section {
+				top: 50%;
+				bottom: auto;
+				width: 100%;
+				height: 50%;
+			}
+
+			.left-section .top-nav {
+				right: 0;
+			}
+		}
+
+		@media only screen and (max-width: 767px) {
+			p {
+				line-height: 1.4;
+			}
+
+			h1 {
+				font-size: 2.8em;
+				line-height: 1;
+			}
+		}
+
+		@media only screen and (max-width: 479px) {
+			body {
+				font-size: 12px;
+			}
+
+			.left-section .logo {
+				font-size: 20px;
+			}
+
+			.left-section .top-back-btn {
+				font-size: 0.8em;
+				padding: 6px 12px;
+			}
+		}
+	</style>
+</head>
+
+<body>
+
+	<div class="main-area">
+		<div class="cl-container full-height cl-position-static">
+
+			<section class="left-section full-height">
+
+				<div class="top-nav">
+					<a class="logo" href="index.html">Mohit Kumar</a>
+					<a class="top-back-btn" href="index.html">
+						<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+							stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+							<line x1="19" y1="12" x2="5" y2="12"></line>
+							<polyline points="12 19 5 12 12 5"></polyline>
+						</svg>
+						Back to Home
+					</a>
+				</div>
+
+				<div class="display-table">
+					<div class="display-table-cell">
+						<div class="main-content">
+							<h1 class="title"><b>Under Construction</b></h1>
+							<p>Our website is currently undergoing scheduled maintenance.
+								We Should be back shortly. Thank you for your patience.</p>
+
+							<div class="email-input-area">
+								<form method="post">
+									<input class="email-input" name="email" type="text"
+										placeholder="Enter your email" />
+									<button class="submit-btn" name="submit" type="submit"><b>NOTIFY US</b></button>
+								</form>
+							</div><!-- email-input-area -->
+
+							<p class="post-desc">Sign up now to get early notification of our lauch date!</p>
+
+							<div class="back-home-wrap">
+								<a href="index.html" class="btn-back-home">
+									<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+										stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+										<line x1="19" y1="12" x2="5" y2="12"></line>
+										<polyline points="12 19 5 12 12 5"></polyline>
+									</svg>
+									Back to Home
+								</a>
+							</div>
+						</div><!-- main-content -->
+					</div><!-- display-table-cell -->
+				</div><!-- display-table -->
+
+				<ul class="footer-icons">
+					<li>Stay in touch : </li>
+					<li><a href="#"><i class="ion-social-facebook"><svg class="cl-icon" viewBox="0 0 192 512"
+									style="vertical-align:-0.125em" aria-hidden="true" focusable="false">
+									<g transform="translate(0,448) scale(1,-1)">
+										<path
+											d="M128 256H192L184 192H128V0H45V192H0V256H45V299Q45 341 66.0 362.5Q87 384 136 384H192V320H158Q139 320 133.5 314.0Q128 308 128 294Z" />
+									</g>
+								</svg></i></a></li>
+					<li><a href="#"><i class="ion-social-twitter"><svg class="cl-icon" viewBox="0 0 472 512"
+									style="vertical-align:-0.125em" aria-hidden="true" focusable="false">
+									<g transform="translate(0,448) scale(1,-1)">
+										<path
+											d="M472 338Q454 310 424 288V276Q424 171 348.5 85.5Q273 0 148 0Q68 0 0 44Q16 42 23 42Q90 42 143 84Q112 85 87.0 103.5Q62 122 53 151Q65 149 71 149Q81 149 97 153Q64 160 41.5 186.5Q19 213 19 248V249Q41 237 63 237Q20 265 20 318Q20 343 33 366Q110 271 232 265Q230 272 230 287Q230 328 258.0 356.0Q286 384 327.0 384.0Q368 384 397 353Q427 358 459 377Q449 342 416 323Q447 326 472 338Z" />
+									</g>
+								</svg></i></a></li>
+					<li><a href="#"><i class="ion-social-googleplus"><svg class="cl-icon" viewBox="0 0 448 512"
+									style="vertical-align:-0.125em" aria-hidden="true" focusable="false">
+									<g transform="translate(0,448) scale(1,-1)">
+										<path
+											d="M210 172Q225 160 232.5 153.0Q240 146 247.5 131.0Q255 116 255 99Q255 59 218.0 29.5Q181 0 116 0Q60 0 30.0 23.0Q0 46 0 77Q0 117 42 142Q73 161 127 165Q119 179 119 191Q119 198 120 201H116Q74 201 49 227Q25 251 25 284Q25 326 60 355Q97 384 154 384H288L228 351H215Q238 324 238 293Q238 274 230.0 258.5Q222 243 214.5 236.0Q207 229 193 219V218Q182 207 182 201Q182 194 192 186ZM85 308Q85 282 99 257Q115 230 140 230Q157 230 168 241Q178 251 178 271Q178 297 163 324Q146 352 123 352Q104 352 94 339Q85 328 85 308ZM206 80Q206 94 196.0 105.0Q186 116 156 136Q155 136 152.5 136.5Q150 137 148 137Q123 137 98 129Q60 115 60 87Q60 64 82.0 50.0Q104 36 140 36Q171 36 188.5 48.0Q206 60 206 80ZM370 306H448V272H370V191H336V272H256V306H336V384H370Z" />
+									</g>
+								</svg></i></a></li>
+					<li><a href="#"><i class="ion-social-instagram-outline"><svg class="cl-icon" viewBox="0 0 384 512"
+									style="vertical-align:-0.125em" aria-hidden="true" focusable="false">
+									<g transform="translate(0,448) scale(1,-1)">
+										<path
+											d="M384 336V47Q384 28 370.0 14.0Q356 0 336 0H48Q28 0 14.0 14.0Q0 28 0 47V336Q0 356 14.0 370.0Q28 384 48 384H336Q356 384 370.0 370.0Q384 356 384 336ZM248.5 248.5Q225 272 192.0 272.0Q159 272 135.5 248.5Q112 225 112.0 192.0Q112 159 135.5 135.5Q159 112 192.0 112.0Q225 112 248.5 135.5Q272 159 272.0 192.0Q272 225 248.5 248.5ZM352 288V336Q352 352 336 352H288Q272 352 272 336V288Q272 272 288 272H336Q352 272 352 288ZM337 32Q352 32 352 48V224H300Q304 211 304 192Q304 145 272 113Q239 80 192 80Q146 80 113.0 113.0Q80 146 80 192Q80 207 85 224H32V48Q32 41 37.0 36.5Q42 32 49 32Z" />
+									</g>
+								</svg></i></a></li>
+					<li><a href="#"><i class="ion-social-pinterest"><svg class="cl-icon" viewBox="0 0 448 512"
+									style="vertical-align:-0.125em" aria-hidden="true" focusable="false">
+									<g transform="translate(0,448) scale(1,-1)">
+										<path
+											d="M224 -32Q190 -32 160 -23Q178 9 183 25L199 87Q214 59 253 59Q307 59 340.5 102.0Q374 145 374 212Q374 264 334.0 302.5Q294 341 232 341Q158 341 115.0 297.5Q72 254 72 201Q72 134 118 115Q127 111 130 121Q130 123 131.5 130.0Q133 137 134 139Q136 145 131 151Q116 169 116 195Q116 239 146.5 270.5Q177 302 226 302Q270 302 295.0 278.5Q320 255 320 217Q320 167 300.0 132.5Q280 98 249 98Q231 98 220.0 110.5Q209 123 213 141Q215 151 220.5 168.0Q226 185 229.5 198.0Q233 211 233 220Q233 234 225.0 244.0Q217 254 203 254Q185 254 172.5 237.5Q160 221 160 196Q160 187 162.0 178.0Q164 169 166 164L167 160Q142 56 138 38Q132 14 134 -13Q74 14 37.0 69.0Q0 124 0 192Q0 285 65.5 350.5Q131 416 224.0 416.0Q317 416 382.5 350.5Q448 285 448.0 192.0Q448 99 382.5 33.5Q317 -32 224 -32Z" />
+									</g>
+								</svg></i></a></li>
+				</ul>
+
+			</section><!-- left-section -->
+
+			<section class="right-section" style="background-image: url('assets/img/person/countdown.jpg');">
+
+				<div class="display-table center-text">
+					<div class="display-table-cell">
+
+						<div id="rounded-countdown">
+							<div class="countdown" data-remaining-sec="259200">
+								<div class="ClassyCountdown-wrapper">
+									<div class="ClassyCountdown-days" style="height: 124px;">
+										<div style="display: inline; height: 124px; width: 124px;"><canvas width="124"
+												height="124"></canvas></div><span class="ClassyCountdown-value"
+											style="font-weight: 600; color: rgb(255, 255, 255); font-size: 28px;">
+											<div>03</div><span style="font-size: 0.5em;">Days</span>
+										</span>
+									</div>
+									<div class="ClassyCountdown-hours" style="height: 124px;">
+										<div style="display: inline; height: 124px; width: 124px;"><canvas width="124"
+												height="124"></canvas></div><span class="ClassyCountdown-value"
+											style="font-weight: 600; color: rgb(255, 255, 255); font-size: 28px;">
+											<div>00</div><span style="font-size: 0.5em;">Hours</span>
+										</span>
+									</div>
+									<div class="ClassyCountdown-minutes" style="height: 124px;">
+										<div style="display: inline; height: 124px; width: 124px;"><canvas width="124"
+												height="124"></canvas></div><span class="ClassyCountdown-value"
+											style="font-weight: 600; color: rgb(255, 255, 255); font-size: 28px;">
+											<div>00</div><span style="font-size: 0.5em;">Minutes</span>
+										</span>
+									</div>
+									<div class="ClassyCountdown-seconds" style="height: 124px;">
+										<div style="display: inline; height: 124px; width: 124px;"><canvas width="124"
+												height="124"></canvas></div><span class="ClassyCountdown-value"
+											style="font-weight: 600; color: rgb(255, 255, 255); font-size: 28px;">
+											<div>00</div><span style="font-size: 0.5em;">Seconds</span>
+										</span>
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</div><!-- display-table-cell -->
+				</div><!-- display-table -->
+
+			</section><!-- right-section -->
+
+		</div><!-- container -->
+	</div><!-- main-area -->
+
+	<!-- SCIPTS -->
+
+	<script>
+
+		(function () {
+			'use strict';
+
+			/* Ring countdown: knob.js geometry, ClassyCountdown's theme. */
+			document.querySelectorAll('.ClassyCountdown-wrapper').forEach(function (w) {
+				var host = w.parentElement;
+				var totalSec = Number(host.getAttribute('data-remaining-sec')) || (3 * 86400);
+				var totalDays = Math.max(1, Math.ceil(totalSec / 86400));
+
+				var storageKey = 'site_countdown_target_' + totalSec;
+				var savedEnd = null;
+				try {
+					savedEnd = localStorage.getItem(storageKey);
+				} catch (e) { }
+
+				var now = Date.now();
+				var end;
+				if (savedEnd && Number(savedEnd) > now && (Number(savedEnd) - now) <= (totalSec * 1000 + 2000)) {
+					end = Number(savedEnd);
+				} else {
+					end = now + totalSec * 1000;
+					try {
+						localStorage.setItem(storageKey, end);
+					} catch (e) { }
+				}
+
+				var RINGS = {
+					days: { max: totalDays, colour: '#1abc9c' },
+					hours: { max: 24, colour: '#2980b9' },
+					minutes: { max: 60, colour: '#8e44ad' },
+					seconds: { max: 60, colour: '#f39c12' }
+				};
+
+				function pad(n) {
+					return n < 10 ? '0' + n : String(n);
+				}
+
+				function ring(canvas, ratio, colour) {
+					var size = canvas.clientWidth || canvas.width || 124;
+					var dpr = window.devicePixelRatio || 1;
+					var targetPx = Math.round(size * dpr);
+					if (canvas.width !== targetPx || canvas.height !== targetPx) {
+						canvas.width = canvas.height = targetPx;
+						canvas.style.width = canvas.style.height = size + 'px';
+					}
+					var g = canvas.getContext('2d');
+					g.setTransform(dpr, 0, 0, dpr, 0, 0);
+					var xy = size / 2, lw = xy * 0.1, r = xy - lw / 2, start = 1.5 * Math.PI;
+					g.clearRect(0, 0, size, size);
+
+					// Background track ring
+					g.lineWidth = lw;
+					g.beginPath();
+					g.strokeStyle = 'rgba(255, 255, 255, .3)';
+					g.arc(xy, xy, r, 0, 2 * Math.PI);
+					g.stroke();
+
+					// Foreground progress arc
+					var progress = Math.max(0, Math.min(1, ratio));
+					if (progress > 0) {
+						g.beginPath();
+						g.strokeStyle = colour;
+						g.arc(xy, xy, r, start, start + 2 * Math.PI * progress);
+						g.stroke();
+					}
+				}
+
+				function paint() {
+					var now = Date.now();
+					var t = Math.max(0, end - now);
+					var totalSecLeft = Math.floor(t / 1000);
+
+					var days = Math.floor(totalSecLeft / 86400);
+					var hours = Math.floor((totalSecLeft % 86400) / 3600);
+					var minutes = Math.floor((totalSecLeft % 3600) / 60);
+					var seconds = totalSecLeft % 60;
+
+					var v = { days: days, hours: hours, minutes: minutes, seconds: seconds };
+
+					var secProgress = 0;
+					if (totalSecLeft < totalSec) {
+						secProgress = seconds === 0 && t > 0 ? 1.0 : (60 - seconds) / 60;
+					}
+
+					var minProgress = 0;
+					if (totalSecLeft < totalSec) {
+						minProgress = (60 - (minutes + seconds / 60)) / 60;
+					}
+
+					var hourProgress = 0;
+					if (totalSecLeft < totalSec) {
+						hourProgress = (24 - (hours + (minutes * 60 + seconds) / 3600)) / 24;
+					}
+
+					var dayProgress = 0;
+					if (totalDays > 0) {
+						var daysLeftFloat = days + (hours * 3600 + minutes * 60 + seconds) / 86400;
+						dayProgress = Math.max(0, (totalDays - daysLeftFloat) / totalDays);
+					}
+
+					var elapsed = {
+						days: dayProgress,
+						hours: hourProgress,
+						minutes: minProgress,
+						seconds: secProgress
+					};
+
+					Object.keys(RINGS).forEach(function (k) {
+						var box = w.querySelector('.ClassyCountdown-' + k);
+						if (!box) return;
+						var canvas = box.querySelector('canvas');
+						var num = box.querySelector('.ClassyCountdown-value > div');
+						if (canvas) ring(canvas, elapsed[k], RINGS[k].colour);
+						if (num) num.textContent = pad(v[k]);
+					});
+
+					if (t <= 0) clearInterval(timer);
+				}
+
+				var timer = setInterval(paint, 1000);
+				paint();
+			});
+		})();
+
+	</script>
+</body>
+
+</html>
